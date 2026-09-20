@@ -1,0 +1,112 @@
+# ==========================================
+# Operating System Files (OS関連の自動生成ファイル)
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.lsbf務
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_dir.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.trash/
+
+# ==========================================
+# IDE & Editor Files (エディタ・開発環境関連)
+# ==========================================
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# JetBrains IDEs (IntelliJ, WebStorm, PyCharm, GoLand, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Vim / Emacs
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+*~
+\#*\#
+.\#*
+
+# Xcode / Android Studio
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserdata
+*.xcworkspace/
+
+# ==========================================
+# Environment Variables & Secrets (機密情報・環境変数)
+# ==========================================
+# APIキーやパスワードなどの機密情報は絶対にリポジトリへ含めない
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ==========================================
+# Logs & Temporary Files (ログ・一時ファイル)
+# ==========================================
+*.log
+logs/
+*.tmp
+*.temp
+tmp/
+temp/
+
+# ==========================================
+# Package / Dependency Managers (パッケージ管理)
+# ==========================================
+# 依存関係ライブラリ本体はGit管理外（設定ファイル package.json 等のみを管理）
+node_modules/
+vendor/
+.venv/
+venv/
+env/
+ENV/
+
+# ==========================================
+# Build & Output Directories (ビルド生成物)
+# ==========================================
+dist/
+build/
+out/
+bin/
+*.exe
+*.dll
+*.so
+*.dylib

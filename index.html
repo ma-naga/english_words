@@ -141,116 +141,16 @@ input.ans:focus{border-color:var(--grape)}
 
 <script>
 /* ============================================================
-   単語データ  [英語, 日本語(許容リスト), カテゴリ, 例文, 例文の日本語]
-   ※ 本番では words.json に切り出せる形式です
+   単語データ  words.json: {id, en, ja[許容リスト], cat, ex, exJa}
+   ※ 単語は同じフォルダの words.json から読み込みます
    ============================================================ */
-const RAW = `
-dog|いぬ,犬|どうぶつ|I have a dog.|わたしはいぬをかっています。
-cat|ねこ,猫|どうぶつ|The cat is cute.|そのねこはかわいいです。
-bird|とり,鳥|どうぶつ|A bird can fly.|とりはとべます。
-fish|さかな,魚|どうぶつ|I like fish.|わたしはさかながすきです。
-horse|うま,馬|どうぶつ|This is a horse.|これはうまです。
-rabbit|うさぎ,兎|どうぶつ|The rabbit is white.|そのうさぎはしろいです。
-monkey|さる,猿|どうぶつ|A monkey likes bananas.|さるはバナナがすきです。
-cow|うし,牛|どうぶつ|The cow eats grass.|うしはくさをたべます。
-pig|ぶた,豚|どうぶつ|The pig is big.|そのぶたはおおきいです。
-bear|くま,熊|どうぶつ|I see a bear.|くまがみえます。
-apple|りんご,リンゴ,林檎|たべもの|I like apples.|わたしはりんごがすきです。
-banana|バナナ,ばなな|たべもの|I eat a banana.|わたしはバナナをたべます。
-orange|オレンジ,おれんじ|たべもの|This orange is sweet.|このオレンジはあまいです。
-milk|ぎゅうにゅう,牛乳,ミルク|たべもの|I drink milk.|わたしはぎゅうにゅうをのみます。
-egg|たまご,卵,玉子|たべもの|I eat an egg.|わたしはたまごをたべます。
-bread|パン,ぱん|たべもの|I like bread.|わたしはパンがすきです。
-rice|ごはん,ご飯,こめ,米,ライス|たべもの|I eat rice.|わたしはごはんをたべます。
-water|みず,水|たべもの|Water, please.|おみずをください。
-cake|ケーキ,けーき|たべもの|This cake is nice.|このケーキはおいしいです。
-tea|おちゃ,お茶,ちゃ,茶,こうちゃ,紅茶|たべもの|I drink tea.|わたしはおちゃをのみます。
-lunch|ひるごはん,昼ご飯,昼ごはん,昼食,ランチ,おひる|たべもの|Lunch is ready.|ひるごはんができました。
-breakfast|あさごはん,朝ご飯,朝ごはん,朝食,ちょうしょく|たべもの|I eat breakfast.|わたしはあさごはんをたべます。
-red|あか,赤,あかい,赤い|いろ|The apple is red.|そのりんごはあかいです。
-blue|あお,青,あおい,青い,ブルー|いろ|The sky is blue.|そらはあおいです。
-yellow|きいろ,黄色,きいろい,黄色い|いろ|I like yellow.|わたしはきいろがすきです。
-green|みどり,緑,みどりいろ,グリーン|いろ|The tree is green.|その木はみどりです。
-white|しろ,白,しろい,白い|いろ|The cat is white.|そのねこはしろいです。
-black|くろ,黒,くろい,黒い|いろ|I have a black bag.|わたしはくろいかばんをもっています。
-one|いち,一,1|かず|I have one pen.|わたしはペンを1ぽんもっています。
-two|に,二,2|かず|I have two dogs.|わたしはいぬを2ひきかっています。
-three|さん,三,3|かず|Three cats are here.|ここにねこが3びきいます。
-four|よん,し,四,4|かず|I am four years old.|わたしは4さいです。
-five|ご,五,5|かず|Five apples, please.|りんごを5こください。
-six|ろく,六,6|かず|It is six o'clock.|6じです。
-seven|なな,しち,七,7|かず|I get up at seven.|わたしは7じにおきます。
-eight|はち,八,8|かず|Eight birds are there.|そこに8わのとりがいます。
-nine|きゅう,く,九,9|かず|I have nine books.|わたしはほんを9さつもっています。
-ten|じゅう,とお,十,10|かず|Ten students are here.|ここにせいとが10にんいます。
-book|ほん,本|がっこう|This is my book.|これはわたしのほんです。
-pen|ペン,ぺん|がっこう|I have a pen.|わたしはペンをもっています。
-pencil|えんぴつ,鉛筆|がっこう|Use a pencil.|えんぴつをつかいましょう。
-desk|つくえ,机,デスク|がっこう|My desk is big.|わたしのつくえはおおきいです。
-bag|かばん,鞄,バッグ|がっこう|My bag is new.|わたしのかばんはあたらしいです。
-school|がっこう,学校|がっこう|I go to school.|わたしはがっこうにいきます。
-teacher|せんせい,先生|がっこう|She is my teacher.|かのじょはわたしのせんせいです。
-student|せいと,生徒,がくせい,学生|がっこう|I am a student.|わたしはせいとです。
-classroom|きょうしつ,教室|がっこう|This is my classroom.|ここはわたしのきょうしつです。
-eraser|けしゴム,消しゴム,けしごむ|がっこう|I need an eraser.|わたしはけしゴムがひつようです。
-notebook|ノート,のーと|がっこう|Open your notebook.|ノートをひらいてください。
-music|おんがく,音楽,ミュージック|がっこう|I like music.|わたしはおんがくがすきです。
-mother|おかあさん,お母さん,はは,母,ママ|かぞく|My mother is kind.|わたしのおかあさんはやさしいです。
-father|おとうさん,お父さん,ちち,父,パパ|かぞく|My father is tall.|わたしのおとうさんはせがたかいです。
-brother|おにいさん,お兄さん,あに,兄,おとうと,弟,きょうだい,兄弟|かぞく|I have a brother.|わたしにはきょうだい(おとこ)がいます。
-sister|おねえさん,お姉さん,あね,姉,いもうと,妹,しまい,姉妹|かぞく|I have a sister.|わたしにはしまい(おんな)がいます。
-friend|ともだち,友達,友だち,ゆうじん,友人|かぞく|He is my friend.|かれはわたしのともだちです。
-family|かぞく,家族,ファミリー|かぞく|I love my family.|わたしはかぞくがだいすきです。
-run|はしる,走る|どうし|I run every day.|わたしはまいにちはしります。
-eat|たべる,食べる|どうし|I eat lunch.|わたしはひるごはんをたべます。
-drink|のむ,飲む|どうし|I drink water.|わたしはみずをのみます。
-read|よむ,読む|どうし|I read a book.|わたしはほんをよみます。
-write|かく,書く|どうし|I write a letter.|わたしはてがみをかきます。
-play|あそぶ,遊ぶ,する,やる|どうし|I play soccer.|わたしはサッカーをします。
-go|いく,行く|どうし|I go to school.|わたしはがっこうにいきます。
-come|くる,来る|どうし|Come here.|ここにきてください。
-see|みる,見る,みえる,見える,あう,会う|どうし|I see a bird.|とりがみえます。
-sing|うたう,歌う|どうし|I sing a song.|わたしはうたをうたいます。
-swim|およぐ,泳ぐ|どうし|I can swim.|わたしはおよげます。
-walk|あるく,歩く|どうし|I walk to school.|わたしはがっこうまであるきます。
-study|べんきょうする,勉強する,べんきょう,勉強,まなぶ,学ぶ|どうし|I study English.|わたしはえいごをべんきょうします。
-like|すき,好き,すきだ,好きだ,このむ,好む|どうし|I like cats.|わたしはねこがすきです。
-have|もつ,持つ,もっている,持っている,かっている,飼っている,ある,いる|どうし|I have a pen.|わたしはペンをもっています。
-speak|はなす,話す|どうし|I speak English.|わたしはえいごをはなします。
-listen|きく,聞く,聴く|どうし|Listen to me.|わたしのはなしをきいて。
-open|あける,開ける,ひらく,開く|どうし|Open the door.|ドアをあけて。
-sleep|ねる,寝る,ねむる,眠る|どうし|I sleep at ten.|わたしは10じにねます。
-big|おおきい,大きい,おおきな,大きな|けいようし|This is a big dog.|これはおおきないぬです。
-small|ちいさい,小さい,ちいさな,小さな|けいようし|I have a small bag.|わたしはちいさなかばんをもっています。
-happy|うれしい,嬉しい,しあわせ,幸せ,たのしい,楽しい,ハッピー|けいようし|I am happy.|わたしはうれしいです。
-good|いい,よい,良い,すばらしい|けいようし|Good idea!|いいかんがえだね！
-new|あたらしい,新しい,ニュー|けいようし|I have a new bag.|わたしはあたらしいかばんをもっています。
-old|ふるい,古い,としをとった,年をとった|けいようし|This is an old book.|これはふるいほんです。
-hot|あつい,暑い,熱い,ホット|けいようし|It is hot today.|きょうはあついです。
-cold|さむい,寒い,つめたい,冷たい|けいようし|It is cold today.|きょうはさむいです。
-sun|たいよう,太陽,おひさま,日|しぜん|The sun is bright.|たいようはあかるいです。
-moon|つき,月|しぜん|Look at the moon.|つきをみて。
-day|ひ,日,いちにち,一日|じかん|It is a nice day.|いいてんきのひですね。
-morning|あさ,朝|じかん|Good morning.|おはよう。
-night|よる,夜,ばん,晩|じかん|Good night.|おやすみなさい。
-rain|あめ,雨|しぜん|It is rain today.|きょうはあめです。
-snow|ゆき,雪|しぜん|I like snow.|わたしはゆきがすきです。
-house|いえ,家,うち|ばしょ|This is my house.|これはわたしのいえです。
-park|こうえん,公園,パーク|ばしょ|I go to the park.|わたしはこうえんにいきます。
-car|くるま,車,じどうしゃ,自動車,カー|ばしょ|My father has a car.|わたしのおとうさんはくるまをもっています。
-bus|バス,ばす|ばしょ|I take a bus.|わたしはバスにのります。
-train|でんしゃ,電車,れっしゃ,列車,トレイン|ばしょ|I take a train.|わたしはでんしゃにのります。
-boy|おとこのこ,男の子,しょうねん,少年,おとこ,男|ひと|The boy is tall.|そのおとこのこはせがたかいです。
-girl|おんなのこ,女の子,しょうじょ,少女,おんな,女|ひと|The girl is happy.|そのおんなのこはうれしそうです。
-hand|て,手|からだ|Wash your hands.|てをあらいましょう。
-eye|め,目|からだ|I have two eyes.|わたしにはめが2つあります。
-name|なまえ,名前,な,名|ひと|What is your name?|あなたのなまえはなんですか？
-`;
-const WORDS = RAW.trim().split("\n").map((line,i)=>{
-  const [en,ja,cat,ex,exJa]=line.split("|");
-  return {id:i+1,en,ja:ja.split(","),cat,ex,exJa};
-});
-const BYID = Object.fromEntries(WORDS.map(w=>[w.id,w]));
+let WORDS=[], BYID={};
+async function loadWords(){
+  const res=await fetch("words.json",{cache:"no-cache"});
+  if(!res.ok) throw new Error("HTTP "+res.status);
+  WORDS=await res.json();
+  BYID=Object.fromEntries(WORDS.map(w=>[w.id,w]));
+}
 
 /* ============================================================
    保存 (localStorage)
@@ -641,7 +541,12 @@ document.addEventListener("keydown",e=>{
 });
 if(hasTTS){ try{ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged=()=>{}; }catch(e){} }
 
-showHome();
+loadWords().then(showHome).catch(err=>{
+  $app.innerHTML=`<div class="card"><h1>たんごを よみこめません</h1>
+    <p class="sub">words.json が index.html と おなじ ばしょに あるか、たしかめてね。<br>
+    ファイルを ダブルクリックで ひらいている ときは うごきません。GitHub Pages などの URL で ひらいてね。</p>
+    <p class="detail">(${esc(err.message)})</p></div>`;
+});
 </script>
 </body>
 </html>
