@@ -8,7 +8,7 @@
 :root{
   --paper:#EAF5F3; --card:#FFFFFF; --ink:#17324D; --muted:#5B7186;
   --orange:#FF8A3D; --orange-d:#E06F22; --grape:#6C4AB6; --grape-d:#553894;
-  --ok:#E5484D; --ng:#2F6FDB; --line:#C9DCE0; --mint:#1FA971;
+  --ok:#E5484D; --ng:#2F6FDB; --line:#C9DCE0; --mint:#1FA971; --mint-d:#12805A;
 }
 *{box-sizing:border-box}
 html,body{margin:0;height:100%}
@@ -29,7 +29,6 @@ button:focus-visible,input:focus-visible,summary:focus-visible,textarea:focus-vi
 }
 .btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--orange-d)}
 .btn.grape{background:var(--grape);box-shadow:0 5px 0 var(--grape-d)}
-.btn.grape:active{box-shadow:0 1px 0 var(--grape-d)}
 .btn.ghost{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line);border:2px solid var(--line)}
 .btn.ghost:active{box-shadow:0 1px 0 var(--line)}
 .btn.small{min-height:44px;padding:0 16px;font-size:.95rem;border-radius:12px;box-shadow:none}
@@ -40,12 +39,28 @@ h1{margin:0;font-size:2rem;line-height:1.25}
 /* home */
 .hero{padding:28px 0 8px}
 .tagline{font-size:1.05rem;color:var(--muted)}
-.stats{display:flex;gap:12px;margin:24px 0}
-.stat{flex:1;background:var(--card);border-radius:18px;padding:14px 16px;border:2px solid var(--line)}
-.stat b{display:block;font-size:1.9rem;line-height:1.1}
+.stats{display:flex;gap:12px;margin:20px 0}
+.stat{flex:1;background:var(--card);border-radius:18px;padding:12px 16px;border:2px solid var(--line)}
+.stat b{display:block;font-size:1.7rem;line-height:1.2}
 .stat span{color:var(--muted);font-size:.85rem}
-.startrow{margin:8px 0 28px}
-.startrow .btn{width:100%;min-height:76px;font-size:1.4rem}
+.modes{display:grid;gap:14px;margin:6px 0 26px}
+.mode{
+  display:flex;align-items:center;gap:18px;width:100%;text-align:left;
+  background:var(--card);border:2px solid var(--line);border-radius:22px;
+  padding:16px 20px;min-height:100px;box-shadow:0 5px 0 var(--line);
+  transition:transform .08s, box-shadow .08s;
+}
+.mode:active{transform:translateY(4px);box-shadow:0 1px 0 var(--line)}
+.mode .ico{
+  flex:none;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:2rem;background:#EFE9FB;
+}
+.mode.type .ico{background:#FFE9D6}
+.mode.write .ico{background:#DDF5EA}
+.mode .txt{display:block}
+.mode .txt b{display:block;font-size:1.2rem;line-height:1.35}
+.mode .txt .d{display:block;color:var(--muted);font-size:.92rem;line-height:1.45;margin-top:2px}
+.mode .txt small{display:block;color:var(--ink);font-size:.85rem;margin-top:6px;font-weight:700}
 .note{background:#FFF3D6;border-radius:14px;padding:12px 16px;font-size:.92rem;margin:14px 0}
 .check{font-size:.9rem;color:var(--muted)}
 .check b{color:var(--ink)}
@@ -72,6 +87,10 @@ label.sw input{width:22px;height:22px}
   font-size:clamp(3.2rem,12vw,5.6rem);font-weight:800;letter-spacing:.02em;line-height:1.15;margin:.1em 0;
   word-break:break-all;
 }
+.word.ja{
+  font-family:inherit;font-size:clamp(2.4rem,9vw,4rem);letter-spacing:.05em;word-break:normal;
+}
+.ask{margin:0;color:var(--muted);font-weight:700;font-size:1rem}
 .speaker{
   width:76px;height:76px;border-radius:50%;background:#EAF1FF;font-size:2rem;
   border:3px solid #BBD0F5;margin:4px auto 0;display:block;
@@ -97,9 +116,36 @@ input.ans{
   width:100%;max-width:440px;height:64px;font-size:1.6rem;text-align:center;
   border:3px solid var(--line);border-radius:16px;padding:0 14px;font-family:inherit;color:var(--ink);
 }
+input.ans.en{
+  font-family:"Avenir Next","Trebuchet MS","Segoe UI",sans-serif;font-size:2rem;font-weight:700;letter-spacing:.06em;
+}
 input.ans:focus{border-color:var(--grape)}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:480px;margin:16px auto 0}
 .choices .btn{min-height:64px;font-size:1.2rem}
+.hint{margin:14px 0 0;color:var(--muted);font-size:1rem}
+.hint b{
+  font-family:"Avenir Next","Trebuchet MS",sans-serif;font-size:1.6rem;letter-spacing:.18em;color:var(--ink);
+  margin:0 .3em;
+}
+
+/* write pad */
+.pad{
+  position:relative;margin:20px auto 0;max-width:600px;height:240px;background:#fff;
+  border:3px solid var(--line);border-radius:18px;overflow:hidden;
+  background-image:
+    linear-gradient(#BCD3EE,#BCD3EE),
+    repeating-linear-gradient(90deg,#BCD3EE 0 12px,transparent 12px 24px),
+    linear-gradient(#EFB7B7,#EFB7B7);
+  background-size:100% 2px,100% 2px,100% 2px;
+  background-position:0 28%,0 50%,0 72%;
+  background-repeat:no-repeat;
+}
+.pad canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.answerword{
+  font-family:"Avenir Next","Trebuchet MS","Segoe UI",sans-serif;
+  font-size:clamp(2.6rem,10vw,4.2rem);font-weight:800;letter-spacing:.04em;margin:0 0 6px;
+}
+#wRes{margin-top:8px}
 
 /* result */
 .stamps{display:flex;justify-content:center;gap:28px;margin:12px 0 4px;flex-wrap:wrap}
@@ -127,6 +173,13 @@ input.ans:focus{border-color:var(--grape)}
 .example .ja{color:var(--muted);font-size:.9rem}
 .again{display:inline-block;background:#FFF3D6;border-radius:99px;padding:0 12px;font-size:.85rem;margin-left:8px;vertical-align:middle}
 .actions{display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.cmp{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:16px 0 4px}
+.cmp small{display:block;color:var(--muted);font-weight:700;font-size:.85rem}
+.lt{
+  font-family:"Avenir Next","Trebuchet MS","Segoe UI",sans-serif;font-size:2.1rem;font-weight:800;letter-spacing:.08em;
+}
+.lt .miss,.lt .bad{background:#FFE1E1;color:var(--ok);border-radius:6px;padding:0 2px}
+.close{margin:8px 0 0;font-weight:700;color:#B25E00}
 
 /* summary */
 .stars{font-size:3rem;letter-spacing:.1em;color:#FFB800;margin:6px 0}
@@ -141,8 +194,8 @@ input.ans:focus{border-color:var(--grape)}
 
 <script>
 /* ============================================================
-   単語データ  words.json: {id, en, ja[許容リスト], cat, ex, exJa}
-   ※ 単語は同じフォルダの words.json から読み込みます
+   単語データ: 同じフォルダの words.json から読み込む
+   {id, en, ja[許容リスト], cat, ex, exJa}
    ============================================================ */
 let WORDS=[], BYID={};
 async function loadWords(){
@@ -153,6 +206,19 @@ async function loadWords(){
 }
 
 /* ============================================================
+   モード
+   speak: えいご→はなす＆いみ (記録: P.words)
+   type : にほんご→うつ (記録: P.typing)
+   write: にほんご→かく (自己採点・記録なし)
+   ============================================================ */
+const MODES={
+  speak:{icon:"🎤",title:"えいご → はなす＆いみ",desc:"えいごを きいて、いって、にほんごの いみを こたえよう"},
+  type :{icon:"⌨️",title:"にほんご → えいご（うつ）",desc:"にほんごを みて、キーボードで えいごを うとう"},
+  write:{icon:"✍️",title:"にほんご → えいご（かく）",desc:"ゆびや ペンで えいごを かいて、こたえと みくらべよう"}
+};
+function store(mode){ return mode==="speak" ? P.words : mode==="type" ? P.typing : null; }
+
+/* ============================================================
    保存 (localStorage)
    ============================================================ */
 const KEY="eitango_v1";
@@ -161,9 +227,15 @@ let P = load();
 function load(){
   try{
     const d = JSON.parse(localStorage.getItem(KEY)||"null");
-    if(d && d.v===1) return d;
+    if(d && d.v===1){
+      d.words=d.words||{}; d.typing=d.typing||{};
+      d.streak=d.streak||{last:"",count:0};
+      d.settings=d.settings||{mic:true};
+      d.sessions=d.sessions||0;
+      return d;
+    }
   }catch(e){}
-  return {v:1, words:{}, streak:{last:"",count:0}, settings:{mic:true}, sessions:0};
+  return {v:1, words:{}, typing:{}, streak:{last:"",count:0}, settings:{mic:true}, sessions:0};
 }
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(P)); }catch(e){} }
 function today(offset=0){
@@ -220,6 +292,32 @@ function judgePron(alts, target){
   return false;
 }
 
+/* つづり入力の正規化と、違う文字の特定 (LCSで一致した文字に印をつける) */
+function normSpell(s){ return s.normalize("NFKC").toLowerCase().replace(/[^a-z0-9]/g,""); }
+function lcsMarks(a,b){
+  const m=a.length,n=b.length;
+  const dp=Array.from({length:m+1},()=>Array(n+1).fill(0));
+  for(let i=m-1;i>=0;i--) for(let j=n-1;j>=0;j--)
+    dp[i][j]= a[i]===b[j] ? dp[i+1][j+1]+1 : Math.max(dp[i+1][j],dp[i][j+1]);
+  const ma=Array(m).fill(false), mb=Array(n).fill(false);
+  let i=0,j=0;
+  while(i<m&&j<n){
+    if(a[i]===b[j]){ ma[i]=true; mb[j]=true; i++; j++; }
+    else if(dp[i+1][j]>=dp[i][j+1]) i++;
+    else j++;
+  }
+  return [ma,mb];
+}
+function diffHTML(correct, typed){
+  const [mc,mt]=lcsMarks(correct,typed);
+  const c=[...correct].map((ch,i)=>`<span class="${mc[i]?"":"miss"}">${esc(ch)}</span>`).join("");
+  const t=[...typed].map((ch,i)=>`<span class="${mt[i]?"":"bad"}">${esc(ch)}</span>`).join("");
+  return `<div class="cmp">
+    <div><small>ただしい つづり</small><span class="lt">${c}</span></div>
+    <div><small>あなたの こたえ</small><span class="lt">${t}</span></div>
+  </div>`;
+}
+
 /* ============================================================
    音声 (お手本 / 認識)
    ============================================================ */
@@ -254,19 +352,26 @@ function recognize(){
 }
 
 /* ============================================================
-   出題の選び方 (復習5 + 新規5)
+   出題の選び方
+   speak/type: 復習(期日が来た語)最大5 + 新規で10問
+   write     : 苦手な語(箱2以下)を最大5 + ランダムで10問
    ============================================================ */
-function pickSession(n=10){
-  const t=today();
-  const due=shuffle(WORDS.filter(w=>P.words[w.id] && P.words[w.id].due<=t));
-  const fresh=shuffle(WORDS.filter(w=>!P.words[w.id]));
-  let rev=due.slice(0,5);
-  let news=fresh.slice(0,n-rev.length);
-  let ids=[...rev,...news];
-  if(ids.length<n){ // 足りなければ復習をさらに追加
-    ids=[...ids,...due.slice(5,5+n-ids.length)];
+function pickSession(mode,n=10){
+  if(mode==="write"){
+    const weak=shuffle(WORDS.filter(w=>{
+      const a=P.typing[w.id], b=P.words[w.id];
+      return (a&&a.box<=2)||(b&&b.box<=2);
+    })).slice(0,5);
+    const rest=shuffle(WORDS.filter(w=>!weak.includes(w)));
+    return shuffle([...weak,...rest.slice(0,n-weak.length)]).map(w=>w.id);
   }
-  if(ids.length<n){ // それでも足りなければ、まだ期日でない単語も
+  const st=store(mode), t=today();
+  const due=shuffle(WORDS.filter(w=>st[w.id] && st[w.id].due<=t));
+  const fresh=shuffle(WORDS.filter(w=>!st[w.id]));
+  const rev=due.slice(0,5);
+  let ids=[...rev,...fresh.slice(0,n-rev.length)];
+  if(ids.length<n) ids=[...ids,...due.slice(5,5+n-ids.length)];
+  if(ids.length<n){
     const rest=shuffle(WORDS.filter(w=>!ids.includes(w)));
     ids=[...ids,...rest.slice(0,n-ids.length)];
   }
@@ -284,27 +389,43 @@ function micAvailable(){ return !!SR && P.settings.mic && !(S&&S.q&&S.q.micBlock
 /* ============================================================
    ホーム画面
    ============================================================ */
+function modeCard(m){
+  const t=today(); const info=MODES[m]; let stat="";
+  if(m==="write"){
+    stat="きろくには のこらない れんしゅうモード";
+  }else{
+    const st=store(m);
+    const known=Object.values(st).filter(x=>x.box>=3).length;
+    const dueN=WORDS.filter(w=>st[w.id] && st[w.id].due<=t).length;
+    stat=`おぼえた ${known} / ${WORDS.length}　ふくしゅう まち ${dueN}`;
+  }
+  return `<button class="mode ${m}" onclick="startSession('${m}')">
+    <span class="ico">${info.icon}</span>
+    <span class="txt"><b>${info.title}</b><span class="d">${info.desc}</span><small>${stat}</small></span>
+  </button>`;
+}
 function showHome(){
   S=null;
   const t=today();
-  const known=Object.values(P.words).filter(x=>x.box>=3).length;
-  const dueN=WORDS.filter(w=>P.words[w.id] && P.words[w.id].due<=t).length;
   const streak = (P.streak.last===t||P.streak.last===today(-1)) ? P.streak.count : 0;
   $app.innerHTML=`
     <div class="hero">
       <h1>しゃべって☆えいたんご</h1>
-      <p class="tagline">きく → いう → いみを こたえる。1かい 10もん、3ぶんで おわるよ。</p>
+      <p class="tagline">えらんで スタート！ 1かい 10もん、3ぶんで おわるよ。</p>
     </div>
     <div class="stats">
       <div class="stat"><b>${streak}</b><span>れんぞく にっすう</span></div>
-      <div class="stat"><b>${known}<small style="font-size:1rem"> / ${WORDS.length}</small></b><span>おぼえた たんご</span></div>
-      <div class="stat"><b>${dueN}</b><span>ふくしゅう まち</span></div>
+      <div class="stat"><b>${P.sessions}</b><span>これまでの れんしゅう</span></div>
     </div>
-    <div class="startrow"><button class="btn" onclick="startSession()">スタート</button></div>
+    <div class="modes">
+      ${modeCard("speak")}
+      ${modeCard("type")}
+      ${modeCard("write")}
+    </div>
     <div class="check" id="check"></div>
     <details>
       <summary>せってい</summary>
-      <label class="sw"><input type="checkbox" id="micSw" ${P.settings.mic?"checked":""} onchange="toggleMic(this.checked)"> マイクで はつおんを チェックする</label>
+      <label class="sw"><input type="checkbox" id="micSw" ${P.settings.mic?"checked":""} onchange="toggleMic(this.checked)"> 「はなす」で マイクを つかって はつおんを チェックする</label>
       <p>オフにすると、おてほんを きいて じぶんで「いえた／むずかしい」を えらぶ ほうほうになります。</p>
     </details>
     <details>
@@ -317,11 +438,11 @@ function showHome(){
         <button class="btn small ghost" onclick="resetData()">ぜんぶ けす</button>
       </div>
     </details>
-    <div class="note">きろくは この ブラウザの なかに ほぞんされます。Safari の タブで つかってね。</div>
+    <div class="note">きろくは この ブラウザの なかに ほぞんされます。「うつ」と「かく」は キーボードや ゆびが つかえる たんまつで やってね。</div>
   `;
   const notes=[];
   notes.push(`おてほんの おと: <b>${hasTTS?"つかえる":"つかえない"}</b>`);
-  notes.push(`マイク(おんせいにんしき): <b>${SR?"つかえそう":"つかえない → じぶんで チェックします"}</b>`);
+  notes.push(`マイク(おんせいにんしき): <b>${SR?"つかえそう":"つかえない → 「はなす」は じぶんで チェックします"}</b>`);
   document.getElementById("check").innerHTML="この たんまつ: "+notes.join(" / ");
 }
 function toggleMic(v){ P.settings.mic=v; save(); }
@@ -330,7 +451,7 @@ function importData(){
   try{
     const d=JSON.parse(document.getElementById("bk").value);
     if(!d||d.v!==1) throw 0;
-    P=d; save(); showHome();
+    localStorage.setItem(KEY,JSON.stringify(d)); P=load(); showHome();
   }catch(e){ alert("よみこめませんでした。かきだした ぶんしょうを そのまま はりつけてね。"); }
 }
 function resetData(){
@@ -338,23 +459,65 @@ function resetData(){
 }
 
 /* ============================================================
-   セッション
+   セッション共通
    ============================================================ */
-function startSession(){
-  const ids=pickSession(10);
-  S={queue:ids,idx:0,total:ids.length,firstDone:0,correct:0,wrong:[],retried:new Set(),seen:new Set(),q:null};
+function startSession(mode){
+  const ids=pickSession(mode,10);
+  S={mode,queue:ids,idx:0,total:ids.length,firstDone:0,correct:0,wrong:[],retried:new Set(),seen:new Set(),q:null};
   nextQuestion();
 }
 function nextQuestion(){
   if(S.idx>=S.queue.length){ return showSummary(); }
   const id=S.queue[S.idx];
-  S.q={id,step:"speak",pron:null,pronBy:"",heard:"",fails:0,meaning:null,typed:"",hint:false,choices:null,msg:"",micBlocked:false,repeat:S.seen.has(id)};
-  renderQuiz();
-  speak(BYID[id].en);
+  const base={id,msg:"",repeat:S.seen.has(id),ok:null};
+  if(S.mode==="speak"){
+    S.q={...base,step:"speak",pron:null,pronBy:"",heard:"",fails:0,meaning:null,typed:"",hint:false,choices:null,micBlocked:false};
+    renderQuiz();
+    speak(BYID[id].en);
+  }else if(S.mode==="type"){
+    S.q={...base,step:"input",typed:"",hint:false};
+    renderQuiz();
+  }else{
+    S.q={...base,step:"write",revealed:false};
+    renderQuiz();
+  }
 }
-function quit(){ if(confirm("やめる？ ここまでの きろくは のこるよ。")){ if(recognizer){try{recognizer.abort()}catch(e){}} showHome(); } }
+function quit(){
+  if(confirm("やめる？ ここまでの きろくは のこるよ。")){
+    if(recognizer){try{recognizer.abort()}catch(e){}}
+    try{ speechSynthesis.cancel(); }catch(e){}
+    showHome();
+  }
+}
 
-/* ---- 発音 ---- */
+/* 1問の結果を反映 (最初の1回だけ記録。×は数問後にもう一度) */
+function applyResult(q, ok){
+  q.ok=ok;
+  if(!S.seen.has(q.id)){
+    S.seen.add(q.id); S.firstDone++;
+    if(ok) S.correct++; else S.wrong.push(q.id);
+    const st=store(S.mode);
+    if(st){
+      const p=st[q.id]||{box:0,due:today(),ok:0,ng:0};
+      if(ok){ p.box=Math.min(5,p.box+1); p.ok++; }
+      else{ p.box=1; p.ng++; }
+      p.due = ok ? today(INTERVALS[p.box]) : today();
+      st[q.id]=p; save();
+    }
+  }
+  if(!ok && !S.retried.has(q.id)){
+    S.retried.add(q.id);
+    S.queue.splice(Math.min(S.idx+4,S.queue.length),0,q.id);
+  }
+}
+function finishQuestion(ok){
+  const q=S.q; q.step="result";
+  applyResult(q,ok);
+  renderQuiz();
+}
+function goNext(){ S.idx++; nextQuestion(); }
+
+/* ---- speak: 発音 ---- */
 async function doMic(){
   if(listening) return;
   const q=S.q; if(q.step!=="speak") return;
@@ -382,12 +545,12 @@ function selfPron(ok){
   renderQuiz();
 }
 
-/* ---- 意味 ---- */
+/* ---- speak: 意味 ---- */
 function submitMeaning(){
   const inp=document.getElementById("ans"); if(!inp) return;
   const v=inp.value.trim(); if(!v){ inp.focus(); return; }
   const q=S.q; q.typed=v; q.meaning=matchJa(v,BYID[q.id].ja);
-  finishQuestion();
+  finishQuestion(!!(q.pron&&q.meaning));
 }
 function showHint(){
   const q=S.q; const w=BYID[q.id];
@@ -398,30 +561,72 @@ function showHint(){
 function pickChoice(i){
   const q=S.q; const w=BYID[q.id];
   q.typed=q.choices[i]; q.meaning=(q.choices[i]===w.ja[0]);
-  finishQuestion();
+  finishQuestion(!!(q.pron&&q.meaning));
 }
 
-/* ---- 結果 ---- */
-function finishQuestion(){
-  const q=S.q; q.step="result";
-  const ok=!!(q.pron&&q.meaning);
-  q.ok=ok;
-  if(!S.seen.has(q.id)){ // 最初の1回だけ記録に反映
-    S.seen.add(q.id); S.firstDone++;
-    if(ok) S.correct++; else S.wrong.push(q.id);
-    const p=P.words[q.id]||{box:0,due:today(),ok:0,ng:0};
-    if(ok){ p.box=Math.min(5,p.box+1); p.ok++; }
-    else{ p.box=1; p.ng++; }
-    p.due = ok ? today(INTERVALS[p.box]) : today();
-    P.words[q.id]=p; save();
-  }
-  if(!ok && !S.retried.has(q.id)){ // 数問あとにもう一度
-    S.retried.add(q.id);
-    S.queue.splice(Math.min(S.idx+4,S.queue.length),0,q.id);
-  }
-  renderQuiz();
+/* ---- type: キーボードでつづる ---- */
+function submitSpell(){
+  const inp=document.getElementById("ans"); if(!inp) return;
+  const raw=inp.value.trim(); if(!raw){ inp.focus(); return; }
+  const q=S.q, w=BYID[q.id];
+  q.typed=raw.toLowerCase();
+  const ok = normSpell(raw)===normSpell(w.en);
+  finishQuestion(ok);
+  speak(w.en);
 }
-function goNext(){ S.idx++; nextQuestion(); }
+function showSpellHint(){ S.q.hint=true; const v=(document.getElementById("ans")||{}).value||""; renderQuiz(); const a=document.getElementById("ans"); if(a){a.value=v;a.focus();} }
+
+/* ---- write: 手書き(自己採点) ---- */
+function initPad(){
+  const c=document.getElementById("pad"); if(!c||!c.getContext) return;
+  const g=c.getContext("2d"); if(!g) return;
+  const dpr=window.devicePixelRatio||1;
+  const r=c.getBoundingClientRect();
+  c.width=Math.max(1,Math.round(r.width*dpr)); c.height=Math.max(1,Math.round(r.height*dpr));
+  g.scale(dpr,dpr);
+  g.lineWidth=6; g.lineCap="round"; g.lineJoin="round"; g.strokeStyle="#17324D";
+  let drawing=false,last=null;
+  const pos=e=>{const b=c.getBoundingClientRect();return {x:e.clientX-b.left,y:e.clientY-b.top};};
+  c.addEventListener("pointerdown",e=>{
+    drawing=true; last=pos(e);
+    try{c.setPointerCapture(e.pointerId);}catch(_){}
+    g.beginPath(); g.moveTo(last.x,last.y); g.lineTo(last.x+0.01,last.y); g.stroke();
+    e.preventDefault();
+  });
+  c.addEventListener("pointermove",e=>{
+    if(!drawing) return;
+    const p=pos(e);
+    g.beginPath(); g.moveTo(last.x,last.y); g.lineTo(p.x,p.y); g.stroke();
+    last=p; e.preventDefault();
+  });
+  const end=()=>{drawing=false;};
+  c.addEventListener("pointerup",end);
+  c.addEventListener("pointercancel",end);
+}
+function clearPad(){
+  const c=document.getElementById("pad"); if(!c||!c.getContext) return;
+  const g=c.getContext("2d"); if(!g) return;
+  g.save(); g.setTransform(1,0,0,1,0,0); g.clearRect(0,0,c.width,c.height); g.restore();
+}
+function revealWrite(){
+  const q=S.q, w=BYID[q.id]; if(q.revealed) return;
+  q.revealed=true;
+  const b=document.getElementById("revealBtn"); if(b) b.style.display="none";
+  document.getElementById("wRes").innerHTML=`
+    <div class="step">
+      <div class="answerword">${esc(w.en)}</div>
+      <button class="btn small ghost" onclick="speak(BYID[S.q.id].en)">🔊 きく</button>
+      <div class="example"><div class="en">${esc(w.ex)}</div><div class="ja">${esc(w.exJa)}</div></div>
+      <h2 style="margin-top:22px">じぶんの じは あっていた？</h2>
+      <div class="actions" style="margin-top:0">
+        <button class="btn" onclick="gradeWrite(true)">○ かけた！</button>
+        <button class="btn ghost" onclick="gradeWrite(false)">× ちがった</button>
+      </div>
+    </div>`;
+  speak(w.en);
+  document.getElementById("wRes").scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+function gradeWrite(ok){ applyResult(S.q,ok); goNext(); }
 
 /* ---- まとめ ---- */
 function showSummary(){
@@ -431,18 +636,19 @@ function showSummary(){
     P.streak.last=t;
   }
   P.sessions++; save();
-  const c=S.correct, n=S.total;
+  const c=S.correct, n=S.total, mode=S.mode;
   const stars = c>=n ? 3 : c>=Math.ceil(n*0.7) ? 2 : 1;
   const st=[0,1,2].map(i=>`<span class="${i<stars?"":"off"}">★</span>`).join("");
   const wrongList=S.wrong.map(id=>{const w=BYID[id];return `<li><span class="en">${esc(w.en)}</span><span>${esc(w.ja[0])}</span></li>`;}).join("");
+  const tail = mode==="write" ? "(この モードは きろくに のこらないよ)" : "まちがえた たんごは あしたも でてくるよ。";
   $app.innerHTML=`
     <div class="card">
       <h1>${c===n?"ぜんぶ せいかい！":"おつかれさま！"}</h1>
       <div class="stars">${st}</div>
       <p style="font-size:1.4rem;font-weight:800;margin:0">${c} / ${n} もん ○</p>
-      ${S.wrong.length?`<p class="sub">まちがえた たんごは あしたも でてくるよ。</p><ul class="list">${wrongList}</ul>`:`<p class="sub">まちがえた たんごは なし！</p>`}
+      ${S.wrong.length?`<p class="sub">${tail}</p><ul class="list">${wrongList}</ul>`:`<p class="sub">まちがえた たんごは なし！</p>`}
       <div class="actions">
-        <button class="btn" onclick="startSession()">もういちど</button>
+        <button class="btn" onclick="startSession('${mode}')">もういちど</button>
         <button class="btn ghost" onclick="showHome()">ホームへ</button>
       </div>
     </div>`;
@@ -452,12 +658,11 @@ function showSummary(){
    クイズ画面の描画
    ============================================================ */
 function stampHTML(ok,size){ return `<span class="stamp ${ok?"ok":"ng"} ${size}">${ok?"○":"×"}</span>`; }
+function tagHTML(q,w){ return `<span class="tag">${esc(w.cat)}${q.repeat?'<span class="again">もういちど</span>':""}</span>`; }
+function exampleHTML(w){ return `<div class="example"><div class="en">${esc(w.ex)}</div><div class="ja">${esc(w.exJa)}</div></div>`; }
 
-function renderQuiz(){
-  const q=S.q, w=BYID[q.id];
-  const pct=Math.round(S.firstDone/S.total*100);
+function speakView(q,w){
   let body="";
-
   if(q.step==="speak"){
     const useMic=micAvailable();
     let mic="";
@@ -478,7 +683,6 @@ function renderQuiz(){
       </div>` : "";
     body=`<div class="step"><h2>② はつおん</h2>${mic}${self}</div>`;
   }
-
   if(q.step==="meaning"){
     const chip = `<span class="chip">はつおん ${q.pron?"OK":"チェックずみ"}${q.pronBy==="self"?"（じぶんで）":""}</span>`;
     let choices="";
@@ -492,7 +696,6 @@ function renderQuiz(){
         ${q.choices?"":`<button class="btn ghost" onclick="showHint()">ヒント (4たく)</button>`}
       </div>${choices}</div>`;
   }
-
   if(q.step==="result"){
     const others=w.ja.filter(x=>x!==w.ja[0]).slice(0,3);
     const heardLine = q.pronBy==="mic" ? `きこえた こえ: ${esc(q.heard)}` : "はつおん: じぶんで チェック";
@@ -506,34 +709,99 @@ function renderQuiz(){
       <div class="answer">${esc(w.ja[0])}<small>${others.length?"ほかにも: "+others.map(esc).join("、"):""}</small></div>
       <p class="detail">${heardLine}</p>
       <p class="detail">${ansLine}</p>
-      <div class="example"><div class="en">${esc(w.ex)}</div><div class="ja">${esc(w.exJa)}</div></div>
+      ${exampleHTML(w)}
       <div class="actions">
         <button class="btn ghost" onclick="speak(BYID[S.q.id].en)">🔊 きく</button>
         <button class="btn ghost" onclick="speak(BYID[S.q.id].ex)">🔊 れいぶん</button>
         <button class="btn" id="nextBtn" onclick="goNext()">つぎへ</button>
       </div></div>`;
   }
+  return `${tagHTML(q,w)}
+    <div class="word">${esc(w.en)}</div>
+    <button class="speaker" onclick="speak(BYID[S.q.id].en)" aria-label="おてほんを きく">🔊</button>
+    ${body}`;
+}
 
+function typeView(q,w){
+  if(q.step==="input"){
+    const hint = q.hint
+      ? `<p class="hint">ヒント: <b>${esc(w.en[0])}${" ＿".repeat(w.en.length-1)}</b>（${w.en.length}もじ）</p>` : "";
+    return `${tagHTML(q,w)}
+      <p class="ask">えいごで なんて いう？</p>
+      <div class="word ja">${esc(w.ja[0])}</div>
+      ${hint}
+      <div class="step">
+        <input class="ans en" id="ans" type="text" lang="en" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="type here">
+        <div class="actions" style="margin-top:18px">
+          <button class="btn" onclick="submitSpell()">こたえる</button>
+          ${q.hint?"":`<button class="btn ghost" onclick="showSpellHint()">ヒント</button>`}
+        </div>
+      </div>`;
+  }
+  // result
+  let feedback="";
+  if(q.ok){
+    feedback=`<div class="answerword">${esc(w.en)}</div>${q.hint?`<p class="detail">ヒントを つかったよ。つぎは ヒントなしで！</p>`:""}`;
+  }else{
+    const typedN=normSpell(q.typed);
+    const d=lev(typedN,normSpell(w.en));
+    feedback=diffHTML(normSpell(w.en),typedN)
+      + (d<=1?`<p class="close">おしい！ あと 1もじ ちがうよ</p>`:`<p class="detail">あかい ところを たしかめよう</p>`);
+  }
+  const otherJa=w.ja.filter(x=>x!==w.ja[0]).slice(0,3);
+  return `${tagHTML(q,w)}
+    <div class="word ja">${esc(w.ja[0])}</div>
+    <div class="step" style="margin-top:8px">
+      ${stampHTML(q.ok,"big")}
+      ${feedback}
+      ${exampleHTML(w)}
+      <div class="actions">
+        <button class="btn ghost" onclick="speak(BYID[S.q.id].en)">🔊 きく</button>
+        <button class="btn ghost" onclick="speak(BYID[S.q.id].ex)">🔊 れいぶん</button>
+        <button class="btn" id="nextBtn" onclick="goNext()">つぎへ</button>
+      </div>
+    </div>`;
+}
+
+function writeView(q,w){
+  return `${tagHTML(q,w)}
+    <p class="ask">えいごで かいてみよう</p>
+    <div class="word ja">${esc(w.ja[0])}</div>
+    <div class="pad"><canvas id="pad" aria-label="かく ところ"></canvas></div>
+    <div class="actions" style="margin-top:16px">
+      <button class="btn ghost" onclick="clearPad()">けす</button>
+      <button class="btn" id="revealBtn" onclick="revealWrite()">こたえを みる</button>
+    </div>
+    <div id="wRes"></div>`;
+}
+
+function renderQuiz(){
+  const q=S.q, w=BYID[q.id];
+  const pct=Math.round(S.firstDone/S.total*100);
+  const inner = S.mode==="speak" ? speakView(q,w) : S.mode==="type" ? typeView(q,w) : writeView(q,w);
   $app.innerHTML=`
     <div class="top">
       <button class="btn small ghost" onclick="quit()">やめる</button>
       <div class="bar"><i style="width:${pct}%"></i></div>
-      <div class="count">${Math.min(S.firstDone+ (q.step==="result"?0:1),S.total)} / ${S.total}</div>
+      <div class="count">${Math.min(S.firstDone+(q.step==="result"?0:1),S.total)} / ${S.total}</div>
     </div>
-    <div class="card">
-      <span class="tag">${esc(w.cat)}${q.repeat?'<span class="again">もういちど</span>':""}</span>
-      <div class="word">${esc(w.en)}</div>
-      <button class="speaker" onclick="speak(BYID[S.q.id].en)" aria-label="おてほんを きく">🔊</button>
-      ${body}
-    </div>`;
+    <div class="card">${inner}</div>`;
 
-  if(q.step==="meaning"){ const a=document.getElementById("ans"); if(a){ a.focus(); a.addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.isComposing&&e.keyCode!==229) submitMeaning(); }); } }
+  if(S.mode==="speak" && q.step==="meaning"){
+    const a=document.getElementById("ans");
+    if(a){ a.focus(); a.addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.isComposing&&e.keyCode!==229) submitMeaning(); }); }
+  }
+  if(S.mode==="type" && q.step==="input"){
+    const a=document.getElementById("ans");
+    if(a){ a.focus(); a.addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.isComposing&&e.keyCode!==229) submitSpell(); }); }
+  }
+  if(S.mode==="write") initPad();
   if(q.step==="result"){ const b=document.getElementById("nextBtn"); if(b) b.focus(); }
 }
 
-/* PCキーボード: スペースでマイク */
+/* PCキーボード: 「はなす」でスペースキーがマイク */
 document.addEventListener("keydown",e=>{
-  if(!S||!S.q) return;
+  if(!S||!S.q||S.mode!=="speak") return;
   const tag=(document.activeElement&&document.activeElement.tagName)||"";
   if(e.code==="Space" && S.q.step==="speak" && micAvailable() && tag!=="INPUT" && tag!=="TEXTAREA"){
     e.preventDefault(); doMic();

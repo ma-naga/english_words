@@ -1,102 +1,5749 @@
 [
-{"id": 1, "en": "dog", "ja": ["いぬ", "犬"], "cat": "どうぶつ", "ex": "I have a dog.", "exJa": "わたしはいぬをかっています。"},
-{"id": 2, "en": "cat", "ja": ["ねこ", "猫"], "cat": "どうぶつ", "ex": "The cat is cute.", "exJa": "そのねこはかわいいです。"},
-{"id": 3, "en": "bird", "ja": ["とり", "鳥"], "cat": "どうぶつ", "ex": "A bird can fly.", "exJa": "とりはとべます。"},
-{"id": 4, "en": "fish", "ja": ["さかな", "魚"], "cat": "どうぶつ", "ex": "I like fish.", "exJa": "わたしはさかながすきです。"},
-{"id": 5, "en": "horse", "ja": ["うま", "馬"], "cat": "どうぶつ", "ex": "This is a horse.", "exJa": "これはうまです。"},
-{"id": 6, "en": "rabbit", "ja": ["うさぎ", "兎"], "cat": "どうぶつ", "ex": "The rabbit is white.", "exJa": "そのうさぎはしろいです。"},
-{"id": 7, "en": "monkey", "ja": ["さる", "猿"], "cat": "どうぶつ", "ex": "A monkey likes bananas.", "exJa": "さるはバナナがすきです。"},
-{"id": 8, "en": "cow", "ja": ["うし", "牛"], "cat": "どうぶつ", "ex": "The cow eats grass.", "exJa": "うしはくさをたべます。"},
-{"id": 9, "en": "pig", "ja": ["ぶた", "豚"], "cat": "どうぶつ", "ex": "The pig is big.", "exJa": "そのぶたはおおきいです。"},
-{"id": 10, "en": "bear", "ja": ["くま", "熊"], "cat": "どうぶつ", "ex": "I see a bear.", "exJa": "くまがみえます。"},
-{"id": 11, "en": "apple", "ja": ["りんご", "リンゴ", "林檎"], "cat": "たべもの", "ex": "I like apples.", "exJa": "わたしはりんごがすきです。"},
-{"id": 12, "en": "banana", "ja": ["バナナ", "ばなな"], "cat": "たべもの", "ex": "I eat a banana.", "exJa": "わたしはバナナをたべます。"},
-{"id": 13, "en": "orange", "ja": ["オレンジ", "おれんじ"], "cat": "たべもの", "ex": "This orange is sweet.", "exJa": "このオレンジはあまいです。"},
-{"id": 14, "en": "milk", "ja": ["ぎゅうにゅう", "牛乳", "ミルク"], "cat": "たべもの", "ex": "I drink milk.", "exJa": "わたしはぎゅうにゅうをのみます。"},
-{"id": 15, "en": "egg", "ja": ["たまご", "卵", "玉子"], "cat": "たべもの", "ex": "I eat an egg.", "exJa": "わたしはたまごをたべます。"},
-{"id": 16, "en": "bread", "ja": ["パン", "ぱん"], "cat": "たべもの", "ex": "I like bread.", "exJa": "わたしはパンがすきです。"},
-{"id": 17, "en": "rice", "ja": ["ごはん", "ご飯", "こめ", "米", "ライス"], "cat": "たべもの", "ex": "I eat rice.", "exJa": "わたしはごはんをたべます。"},
-{"id": 18, "en": "water", "ja": ["みず", "水"], "cat": "たべもの", "ex": "Water, please.", "exJa": "おみずをください。"},
-{"id": 19, "en": "cake", "ja": ["ケーキ", "けーき"], "cat": "たべもの", "ex": "This cake is nice.", "exJa": "このケーキはおいしいです。"},
-{"id": 20, "en": "tea", "ja": ["おちゃ", "お茶", "ちゃ", "茶", "こうちゃ", "紅茶"], "cat": "たべもの", "ex": "I drink tea.", "exJa": "わたしはおちゃをのみます。"},
-{"id": 21, "en": "lunch", "ja": ["ひるごはん", "昼ご飯", "昼ごはん", "昼食", "ランチ", "おひる"], "cat": "たべもの", "ex": "Lunch is ready.", "exJa": "ひるごはんができました。"},
-{"id": 22, "en": "breakfast", "ja": ["あさごはん", "朝ご飯", "朝ごはん", "朝食", "ちょうしょく"], "cat": "たべもの", "ex": "I eat breakfast.", "exJa": "わたしはあさごはんをたべます。"},
-{"id": 23, "en": "red", "ja": ["あか", "赤", "あかい", "赤い"], "cat": "いろ", "ex": "The apple is red.", "exJa": "そのりんごはあかいです。"},
-{"id": 24, "en": "blue", "ja": ["あお", "青", "あおい", "青い", "ブルー"], "cat": "いろ", "ex": "The sky is blue.", "exJa": "そらはあおいです。"},
-{"id": 25, "en": "yellow", "ja": ["きいろ", "黄色", "きいろい", "黄色い"], "cat": "いろ", "ex": "I like yellow.", "exJa": "わたしはきいろがすきです。"},
-{"id": 26, "en": "green", "ja": ["みどり", "緑", "みどりいろ", "グリーン"], "cat": "いろ", "ex": "The tree is green.", "exJa": "その木はみどりです。"},
-{"id": 27, "en": "white", "ja": ["しろ", "白", "しろい", "白い"], "cat": "いろ", "ex": "The cat is white.", "exJa": "そのねこはしろいです。"},
-{"id": 28, "en": "black", "ja": ["くろ", "黒", "くろい", "黒い"], "cat": "いろ", "ex": "I have a black bag.", "exJa": "わたしはくろいかばんをもっています。"},
-{"id": 29, "en": "one", "ja": ["いち", "一", "1"], "cat": "かず", "ex": "I have one pen.", "exJa": "わたしはペンを1ぽんもっています。"},
-{"id": 30, "en": "two", "ja": ["に", "二", "2"], "cat": "かず", "ex": "I have two dogs.", "exJa": "わたしはいぬを2ひきかっています。"},
-{"id": 31, "en": "three", "ja": ["さん", "三", "3"], "cat": "かず", "ex": "Three cats are here.", "exJa": "ここにねこが3びきいます。"},
-{"id": 32, "en": "four", "ja": ["よん", "し", "四", "4"], "cat": "かず", "ex": "I am four years old.", "exJa": "わたしは4さいです。"},
-{"id": 33, "en": "five", "ja": ["ご", "五", "5"], "cat": "かず", "ex": "Five apples, please.", "exJa": "りんごを5こください。"},
-{"id": 34, "en": "six", "ja": ["ろく", "六", "6"], "cat": "かず", "ex": "It is six o'clock.", "exJa": "6じです。"},
-{"id": 35, "en": "seven", "ja": ["なな", "しち", "七", "7"], "cat": "かず", "ex": "I get up at seven.", "exJa": "わたしは7じにおきます。"},
-{"id": 36, "en": "eight", "ja": ["はち", "八", "8"], "cat": "かず", "ex": "Eight birds are there.", "exJa": "そこに8わのとりがいます。"},
-{"id": 37, "en": "nine", "ja": ["きゅう", "く", "九", "9"], "cat": "かず", "ex": "I have nine books.", "exJa": "わたしはほんを9さつもっています。"},
-{"id": 38, "en": "ten", "ja": ["じゅう", "とお", "十", "10"], "cat": "かず", "ex": "Ten students are here.", "exJa": "ここにせいとが10にんいます。"},
-{"id": 39, "en": "book", "ja": ["ほん", "本"], "cat": "がっこう", "ex": "This is my book.", "exJa": "これはわたしのほんです。"},
-{"id": 40, "en": "pen", "ja": ["ペン", "ぺん"], "cat": "がっこう", "ex": "I have a pen.", "exJa": "わたしはペンをもっています。"},
-{"id": 41, "en": "pencil", "ja": ["えんぴつ", "鉛筆"], "cat": "がっこう", "ex": "Use a pencil.", "exJa": "えんぴつをつかいましょう。"},
-{"id": 42, "en": "desk", "ja": ["つくえ", "机", "デスク"], "cat": "がっこう", "ex": "My desk is big.", "exJa": "わたしのつくえはおおきいです。"},
-{"id": 43, "en": "bag", "ja": ["かばん", "鞄", "バッグ"], "cat": "がっこう", "ex": "My bag is new.", "exJa": "わたしのかばんはあたらしいです。"},
-{"id": 44, "en": "school", "ja": ["がっこう", "学校"], "cat": "がっこう", "ex": "I go to school.", "exJa": "わたしはがっこうにいきます。"},
-{"id": 45, "en": "teacher", "ja": ["せんせい", "先生"], "cat": "がっこう", "ex": "She is my teacher.", "exJa": "かのじょはわたしのせんせいです。"},
-{"id": 46, "en": "student", "ja": ["せいと", "生徒", "がくせい", "学生"], "cat": "がっこう", "ex": "I am a student.", "exJa": "わたしはせいとです。"},
-{"id": 47, "en": "classroom", "ja": ["きょうしつ", "教室"], "cat": "がっこう", "ex": "This is my classroom.", "exJa": "ここはわたしのきょうしつです。"},
-{"id": 48, "en": "eraser", "ja": ["けしゴム", "消しゴム", "けしごむ"], "cat": "がっこう", "ex": "I need an eraser.", "exJa": "わたしはけしゴムがひつようです。"},
-{"id": 49, "en": "notebook", "ja": ["ノート", "のーと"], "cat": "がっこう", "ex": "Open your notebook.", "exJa": "ノートをひらいてください。"},
-{"id": 50, "en": "music", "ja": ["おんがく", "音楽", "ミュージック"], "cat": "がっこう", "ex": "I like music.", "exJa": "わたしはおんがくがすきです。"},
-{"id": 51, "en": "mother", "ja": ["おかあさん", "お母さん", "はは", "母", "ママ"], "cat": "かぞく", "ex": "My mother is kind.", "exJa": "わたしのおかあさんはやさしいです。"},
-{"id": 52, "en": "father", "ja": ["おとうさん", "お父さん", "ちち", "父", "パパ"], "cat": "かぞく", "ex": "My father is tall.", "exJa": "わたしのおとうさんはせがたかいです。"},
-{"id": 53, "en": "brother", "ja": ["おにいさん", "お兄さん", "あに", "兄", "おとうと", "弟", "きょうだい", "兄弟"], "cat": "かぞく", "ex": "I have a brother.", "exJa": "わたしにはきょうだい(おとこ)がいます。"},
-{"id": 54, "en": "sister", "ja": ["おねえさん", "お姉さん", "あね", "姉", "いもうと", "妹", "しまい", "姉妹"], "cat": "かぞく", "ex": "I have a sister.", "exJa": "わたしにはしまい(おんな)がいます。"},
-{"id": 55, "en": "friend", "ja": ["ともだち", "友達", "友だち", "ゆうじん", "友人"], "cat": "かぞく", "ex": "He is my friend.", "exJa": "かれはわたしのともだちです。"},
-{"id": 56, "en": "family", "ja": ["かぞく", "家族", "ファミリー"], "cat": "かぞく", "ex": "I love my family.", "exJa": "わたしはかぞくがだいすきです。"},
-{"id": 57, "en": "run", "ja": ["はしる", "走る"], "cat": "どうし", "ex": "I run every day.", "exJa": "わたしはまいにちはしります。"},
-{"id": 58, "en": "eat", "ja": ["たべる", "食べる"], "cat": "どうし", "ex": "I eat lunch.", "exJa": "わたしはひるごはんをたべます。"},
-{"id": 59, "en": "drink", "ja": ["のむ", "飲む"], "cat": "どうし", "ex": "I drink water.", "exJa": "わたしはみずをのみます。"},
-{"id": 60, "en": "read", "ja": ["よむ", "読む"], "cat": "どうし", "ex": "I read a book.", "exJa": "わたしはほんをよみます。"},
-{"id": 61, "en": "write", "ja": ["かく", "書く"], "cat": "どうし", "ex": "I write a letter.", "exJa": "わたしはてがみをかきます。"},
-{"id": 62, "en": "play", "ja": ["あそぶ", "遊ぶ", "する", "やる"], "cat": "どうし", "ex": "I play soccer.", "exJa": "わたしはサッカーをします。"},
-{"id": 63, "en": "go", "ja": ["いく", "行く"], "cat": "どうし", "ex": "I go to school.", "exJa": "わたしはがっこうにいきます。"},
-{"id": 64, "en": "come", "ja": ["くる", "来る"], "cat": "どうし", "ex": "Come here.", "exJa": "ここにきてください。"},
-{"id": 65, "en": "see", "ja": ["みる", "見る", "みえる", "見える", "あう", "会う"], "cat": "どうし", "ex": "I see a bird.", "exJa": "とりがみえます。"},
-{"id": 66, "en": "sing", "ja": ["うたう", "歌う"], "cat": "どうし", "ex": "I sing a song.", "exJa": "わたしはうたをうたいます。"},
-{"id": 67, "en": "swim", "ja": ["およぐ", "泳ぐ"], "cat": "どうし", "ex": "I can swim.", "exJa": "わたしはおよげます。"},
-{"id": 68, "en": "walk", "ja": ["あるく", "歩く"], "cat": "どうし", "ex": "I walk to school.", "exJa": "わたしはがっこうまであるきます。"},
-{"id": 69, "en": "study", "ja": ["べんきょうする", "勉強する", "べんきょう", "勉強", "まなぶ", "学ぶ"], "cat": "どうし", "ex": "I study English.", "exJa": "わたしはえいごをべんきょうします。"},
-{"id": 70, "en": "like", "ja": ["すき", "好き", "すきだ", "好きだ", "このむ", "好む"], "cat": "どうし", "ex": "I like cats.", "exJa": "わたしはねこがすきです。"},
-{"id": 71, "en": "have", "ja": ["もつ", "持つ", "もっている", "持っている", "かっている", "飼っている", "ある", "いる"], "cat": "どうし", "ex": "I have a pen.", "exJa": "わたしはペンをもっています。"},
-{"id": 72, "en": "speak", "ja": ["はなす", "話す"], "cat": "どうし", "ex": "I speak English.", "exJa": "わたしはえいごをはなします。"},
-{"id": 73, "en": "listen", "ja": ["きく", "聞く", "聴く"], "cat": "どうし", "ex": "Listen to me.", "exJa": "わたしのはなしをきいて。"},
-{"id": 74, "en": "open", "ja": ["あける", "開ける", "ひらく", "開く"], "cat": "どうし", "ex": "Open the door.", "exJa": "ドアをあけて。"},
-{"id": 75, "en": "sleep", "ja": ["ねる", "寝る", "ねむる", "眠る"], "cat": "どうし", "ex": "I sleep at ten.", "exJa": "わたしは10じにねます。"},
-{"id": 76, "en": "big", "ja": ["おおきい", "大きい", "おおきな", "大きな"], "cat": "けいようし", "ex": "This is a big dog.", "exJa": "これはおおきないぬです。"},
-{"id": 77, "en": "small", "ja": ["ちいさい", "小さい", "ちいさな", "小さな"], "cat": "けいようし", "ex": "I have a small bag.", "exJa": "わたしはちいさなかばんをもっています。"},
-{"id": 78, "en": "happy", "ja": ["うれしい", "嬉しい", "しあわせ", "幸せ", "たのしい", "楽しい", "ハッピー"], "cat": "けいようし", "ex": "I am happy.", "exJa": "わたしはうれしいです。"},
-{"id": 79, "en": "good", "ja": ["いい", "よい", "良い", "すばらしい"], "cat": "けいようし", "ex": "Good idea!", "exJa": "いいかんがえだね！"},
-{"id": 80, "en": "new", "ja": ["あたらしい", "新しい", "ニュー"], "cat": "けいようし", "ex": "I have a new bag.", "exJa": "わたしはあたらしいかばんをもっています。"},
-{"id": 81, "en": "old", "ja": ["ふるい", "古い", "としをとった", "年をとった"], "cat": "けいようし", "ex": "This is an old book.", "exJa": "これはふるいほんです。"},
-{"id": 82, "en": "hot", "ja": ["あつい", "暑い", "熱い", "ホット"], "cat": "けいようし", "ex": "It is hot today.", "exJa": "きょうはあついです。"},
-{"id": 83, "en": "cold", "ja": ["さむい", "寒い", "つめたい", "冷たい"], "cat": "けいようし", "ex": "It is cold today.", "exJa": "きょうはさむいです。"},
-{"id": 84, "en": "sun", "ja": ["たいよう", "太陽", "おひさま", "日"], "cat": "しぜん", "ex": "The sun is bright.", "exJa": "たいようはあかるいです。"},
-{"id": 85, "en": "moon", "ja": ["つき", "月"], "cat": "しぜん", "ex": "Look at the moon.", "exJa": "つきをみて。"},
-{"id": 86, "en": "day", "ja": ["ひ", "日", "いちにち", "一日"], "cat": "じかん", "ex": "It is a nice day.", "exJa": "いいてんきのひですね。"},
-{"id": 87, "en": "morning", "ja": ["あさ", "朝"], "cat": "じかん", "ex": "Good morning.", "exJa": "おはよう。"},
-{"id": 88, "en": "night", "ja": ["よる", "夜", "ばん", "晩"], "cat": "じかん", "ex": "Good night.", "exJa": "おやすみなさい。"},
-{"id": 89, "en": "rain", "ja": ["あめ", "雨"], "cat": "しぜん", "ex": "It is rain today.", "exJa": "きょうはあめです。"},
-{"id": 90, "en": "snow", "ja": ["ゆき", "雪"], "cat": "しぜん", "ex": "I like snow.", "exJa": "わたしはゆきがすきです。"},
-{"id": 91, "en": "house", "ja": ["いえ", "家", "うち"], "cat": "ばしょ", "ex": "This is my house.", "exJa": "これはわたしのいえです。"},
-{"id": 92, "en": "park", "ja": ["こうえん", "公園", "パーク"], "cat": "ばしょ", "ex": "I go to the park.", "exJa": "わたしはこうえんにいきます。"},
-{"id": 93, "en": "car", "ja": ["くるま", "車", "じどうしゃ", "自動車", "カー"], "cat": "ばしょ", "ex": "My father has a car.", "exJa": "わたしのおとうさんはくるまをもっています。"},
-{"id": 94, "en": "bus", "ja": ["バス", "ばす"], "cat": "ばしょ", "ex": "I take a bus.", "exJa": "わたしはバスにのります。"},
-{"id": 95, "en": "train", "ja": ["でんしゃ", "電車", "れっしゃ", "列車", "トレイン"], "cat": "ばしょ", "ex": "I take a train.", "exJa": "わたしはでんしゃにのります。"},
-{"id": 96, "en": "boy", "ja": ["おとこのこ", "男の子", "しょうねん", "少年", "おとこ", "男"], "cat": "ひと", "ex": "The boy is tall.", "exJa": "そのおとこのこはせがたかいです。"},
-{"id": 97, "en": "girl", "ja": ["おんなのこ", "女の子", "しょうじょ", "少女", "おんな", "女"], "cat": "ひと", "ex": "The girl is happy.", "exJa": "そのおんなのこはうれしそうです。"},
-{"id": 98, "en": "hand", "ja": ["て", "手"], "cat": "からだ", "ex": "Wash your hands.", "exJa": "てをあらいましょう。"},
-{"id": 99, "en": "eye", "ja": ["め", "目"], "cat": "からだ", "ex": "I have two eyes.", "exJa": "わたしにはめが2つあります。"},
-{"id": 100, "en": "name", "ja": ["なまえ", "名前", "な", "名"], "cat": "ひと", "ex": "What is your name?", "exJa": "あなたのなまえはなんですか？"}
+  {
+    "id": 1,
+    "en": "a, an",
+    "ja": [
+      "ひとつの",
+      "ある"
+    ],
+    "cat": "かんし",
+    "ex": "This is an apple.",
+    "exJa": "これはひとつのりんごです。"
+  },
+  {
+    "id": 2,
+    "en": "about",
+    "ja": [
+      "〜について",
+      "およそ"
+    ],
+    "cat": "ぜんじし",
+    "ex": "Tell me about yourself.",
+    "exJa": "あなたについておしえてください。"
+  },
+  {
+    "id": 3,
+    "en": "after",
+    "ja": [
+      "〜のあとに"
+    ],
+    "cat": "ぜんじし",
+    "ex": "See you after school.",
+    "exJa": "ほうかごにあいましょう。"
+  },
+  {
+    "id": 4,
+    "en": "afternoon",
+    "ja": [
+      "ごご",
+      "午後"
+    ],
+    "cat": "じかん",
+    "ex": "Good afternoon.",
+    "exJa": "こんにちは。"
+  },
+  {
+    "id": 5,
+    "en": "airport",
+    "ja": [
+      "くうこう",
+      "空港"
+    ],
+    "cat": "ばしょ",
+    "ex": "We arrived at the airport.",
+    "exJa": "わたしたちはくうこうにつきました。"
+  },
+  {
+    "id": 6,
+    "en": "album",
+    "ja": [
+      "アルバム"
+    ],
+    "cat": "もの",
+    "ex": "Look at this photo album.",
+    "exJa": "このしゃしんアルバムをみて。"
+  },
+  {
+    "id": 7,
+    "en": "all",
+    "ja": [
+      "すべて",
+      "ぜんぶ"
+    ],
+    "cat": "めいし",
+    "ex": "All students are here.",
+    "exJa": "ぜんいん揃っています。"
+  },
+  {
+    "id": 8,
+    "en": "also",
+    "ja": [
+      "〜もまた"
+    ],
+    "cat": "ふくし",
+    "ex": "I also like cats.",
+    "exJa": "わたしもねこがすきです。"
+  },
+  {
+    "id": 9,
+    "en": "always",
+    "ja": [
+      "いつも",
+      "つねに"
+    ],
+    "cat": "ふくし",
+    "ex": "He is always happy.",
+    "exJa": "かれはいつもたのしそうです。"
+  },
+  {
+    "id": 10,
+    "en": "am",
+    "ja": [
+      "〜です",
+      "いる"
+    ],
+    "cat": "どうし",
+    "ex": "I am a student.",
+    "exJa": "わたしはせいとです。"
+  },
+  {
+    "id": 11,
+    "en": "a.m.",
+    "ja": [
+      "ごぜん",
+      "午前"
+    ],
+    "cat": "じかん",
+    "ex": "It is 9 a.m.",
+    "exJa": "ごぜん9じです。"
+  },
+  {
+    "id": 12,
+    "en": "and",
+    "ja": [
+      "〜と",
+      "そして"
+    ],
+    "cat": "せ接続詞",
+    "ex": "Apples and oranges.",
+    "exJa": "りんごとオレンジ。"
+  },
+  {
+    "id": 13,
+    "en": "animal",
+    "ja": [
+      "どうぶつ",
+      "動物"
+    ],
+    "cat": "どうぶつ",
+    "ex": "I like animals.",
+    "exJa": "わたしはどうぶつがすきです。"
+  },
+  {
+    "id": 14,
+    "en": "any",
+    "ja": [
+      "いくらかの",
+      "どれでも"
+    ],
+    "cat": "めいし",
+    "ex": "Do you have any pens?",
+    "exJa": "ペンをなにかもっていますか？"
+  },
+  {
+    "id": 15,
+    "en": "apple",
+    "ja": [
+      "りんご",
+      "リンゴ"
+    ],
+    "cat": "たべもの",
+    "ex": "I like apples.",
+    "exJa": "わたしはりんごがすきです。"
+  },
+  {
+    "id": 16,
+    "en": "April",
+    "ja": [
+      "しがつ",
+      "4月"
+    ],
+    "cat": "じかん",
+    "ex": "School starts in April.",
+    "exJa": "がっこうは4がつにはじまります。"
+  },
+  {
+    "id": 17,
+    "en": "are",
+    "ja": [
+      "〜です",
+      "いる"
+    ],
+    "cat": "どうし",
+    "ex": "They are happy.",
+    "exJa": "かれらはしあわせです。"
+  },
+  {
+    "id": 18,
+    "en": "around",
+    "ja": [
+      "〜のまわりに",
+      "およそ"
+    ],
+    "cat": "ぜんじし",
+    "ex": "Run around the park.",
+    "exJa": "こうえんのまわりをはしります。"
+  },
+  {
+    "id": 19,
+    "en": "art",
+    "ja": [
+      "びじゅつ",
+      "美術",
+      "げいじゅつ"
+    ],
+    "cat": "がっこう",
+    "ex": "I like art class.",
+    "exJa": "わたしはびじゅつのじゅぎょうがすきです。"
+  },
+  {
+    "id": 20,
+    "en": "at",
+    "ja": [
+      "〜に",
+      "〜で"
+    ],
+    "cat": "ぜんじし",
+    "ex": "At school.",
+    "exJa": "がっこうで。"
+  },
+  {
+    "id": 21,
+    "en": "August",
+    "ja": [
+      "はちがつ",
+      "8月"
+    ],
+    "cat": "じかん",
+    "ex": "August is hot.",
+    "exJa": "8がつにあついです。"
+  },
+  {
+    "id": 22,
+    "en": "aunt",
+    "ja": [
+      "おば",
+      "叔母",
+      "伯母"
+    ],
+    "cat": "かぞく",
+    "ex": "My aunt is kind.",
+    "exJa": "わたしのおばはやさしいです。"
+  },
+  {
+    "id": 23,
+    "en": "Australia",
+    "ja": [
+      "オーストラリア"
+    ],
+    "cat": "ばしょ",
+    "ex": "I want to go to Australia.",
+    "exJa": "わたしはオーストラリアにいきたいです。"
+  },
+  {
+    "id": 24,
+    "en": "backpack",
+    "ja": [
+      "リュックサック",
+      "ランドセル"
+    ],
+    "cat": "がっこう",
+    "ex": "My backpack is heavy.",
+    "exJa": "わたしのリュックサックはおもいです。"
+  },
+  {
+    "id": 25,
+    "en": "badminton",
+    "ja": [
+      "バドミントン"
+    ],
+    "cat": "スポーツ",
+    "ex": "Play badminton.",
+    "exJa": "バドミントンをする。"
+  },
+  {
+    "id": 26,
+    "en": "bag",
+    "ja": [
+      "かばん",
+      "鞄",
+      "バッグ"
+    ],
+    "cat": "がっこう",
+    "ex": "My bag is new.",
+    "exJa": "わたしのかばんはあたらしいです。"
+  },
+  {
+    "id": 27,
+    "en": "ball",
+    "ja": [
+      "ボール",
+      "たま",
+      "球"
+    ],
+    "cat": "スポーツ",
+    "ex": "Catch the ball.",
+    "exJa": "ボールをつかまえて。"
+  },
+  {
+    "id": 28,
+    "en": "banana",
+    "ja": [
+      "バナナ",
+      "ばなな"
+    ],
+    "cat": "たべもの",
+    "ex": "I eat a banana.",
+    "exJa": "わたしはバナナをたべます。"
+  },
+  {
+    "id": 29,
+    "en": "bank",
+    "ja": [
+      "ぎんこう",
+      "銀行"
+    ],
+    "cat": "ばしょ",
+    "ex": "Go to the bank.",
+    "exJa": "ぎんこうにいく。"
+  },
+  {
+    "id": 30,
+    "en": "baseball",
+    "ja": [
+      "やきゅう",
+      "野球"
+    ],
+    "cat": "スポーツ",
+    "ex": "I play baseball.",
+    "exJa": "わたしはやきゅうをします。"
+  },
+  {
+    "id": 31,
+    "en": "basket",
+    "ja": [
+      "かご",
+      "バスケット"
+    ],
+    "cat": "もの",
+    "ex": "Put it in the basket.",
+    "exJa": "かごにいれてください。"
+  },
+  {
+    "id": 32,
+    "en": "basketball",
+    "ja": [
+      "バスケットボール"
+    ],
+    "cat": "スポーツ",
+    "ex": "Play basketball.",
+    "exJa": "バスケットボールをする。"
+  },
+  {
+    "id": 33,
+    "en": "bath",
+    "ja": [
+      "おふろ",
+      "お風呂"
+    ],
+    "cat": "くらし",
+    "ex": "Take a bath.",
+    "exJa": "おふろにはいる。"
+  },
+  {
+    "id": 34,
+    "en": "bathroom",
+    "ja": [
+      "よくしつ",
+      "浴室",
+      "お手洗い",
+      "トイレ"
+    ],
+    "cat": "ばしょ",
+    "ex": "Where is the bathroom?",
+    "exJa": "トイレはどこですか？"
+  },
+  {
+    "id": 35,
+    "en": "beach",
+    "ja": [
+      "うみべ",
+      "海辺",
+      "ビーチ"
+    ],
+    "cat": "ばしょ",
+    "ex": "Walk on the beach.",
+    "exJa": "うみべをあるく。"
+  },
+  {
+    "id": 36,
+    "en": "beautiful",
+    "ja": [
+      "うつくしい",
+      "美しい",
+      "きれいな"
+    ],
+    "cat": "けいようし",
+    "ex": "This flower is beautiful.",
+    "exJa": "このはなはきれいです。"
+  },
+  {
+    "id": 37,
+    "en": "bed",
+    "ja": [
+      "ベッド"
+    ],
+    "cat": "くらし",
+    "ex": "Go to bed.",
+    "exJa": "ねる（ベッドにいく）。"
+  },
+  {
+    "id": 38,
+    "en": "bedroom",
+    "ja": [
+      "しんしつ",
+      "寝室"
+    ],
+    "cat": "ばしょ",
+    "ex": "This is my bedroom.",
+    "exJa": "ここはわたしのしんしつです。"
+  },
+  {
+    "id": 39,
+    "en": "before",
+    "ja": [
+      "〜のまえに"
+    ],
+    "cat": "ぜんじし",
+    "ex": "Before dinner.",
+    "exJa": "ばんごはんのまえに。"
+  },
+  {
+    "id": 40,
+    "en": "bicycle",
+    "ja": [
+      "じてんしゃ",
+      "自転車"
+    ],
+    "cat": "のりもの",
+    "ex": "Ride a bicycle.",
+    "exJa": "じてんしゃにのる。"
+  },
+  {
+    "id": 41,
+    "en": "big",
+    "ja": [
+      "おおきい",
+      "大きい"
+    ],
+    "cat": "けいようし",
+    "ex": "This is a big dog.",
+    "exJa": "これはおおきないぬです。"
+  },
+  {
+    "id": 42,
+    "en": "bike",
+    "ja": [
+      "じてんしゃ",
+      "自転車",
+      "バイク"
+    ],
+    "cat": "のりもの",
+    "ex": "I have a bike.",
+    "exJa": "わたしはじてんしゃをもっています。"
+  },
+  {
+    "id": 43,
+    "en": "bird",
+    "ja": [
+      "とり",
+      "鳥"
+    ],
+    "cat": "どうぶつ",
+    "ex": "A bird can fly.",
+    "exJa": "とりはとべます。"
+  },
+  {
+    "id": 44,
+    "en": "birthday",
+    "ja": [
+      "たんじょうび",
+      "誕生日"
+    ],
+    "cat": "じかん",
+    "ex": "Happy birthday!",
+    "exJa": "たんじょうびおめでとう！"
+  },
+  {
+    "id": 45,
+    "en": "black",
+    "ja": [
+      "くろ",
+      "黒",
+      "くろい"
+    ],
+    "cat": "いろ",
+    "ex": "I have a black bag.",
+    "exJa": "わたしはくろいかばんをもっています。"
+  },
+  {
+    "id": 46,
+    "en": "blackboard",
+    "ja": [
+      "こくばん",
+      "黒板"
+    ],
+    "cat": "がっこう",
+    "ex": "Look at the blackboard.",
+    "exJa": "こくばんをみてください。"
+  },
+  {
+    "id": 47,
+    "en": "blue",
+    "ja": [
+      "あお",
+      "青",
+      "あおい"
+    ],
+    "cat": "いろ",
+    "ex": "The sky is blue.",
+    "exJa": "そらはあおいです。"
+  },
+  {
+    "id": 48,
+    "en": "book",
+    "ja": [
+      "ほん",
+      "本"
+    ],
+    "cat": "がっこう",
+    "ex": "This is my book.",
+    "exJa": "これはわたしのほんです。"
+  },
+  {
+    "id": 49,
+    "en": "bookstore",
+    "ja": [
+      "ほんや",
+      "本屋",
+      "しょてん"
+    ],
+    "cat": "ばしょ",
+    "ex": "I go to the bookstore.",
+    "exJa": "わたしはほんやにいぎます。"
+  },
+  {
+    "id": 50,
+    "en": "box",
+    "ja": [
+      "はこ",
+      "箱",
+      "ボックス"
+    ],
+    "cat": "もの",
+    "ex": "Open the box.",
+    "exJa": "はこをあけて。"
+  },
+  {
+    "id": 51,
+    "en": "boy",
+    "ja": [
+      "おとこのこ",
+      "男の子"
+    ],
+    "cat": "ひと",
+    "ex": "The boy is tall.",
+    "exJa": "そのおとこのこはせがたかいです。"
+  },
+  {
+    "id": 52,
+    "en": "bread",
+    "ja": [
+      "パン",
+      "ぱん"
+    ],
+    "cat": "たべもの",
+    "ex": "I like bread.",
+    "exJa": "わたしはパンがすきです。"
+  },
+  {
+    "id": 53,
+    "en": "breakfast",
+    "ja": [
+      "あさごはん",
+      "朝ご飯",
+      "朝食"
+    ],
+    "cat": "たべもの",
+    "ex": "I eat breakfast.",
+    "exJa": "わたしはあさごはんをたべます。"
+  },
+  {
+    "id": 54,
+    "en": "bridge",
+    "ja": [
+      "はし",
+      "橋"
+    ],
+    "cat": "ばしょ",
+    "ex": "Cross the bridge.",
+    "exJa": "はしをわたる。"
+  },
+  {
+    "id": 55,
+    "en": "brother",
+    "ja": [
+      "きょうだい",
+      "兄弟",
+      "おにいさん",
+      "おとうと"
+    ],
+    "cat": "かぞく",
+    "ex": "I have a brother.",
+    "exJa": "わたしにはきょうだいがいます。"
+  },
+  {
+    "id": 56,
+    "en": "brown",
+    "ja": [
+      "ちゃいろ",
+      "茶色"
+    ],
+    "cat": "いろ",
+    "ex": "The bear is brown.",
+    "exJa": "くまはちゃいろです。"
+  },
+  {
+    "id": 57,
+    "en": "brush",
+    "ja": [
+      "みがく",
+      "ブラシ"
+    ],
+    "cat": "どうし",
+    "ex": "Brush your teeth.",
+    "exJa": "はをみがきましょう。"
+  },
+  {
+    "id": 58,
+    "en": "building",
+    "ja": [
+      "たてもの",
+      "建物",
+      "ビル"
+    ],
+    "cat": "ばしょ",
+    "ex": "This building is high.",
+    "exJa": "このたてものはたかいです。"
+  },
+  {
+    "id": 59,
+    "en": "bus",
+    "ja": [
+      "バス",
+      "ばす"
+    ],
+    "cat": "のりもの",
+    "ex": "I take a bus.",
+    "exJa": "わたしはバスにのります。"
+  },
+  {
+    "id": 60,
+    "en": "bus stop",
+    "ja": [
+      "バスてい",
+      "バス停"
+    ],
+    "cat": "ばしょ",
+    "ex": "Wait at the bus stop.",
+    "exJa": "バスていでまつ。"
+  },
+  {
+    "id": 61,
+    "en": "busy",
+    "ja": [
+      "いそがしい",
+      "忙しい"
+    ],
+    "cat": "けいようし",
+    "ex": "I am busy today.",
+    "exJa": "きょうはいそがしいです。"
+  },
+  {
+    "id": 62,
+    "en": "but",
+    "ja": [
+      "しかし",
+      "でも"
+    ],
+    "cat": "せつぞくし",
+    "ex": "Small but strong.",
+    "exJa": "ちいさいけれどつよい。"
+  },
+  {
+    "id": 63,
+    "en": "buy",
+    "ja": [
+      "かう",
+      "買う"
+    ],
+    "cat": "どうし",
+    "ex": "Buy a present.",
+    "exJa": "プレゼントをかう。"
+  },
+  {
+    "id": 64,
+    "en": "by",
+    "ja": [
+      "〜のそばに",
+      "〜によって"
+    ],
+    "cat": "ぜんじし",
+    "ex": "By train.",
+    "exJa": "でんしゃで。"
+  },
+  {
+    "id": 65,
+    "en": "cafeteria",
+    "ja": [
+      "しょくどう",
+      "食堂"
+    ],
+    "cat": "ばしょ",
+    "ex": "I eat in the cafeteria.",
+    "exJa": "わたしはしょくどうでたべます。"
+  },
+  {
+    "id": 66,
+    "en": "cake",
+    "ja": [
+      "ケーキ"
+    ],
+    "cat": "たべもの",
+    "ex": "This cake is nice.",
+    "exJa": "このケーキはおいしいです。"
+  },
+  {
+    "id": 67,
+    "en": "calendar",
+    "ja": [
+      "カレンダー",
+      "こよみ"
+    ],
+    "cat": "もの",
+    "ex": "Look at the calendar.",
+    "exJa": "カレンダーをみて。"
+  },
+  {
+    "id": 68,
+    "en": "call",
+    "ja": [
+      "でんわする",
+      "電話する",
+      "よぶ",
+      "呼ぶ"
+    ],
+    "cat": "どうし",
+    "ex": "Call me later.",
+    "exJa": "あとででんわしてね。"
+  },
+  {
+    "id": 69,
+    "en": "camera",
+    "ja": [
+      "カメラ"
+    ],
+    "cat": "もの",
+    "ex": "I have a camera.",
+    "exJa": "わたしはカメラをもっています。"
+  },
+  {
+    "id": 70,
+    "en": "camp",
+    "ja": [
+      "キャンプ"
+    ],
+    "cat": "あそび",
+    "ex": "Go to camp.",
+    "exJa": "キャンプにいく。"
+  },
+  {
+    "id": 71,
+    "en": "can",
+    "ja": [
+      "〜できる"
+    ],
+    "cat": "どうし",
+    "ex": "I can swim.",
+    "exJa": "わたしはおよげます。"
+  },
+  {
+    "id": 72,
+    "en": "Canada",
+    "ja": [
+      "カナダ"
+    ],
+    "cat": "ばしょ",
+    "ex": "He lives in Canada.",
+    "exJa": "かれはカナダにすんでいます。"
+  },
+  {
+    "id": 73,
+    "en": "cap",
+    "ja": [
+      "ぼうし",
+      "帽子",
+      "キャップ"
+    ],
+    "cat": "ふく",
+    "ex": "Wear a cap.",
+    "exJa": "ぼうしをかぶる。"
+  },
+  {
+    "id": 74,
+    "en": "car",
+    "ja": [
+      "くるま",
+      "車"
+    ],
+    "cat": "のりもの",
+    "ex": "My father has a car.",
+    "exJa": "わたしのおとうさんはくるまをもっています。"
+  },
+  {
+    "id": 75,
+    "en": "card",
+    "ja": [
+      "カード"
+    ],
+    "cat": "もの",
+    "ex": "Send a card.",
+    "exJa": "カードをおくる。"
+  },
+  {
+    "id": 76,
+    "en": "carrot",
+    "ja": [
+      "にんじん",
+      "人参"
+    ],
+    "cat": "たべもの",
+    "ex": "I like carrots.",
+    "exJa": "わたしはにんじんがすきです。"
+  },
+  {
+    "id": 77,
+    "en": "cat",
+    "ja": [
+      "ねこ",
+      "猫"
+    ],
+    "cat": "どうぶつ",
+    "ex": "The cat is cute.",
+    "exJa": "そのねこはかわいいです。"
+  },
+  {
+    "id": 78,
+    "en": "CD",
+    "ja": [
+      "シーディー",
+      "CD"
+    ],
+    "cat": "もの",
+    "ex": "Listen to a CD.",
+    "exJa": "CDをきく。"
+  },
+  {
+    "id": 79,
+    "en": "cent",
+    "ja": [
+      "セント"
+    ],
+    "cat": "おかね",
+    "ex": "One cent.",
+    "exJa": "1セント。"
+  },
+  {
+    "id": 80,
+    "en": "centimeter",
+    "ja": [
+      "センチメートル"
+    ],
+    "cat": "たんい",
+    "ex": "Ten centimeters.",
+    "exJa": "10センチメートル。"
+  },
+  {
+    "id": 81,
+    "en": "chair",
+    "ja": [
+      "いす",
+      "椅子"
+    ],
+    "cat": "もの",
+    "ex": "Sit on the chair.",
+    "exJa": "いすにすわる。"
+  },
+  {
+    "id": 82,
+    "en": "children",
+    "ja": [
+      "こどもたち",
+      "子供たち"
+    ],
+    "cat": "ひと",
+    "ex": "Children are playing.",
+    "exJa": "こどもたちがあそんでいます。"
+  },
+  {
+    "id": 83,
+    "en": "Chinese",
+    "ja": [
+      "ちゅうごくご",
+      "中国語",
+      "ちゅうごくじん",
+      "中国人"
+    ],
+    "cat": "ことば",
+    "ex": "Speak Chinese.",
+    "exJa": "ちゅうごくごをはなす。"
+  },
+  {
+    "id": 84,
+    "en": "chocolate",
+    "ja": [
+      "チョコレート"
+    ],
+    "cat": "たべもの",
+    "ex": "I like chocolate.",
+    "exJa": "わたしはチョコレートがすきです。"
+  },
+  {
+    "id": 85,
+    "en": "chopstick",
+    "ja": [
+      "はし",
+      "箸"
+    ],
+    "cat": "もの",
+    "ex": "Use chopsticks.",
+    "exJa": "おはしをつかう。"
+  },
+  {
+    "id": 86,
+    "en": "city",
+    "ja": [
+      "まち",
+      "町",
+      "とし",
+      "都市"
+    ],
+    "cat": "ばしょ",
+    "ex": "A big city.",
+    "exJa": "おおきなまち。"
+  },
+  {
+    "id": 87,
+    "en": "class",
+    "ja": [
+      "じゅぎょう",
+      "授業",
+      "クラス"
+    ],
+    "cat": "がっこう",
+    "ex": "English class.",
+    "exJa": "えいごのじゅぎょう。"
+  },
+  {
+    "id": 88,
+    "en": "classmate",
+    "ja": [
+      "クラスメイト",
+      "くらすめいと",
+      "クラスの友だち"
+    ],
+    "cat": "がっこう",
+    "ex": "She is my classmate.",
+    "exJa": "かのじょはわたしのクラスメイトです。"
+  },
+  {
+    "id": 89,
+    "en": "classroom",
+    "ja": [
+      "きょうしつ",
+      "教室"
+    ],
+    "cat": "がっこう",
+    "ex": "This is my classroom.",
+    "exJa": "ここはわたしのきょうしつです。"
+  },
+  {
+    "id": 90,
+    "en": "clean",
+    "ja": [
+      "そうじする",
+      "掃除する",
+      "きれいな"
+    ],
+    "cat": "どうし",
+    "ex": "Clean your room.",
+    "exJa": "へやをそうじしなさい。"
+  },
+  {
+    "id": 91,
+    "en": "close",
+    "ja": [
+      "しめる",
+      "閉める",
+      "ちかい"
+    ],
+    "cat": "どうし",
+    "ex": "Close the door.",
+    "exJa": "ドアを閉めて。"
+  },
+  {
+    "id": 92,
+    "en": "cloudy",
+    "ja": [
+      "くもり",
+      "曇り",
+      "くもった"
+    ],
+    "cat": "てんき",
+    "ex": "It is cloudy today.",
+    "exJa": "きょうはくもりです。"
+  },
+  {
+    "id": 93,
+    "en": "club",
+    "ja": [
+      "クラブ",
+      "ぶかつ",
+      "部活"
+    ],
+    "cat": "がっこう",
+    "ex": "Join the club.",
+    "exJa": "クラブにはいる。"
+  },
+  {
+    "id": 94,
+    "en": "coat",
+    "ja": [
+      "コート"
+    ],
+    "cat": "ふく",
+    "ex": "Wear a coat.",
+    "exJa": "コートをきる。"
+  },
+  {
+    "id": 95,
+    "en": "coffee",
+    "ja": [
+      "コーヒー"
+    ],
+    "cat": "たべもの",
+    "ex": "Drink coffee.",
+    "exJa": "コーヒーをのむ。"
+  },
+  {
+    "id": 96,
+    "en": "cold",
+    "ja": [
+      "さむい",
+      "寒い",
+      "つめたい"
+    ],
+    "cat": "けいようし",
+    "ex": "It is cold today.",
+    "exJa": "きょうはさむいです。"
+  },
+  {
+    "id": 97,
+    "en": "color",
+    "ja": [
+      "いろ",
+      "色"
+    ],
+    "cat": "いろ",
+    "ex": "What color do you like?",
+    "exJa": "なんのいろがすきですか？"
+  },
+  {
+    "id": 98,
+    "en": "come",
+    "ja": [
+      "くる",
+      "来る"
+    ],
+    "cat": "どうし",
+    "ex": "Come here.",
+    "exJa": "ここにきてください。"
+  },
+  {
+    "id": 99,
+    "en": "comic book",
+    "ja": [
+      "まんが",
+      "漫画",
+      "マンガ本"
+    ],
+    "cat": "ほん",
+    "ex": "Read a comic book.",
+    "exJa": "マンガをよむ。"
+  },
+  {
+    "id": 100,
+    "en": "computer",
+    "ja": [
+      "コンピューター",
+      "パソコン"
+    ],
+    "cat": "もの",
+    "ex": "Use a computer.",
+    "exJa": "コンピューターをつかう。"
+  },
+  {
+    "id": 101,
+    "en": "concert",
+    "ja": [
+      "コンサート"
+    ],
+    "cat": "おんがく",
+    "ex": "Go to a concert.",
+    "exJa": "コンサートにいぐ。"
+  },
+  {
+    "id": 102,
+    "en": "cook",
+    "ja": [
+      "りょうりする",
+      "料理する"
+    ],
+    "cat": "どうし",
+    "ex": "Cook dinner.",
+    "exJa": "ばんごはんをりょうりする。"
+  },
+  {
+    "id": 103,
+    "en": "cookie",
+    "ja": [
+      "クッキー"
+    ],
+    "cat": "たべもの",
+    "ex": "Eat a cookie.",
+    "exJa": "クッキーをたべる。"
+  },
+  {
+    "id": 104,
+    "en": "country",
+    "ja": [
+      "くに",
+      "国"
+    ],
+    "cat": "ばしょ",
+    "ex": "A beautiful country.",
+    "exJa": "うつくしいくに。"
+  },
+  {
+    "id": 105,
+    "en": "cucumber",
+    "ja": [
+      "きゅうり"
+    ],
+    "cat": "たべもの",
+    "ex": "Fresh cucumber.",
+    "exJa": "しんせんなきゅうり。"
+  },
+  {
+    "id": 106,
+    "en": "cup",
+    "ja": [
+      "カップ",
+      "コップ"
+    ],
+    "cat": "もの",
+    "ex": "A cup of tea.",
+    "exJa": "おちゃ1ぱい。"
+  },
+  {
+    "id": 107,
+    "en": "curry",
+    "ja": [
+      "カレー"
+    ],
+    "cat": "たべもの",
+    "ex": "I like curry.",
+    "exJa": "わたしはカレーがすきです。"
+  },
+  {
+    "id": 108,
+    "en": "curtain",
+    "ja": [
+      "カーテン"
+    ],
+    "cat": "もの",
+    "ex": "Open the curtain.",
+    "exJa": "カーテンをあける。"
+  },
+  {
+    "id": 109,
+    "en": "cut",
+    "ja": [
+      "きる",
+      "切る"
+    ],
+    "cat": "どうし",
+    "ex": "Cut the cake.",
+    "exJa": "ケーキをきる。"
+  },
+  {
+    "id": 110,
+    "en": "cute",
+    "ja": [
+      "かわいい"
+    ],
+    "cat": "けいようし",
+    "ex": "The cat is cute.",
+    "exJa": "そのねこはかわいいです。"
+  },
+  {
+    "id": 111,
+    "en": "dance",
+    "ja": [
+      "dance"
+    ],
+    "cat": "たんご",
+    "ex": "This is dance.",
+    "exJa": "これはdanceです。"
+  },
+  {
+    "id": 112,
+    "en": "dancer",
+    "ja": [
+      "dancer"
+    ],
+    "cat": "たんご",
+    "ex": "This is dancer.",
+    "exJa": "これはdancerです。"
+  },
+  {
+    "id": 113,
+    "en": "date",
+    "ja": [
+      "date"
+    ],
+    "cat": "たんご",
+    "ex": "This is date.",
+    "exJa": "これはdateです。"
+  },
+  {
+    "id": 114,
+    "en": "daughter",
+    "ja": [
+      "daughter"
+    ],
+    "cat": "たんご",
+    "ex": "This is daughter.",
+    "exJa": "これはdaughterです。"
+  },
+  {
+    "id": 115,
+    "en": "day",
+    "ja": [
+      "day"
+    ],
+    "cat": "たんご",
+    "ex": "This is day.",
+    "exJa": "これはdayです。"
+  },
+  {
+    "id": 116,
+    "en": "December",
+    "ja": [
+      "December"
+    ],
+    "cat": "たんご",
+    "ex": "This is December.",
+    "exJa": "これはDecemberです。"
+  },
+  {
+    "id": 117,
+    "en": "department store",
+    "ja": [
+      "department store"
+    ],
+    "cat": "たんご",
+    "ex": "This is department store.",
+    "exJa": "これはdepartment storeです。"
+  },
+  {
+    "id": 118,
+    "en": "desk",
+    "ja": [
+      "desk"
+    ],
+    "cat": "たんご",
+    "ex": "This is desk.",
+    "exJa": "これはdeskです。"
+  },
+  {
+    "id": 119,
+    "en": "dessert",
+    "ja": [
+      "dessert"
+    ],
+    "cat": "たんご",
+    "ex": "This is dessert.",
+    "exJa": "これはdessertです。"
+  },
+  {
+    "id": 120,
+    "en": "diary",
+    "ja": [
+      "diary"
+    ],
+    "cat": "たんご",
+    "ex": "This is diary.",
+    "exJa": "これはdiaryです。"
+  },
+  {
+    "id": 121,
+    "en": "dictionary",
+    "ja": [
+      "dictionary"
+    ],
+    "cat": "たんご",
+    "ex": "This is dictionary.",
+    "exJa": "これはdictionaryです。"
+  },
+  {
+    "id": 122,
+    "en": "dining room",
+    "ja": [
+      "dining room"
+    ],
+    "cat": "たんご",
+    "ex": "This is dining room.",
+    "exJa": "これはdining roomです。"
+  },
+  {
+    "id": 123,
+    "en": "dinner",
+    "ja": [
+      "dinner"
+    ],
+    "cat": "たんご",
+    "ex": "This is dinner.",
+    "exJa": "これはdinnerです。"
+  },
+  {
+    "id": 124,
+    "en": "dish",
+    "ja": [
+      "dish"
+    ],
+    "cat": "たんご",
+    "ex": "This is dish.",
+    "exJa": "これはdishです。"
+  },
+  {
+    "id": 125,
+    "en": "do, does",
+    "ja": [
+      "do, does"
+    ],
+    "cat": "たんご",
+    "ex": "This is do, does.",
+    "exJa": "これはdo, doesです。"
+  },
+  {
+    "id": 126,
+    "en": "doctor",
+    "ja": [
+      "doctor"
+    ],
+    "cat": "たんご",
+    "ex": "This is doctor.",
+    "exJa": "これはdoctorです。"
+  },
+  {
+    "id": 127,
+    "en": "dog",
+    "ja": [
+      "dog"
+    ],
+    "cat": "たんご",
+    "ex": "This is dog.",
+    "exJa": "これはdogです。"
+  },
+  {
+    "id": 128,
+    "en": "dollar",
+    "ja": [
+      "dollar"
+    ],
+    "cat": "たんご",
+    "ex": "This is dollar.",
+    "exJa": "これはdollarです。"
+  },
+  {
+    "id": 129,
+    "en": "dolphin",
+    "ja": [
+      "dolphin"
+    ],
+    "cat": "たんご",
+    "ex": "This is dolphin.",
+    "exJa": "これはdolphinです。"
+  },
+  {
+    "id": 130,
+    "en": "door",
+    "ja": [
+      "door"
+    ],
+    "cat": "たんご",
+    "ex": "This is door.",
+    "exJa": "これはdoorです。"
+  },
+  {
+    "id": 131,
+    "en": "down",
+    "ja": [
+      "down"
+    ],
+    "cat": "たんご",
+    "ex": "This is down.",
+    "exJa": "これはdownです。"
+  },
+  {
+    "id": 132,
+    "en": "drink",
+    "ja": [
+      "drink"
+    ],
+    "cat": "たんご",
+    "ex": "This is drink.",
+    "exJa": "これはdrinkです。"
+  },
+  {
+    "id": 133,
+    "en": "driver",
+    "ja": [
+      "driver"
+    ],
+    "cat": "たんご",
+    "ex": "This is driver.",
+    "exJa": "これはdriverです。"
+  },
+  {
+    "id": 134,
+    "en": "DVD",
+    "ja": [
+      "DVD"
+    ],
+    "cat": "たんご",
+    "ex": "This is DVD.",
+    "exJa": "これはDVDです。"
+  },
+  {
+    "id": 135,
+    "en": "ear",
+    "ja": [
+      "ear"
+    ],
+    "cat": "たんご",
+    "ex": "This is ear.",
+    "exJa": "これはearです。"
+  },
+  {
+    "id": 136,
+    "en": "easy",
+    "ja": [
+      "easy"
+    ],
+    "cat": "たんご",
+    "ex": "This is easy.",
+    "exJa": "これはeasyです。"
+  },
+  {
+    "id": 137,
+    "en": "eat",
+    "ja": [
+      "eat"
+    ],
+    "cat": "たんご",
+    "ex": "This is eat.",
+    "exJa": "これはeatです。"
+  },
+  {
+    "id": 138,
+    "en": "egg",
+    "ja": [
+      "egg"
+    ],
+    "cat": "たんご",
+    "ex": "This is egg.",
+    "exJa": "これはeggです。"
+  },
+  {
+    "id": 139,
+    "en": "eight",
+    "ja": [
+      "eight"
+    ],
+    "cat": "たんご",
+    "ex": "This is eight.",
+    "exJa": "これはeightです。"
+  },
+  {
+    "id": 140,
+    "en": "eighteen",
+    "ja": [
+      "eighteen"
+    ],
+    "cat": "たんご",
+    "ex": "This is eighteen.",
+    "exJa": "これはeighteenです。"
+  },
+  {
+    "id": 141,
+    "en": "eighth",
+    "ja": [
+      "eighth"
+    ],
+    "cat": "たんご",
+    "ex": "This is eighth.",
+    "exJa": "これはeighthです。"
+  },
+  {
+    "id": 142,
+    "en": "eighty",
+    "ja": [
+      "eighty"
+    ],
+    "cat": "たんご",
+    "ex": "This is eighty.",
+    "exJa": "これはeightyです。"
+  },
+  {
+    "id": 143,
+    "en": "elephant",
+    "ja": [
+      "elephant"
+    ],
+    "cat": "たんご",
+    "ex": "This is elephant.",
+    "exJa": "これはelephantです。"
+  },
+  {
+    "id": 144,
+    "en": "eleven",
+    "ja": [
+      "eleven"
+    ],
+    "cat": "たんご",
+    "ex": "This is eleven.",
+    "exJa": "これはelevenです。"
+  },
+  {
+    "id": 145,
+    "en": "eleventh",
+    "ja": [
+      "eleventh"
+    ],
+    "cat": "たんご",
+    "ex": "This is eleventh.",
+    "exJa": "これはeleventhです。"
+  },
+  {
+    "id": 146,
+    "en": "e-mail",
+    "ja": [
+      "e-mail"
+    ],
+    "cat": "たんご",
+    "ex": "This is e-mail.",
+    "exJa": "これはe-mailです。"
+  },
+  {
+    "id": 147,
+    "en": "English",
+    "ja": [
+      "English"
+    ],
+    "cat": "たんご",
+    "ex": "This is English.",
+    "exJa": "これはEnglishです。"
+  },
+  {
+    "id": 148,
+    "en": "enjoy",
+    "ja": [
+      "enjoy"
+    ],
+    "cat": "たんご",
+    "ex": "This is enjoy.",
+    "exJa": "これはenjoyです。"
+  },
+  {
+    "id": 149,
+    "en": "eraser",
+    "ja": [
+      "eraser"
+    ],
+    "cat": "たんご",
+    "ex": "This is eraser.",
+    "exJa": "これはeraserです。"
+  },
+  {
+    "id": 150,
+    "en": "evening",
+    "ja": [
+      "evening"
+    ],
+    "cat": "たんご",
+    "ex": "This is evening.",
+    "exJa": "これはeveningです。"
+  },
+  {
+    "id": 151,
+    "en": "every",
+    "ja": [
+      "every"
+    ],
+    "cat": "たんご",
+    "ex": "This is every.",
+    "exJa": "これはeveryです。"
+  },
+  {
+    "id": 152,
+    "en": "everyone",
+    "ja": [
+      "everyone"
+    ],
+    "cat": "たんご",
+    "ex": "This is everyone.",
+    "exJa": "これはeveryoneです。"
+  },
+  {
+    "id": 153,
+    "en": "face",
+    "ja": [
+      "face"
+    ],
+    "cat": "たんご",
+    "ex": "This is face.",
+    "exJa": "これはfaceです。"
+  },
+  {
+    "id": 154,
+    "en": "fall",
+    "ja": [
+      "fall"
+    ],
+    "cat": "たんご",
+    "ex": "This is fall.",
+    "exJa": "これはfallです。"
+  },
+  {
+    "id": 155,
+    "en": "family",
+    "ja": [
+      "family"
+    ],
+    "cat": "たんご",
+    "ex": "This is family.",
+    "exJa": "これはfamilyです。"
+  },
+  {
+    "id": 156,
+    "en": "fast",
+    "ja": [
+      "fast"
+    ],
+    "cat": "たんご",
+    "ex": "This is fast.",
+    "exJa": "これはfastです。"
+  },
+  {
+    "id": 157,
+    "en": "fast",
+    "ja": [
+      "fast"
+    ],
+    "cat": "たんご",
+    "ex": "This is fast.",
+    "exJa": "これはfastです。"
+  },
+  {
+    "id": 158,
+    "en": "father",
+    "ja": [
+      "father"
+    ],
+    "cat": "たんご",
+    "ex": "This is father.",
+    "exJa": "これはfatherです。"
+  },
+  {
+    "id": 159,
+    "en": "favorite",
+    "ja": [
+      "favorite"
+    ],
+    "cat": "たんご",
+    "ex": "This is favorite.",
+    "exJa": "これはfavoriteです。"
+  },
+  {
+    "id": 160,
+    "en": "February",
+    "ja": [
+      "February"
+    ],
+    "cat": "たんご",
+    "ex": "This is February.",
+    "exJa": "これはFebruaryです。"
+  },
+  {
+    "id": 161,
+    "en": "festival",
+    "ja": [
+      "festival"
+    ],
+    "cat": "たんご",
+    "ex": "This is festival.",
+    "exJa": "これはfestivalです。"
+  },
+  {
+    "id": 162,
+    "en": "fifteen",
+    "ja": [
+      "fifteen"
+    ],
+    "cat": "たんご",
+    "ex": "This is fifteen.",
+    "exJa": "これはfifteenです。"
+  },
+  {
+    "id": 163,
+    "en": "fifth",
+    "ja": [
+      "fifth"
+    ],
+    "cat": "たんご",
+    "ex": "This is fifth.",
+    "exJa": "これはfifthです。"
+  },
+  {
+    "id": 164,
+    "en": "fifty",
+    "ja": [
+      "fifty"
+    ],
+    "cat": "たんご",
+    "ex": "This is fifty.",
+    "exJa": "これはfiftyです。"
+  },
+  {
+    "id": 165,
+    "en": "find",
+    "ja": [
+      "find"
+    ],
+    "cat": "たんご",
+    "ex": "This is find.",
+    "exJa": "これはfindです。"
+  },
+  {
+    "id": 166,
+    "en": "fine",
+    "ja": [
+      "fine"
+    ],
+    "cat": "たんご",
+    "ex": "This is fine.",
+    "exJa": "これはfineです。"
+  },
+  {
+    "id": 167,
+    "en": "finger",
+    "ja": [
+      "finger"
+    ],
+    "cat": "たんご",
+    "ex": "This is finger.",
+    "exJa": "これはfingerです。"
+  },
+  {
+    "id": 168,
+    "en": "firefighter",
+    "ja": [
+      "firefighter"
+    ],
+    "cat": "たんご",
+    "ex": "This is firefighter.",
+    "exJa": "これはfirefighterです。"
+  },
+  {
+    "id": 169,
+    "en": "first",
+    "ja": [
+      "first"
+    ],
+    "cat": "たんご",
+    "ex": "This is first.",
+    "exJa": "これはfirstです。"
+  },
+  {
+    "id": 170,
+    "en": "fish",
+    "ja": [
+      "fish"
+    ],
+    "cat": "たんご",
+    "ex": "This is fish.",
+    "exJa": "これはfishです。"
+  },
+  {
+    "id": 171,
+    "en": "five",
+    "ja": [
+      "five"
+    ],
+    "cat": "たんご",
+    "ex": "This is five.",
+    "exJa": "これはfiveです。"
+  },
+  {
+    "id": 172,
+    "en": "floor",
+    "ja": [
+      "floor"
+    ],
+    "cat": "たんご",
+    "ex": "This is floor.",
+    "exJa": "これはfloorです。"
+  },
+  {
+    "id": 173,
+    "en": "flower",
+    "ja": [
+      "flower"
+    ],
+    "cat": "たんご",
+    "ex": "This is flower.",
+    "exJa": "これはflowerです。"
+  },
+  {
+    "id": 174,
+    "en": "flute",
+    "ja": [
+      "flute"
+    ],
+    "cat": "たんご",
+    "ex": "This is flute.",
+    "exJa": "これはfluteです。"
+  },
+  {
+    "id": 175,
+    "en": "fly",
+    "ja": [
+      "fly"
+    ],
+    "cat": "たんご",
+    "ex": "This is fly.",
+    "exJa": "これはflyです。"
+  },
+  {
+    "id": 176,
+    "en": "food",
+    "ja": [
+      "food"
+    ],
+    "cat": "たんご",
+    "ex": "This is food.",
+    "exJa": "これはfoodです。"
+  },
+  {
+    "id": 177,
+    "en": "foot",
+    "ja": [
+      "foot"
+    ],
+    "cat": "たんご",
+    "ex": "This is foot.",
+    "exJa": "これはfootです。"
+  },
+  {
+    "id": 178,
+    "en": "football",
+    "ja": [
+      "football"
+    ],
+    "cat": "たんご",
+    "ex": "This is football.",
+    "exJa": "これはfootballです。"
+  },
+  {
+    "id": 179,
+    "en": "for",
+    "ja": [
+      "for"
+    ],
+    "cat": "たんご",
+    "ex": "This is for.",
+    "exJa": "これはforです。"
+  },
+  {
+    "id": 180,
+    "en": "fork",
+    "ja": [
+      "fork"
+    ],
+    "cat": "たんご",
+    "ex": "This is fork.",
+    "exJa": "これはforkです。"
+  },
+  {
+    "id": 181,
+    "en": "forty",
+    "ja": [
+      "forty"
+    ],
+    "cat": "たんご",
+    "ex": "This is forty.",
+    "exJa": "これはfortyです。"
+  },
+  {
+    "id": 182,
+    "en": "four",
+    "ja": [
+      "four"
+    ],
+    "cat": "たんご",
+    "ex": "This is four.",
+    "exJa": "これはfourです。"
+  },
+  {
+    "id": 183,
+    "en": "fourteen",
+    "ja": [
+      "fourteen"
+    ],
+    "cat": "たんご",
+    "ex": "This is fourteen.",
+    "exJa": "これはfourteenです。"
+  },
+  {
+    "id": 184,
+    "en": "fourth",
+    "ja": [
+      "fourth"
+    ],
+    "cat": "たんご",
+    "ex": "This is fourth.",
+    "exJa": "これはfourthです。"
+  },
+  {
+    "id": 185,
+    "en": "French",
+    "ja": [
+      "French"
+    ],
+    "cat": "たんご",
+    "ex": "This is French.",
+    "exJa": "これはFrenchです。"
+  },
+  {
+    "id": 186,
+    "en": "Friday",
+    "ja": [
+      "Friday"
+    ],
+    "cat": "たんご",
+    "ex": "This is Friday.",
+    "exJa": "これはFridayです。"
+  },
+  {
+    "id": 187,
+    "en": "friend",
+    "ja": [
+      "friend"
+    ],
+    "cat": "たんご",
+    "ex": "This is friend.",
+    "exJa": "これはfriendです。"
+  },
+  {
+    "id": 188,
+    "en": "from",
+    "ja": [
+      "from"
+    ],
+    "cat": "たんご",
+    "ex": "This is from.",
+    "exJa": "これはfromです。"
+  },
+  {
+    "id": 189,
+    "en": "fruit",
+    "ja": [
+      "fruit"
+    ],
+    "cat": "たんご",
+    "ex": "This is fruit.",
+    "exJa": "これはfruitです。"
+  },
+  {
+    "id": 190,
+    "en": "game",
+    "ja": [
+      "game"
+    ],
+    "cat": "たんご",
+    "ex": "This is game.",
+    "exJa": "これはgameです。"
+  },
+  {
+    "id": 191,
+    "en": "garden",
+    "ja": [
+      "garden"
+    ],
+    "cat": "たんご",
+    "ex": "This is garden.",
+    "exJa": "これはgardenです。"
+  },
+  {
+    "id": 192,
+    "en": "gas station",
+    "ja": [
+      "gas station"
+    ],
+    "cat": "たんご",
+    "ex": "This is gas station.",
+    "exJa": "これはgas stationです。"
+  },
+  {
+    "id": 193,
+    "en": "get",
+    "ja": [
+      "get"
+    ],
+    "cat": "たんご",
+    "ex": "This is get.",
+    "exJa": "これはgetです。"
+  },
+  {
+    "id": 194,
+    "en": "girl",
+    "ja": [
+      "girl"
+    ],
+    "cat": "たんご",
+    "ex": "This is girl.",
+    "exJa": "これはgirlです。"
+  },
+  {
+    "id": 195,
+    "en": "glass",
+    "ja": [
+      "glass"
+    ],
+    "cat": "たんご",
+    "ex": "This is glass.",
+    "exJa": "これはglassです。"
+  },
+  {
+    "id": 196,
+    "en": "glove",
+    "ja": [
+      "glove"
+    ],
+    "cat": "たんご",
+    "ex": "This is glove.",
+    "exJa": "これはgloveです。"
+  },
+  {
+    "id": 197,
+    "en": "go",
+    "ja": [
+      "go"
+    ],
+    "cat": "たんご",
+    "ex": "This is go.",
+    "exJa": "これはgoです。"
+  },
+  {
+    "id": 198,
+    "en": "good",
+    "ja": [
+      "good"
+    ],
+    "cat": "たんご",
+    "ex": "This is good.",
+    "exJa": "これはgoodです。"
+  },
+  {
+    "id": 199,
+    "en": "grandfather",
+    "ja": [
+      "grandfather"
+    ],
+    "cat": "たんご",
+    "ex": "This is grandfather.",
+    "exJa": "これはgrandfatherです。"
+  },
+  {
+    "id": 200,
+    "en": "grandmother",
+    "ja": [
+      "grandmother"
+    ],
+    "cat": "たんご",
+    "ex": "This is grandmother.",
+    "exJa": "これはgrandmotherです。"
+  },
+  {
+    "id": 201,
+    "en": "grape",
+    "ja": [
+      "grape"
+    ],
+    "cat": "たんご",
+    "ex": "This is grape.",
+    "exJa": "これはgrapeです。"
+  },
+  {
+    "id": 202,
+    "en": "great",
+    "ja": [
+      "great"
+    ],
+    "cat": "たんご",
+    "ex": "This is great.",
+    "exJa": "これはgreatです。"
+  },
+  {
+    "id": 203,
+    "en": "green",
+    "ja": [
+      "green"
+    ],
+    "cat": "たんご",
+    "ex": "This is green.",
+    "exJa": "これはgreenです。"
+  },
+  {
+    "id": 204,
+    "en": "ground",
+    "ja": [
+      "ground"
+    ],
+    "cat": "たんご",
+    "ex": "This is ground.",
+    "exJa": "これはgroundです。"
+  },
+  {
+    "id": 205,
+    "en": "guitar",
+    "ja": [
+      "guitar"
+    ],
+    "cat": "たんご",
+    "ex": "This is guitar.",
+    "exJa": "これはguitarです。"
+  },
+  {
+    "id": 206,
+    "en": "gym",
+    "ja": [
+      "gym"
+    ],
+    "cat": "たんご",
+    "ex": "This is gym.",
+    "exJa": "これはgymです。"
+  },
+  {
+    "id": 207,
+    "en": "high",
+    "ja": [
+      "high"
+    ],
+    "cat": "たんご",
+    "ex": "This is high.",
+    "exJa": "これはhighです。"
+  },
+  {
+    "id": 208,
+    "en": "him",
+    "ja": [
+      "him"
+    ],
+    "cat": "たんご",
+    "ex": "This is him.",
+    "exJa": "これはhimです。"
+  },
+  {
+    "id": 209,
+    "en": "his（所有格）",
+    "ja": [
+      "his"
+    ],
+    "cat": "たんご",
+    "ex": "This is his.",
+    "exJa": "これはhisです。"
+  },
+  {
+    "id": 210,
+    "en": "his（所有代名詞）",
+    "ja": [
+      "his"
+    ],
+    "cat": "たんご",
+    "ex": "This is his.",
+    "exJa": "これはhisです。"
+  },
+  {
+    "id": 211,
+    "en": "history",
+    "ja": [
+      "history"
+    ],
+    "cat": "たんご",
+    "ex": "This is history.",
+    "exJa": "これはhistoryです。"
+  },
+  {
+    "id": 212,
+    "en": "home",
+    "ja": [
+      "home"
+    ],
+    "cat": "たんご",
+    "ex": "This is home.",
+    "exJa": "これはhomeです。"
+  },
+  {
+    "id": 213,
+    "en": "homework",
+    "ja": [
+      "homework"
+    ],
+    "cat": "たんご",
+    "ex": "This is homework.",
+    "exJa": "これはhomeworkです。"
+  },
+  {
+    "id": 214,
+    "en": "hospital",
+    "ja": [
+      "hospital"
+    ],
+    "cat": "たんご",
+    "ex": "This is hospital.",
+    "exJa": "これはhospitalです。"
+  },
+  {
+    "id": 215,
+    "en": "hot",
+    "ja": [
+      "hot"
+    ],
+    "cat": "たんご",
+    "ex": "This is hot.",
+    "exJa": "これはhotです。"
+  },
+  {
+    "id": 216,
+    "en": "hotel",
+    "ja": [
+      "hotel"
+    ],
+    "cat": "たんご",
+    "ex": "This is hotel.",
+    "exJa": "これはhotelです。"
+  },
+  {
+    "id": 217,
+    "en": "hour",
+    "ja": [
+      "hour"
+    ],
+    "cat": "たんご",
+    "ex": "This is hour.",
+    "exJa": "これはhourです。"
+  },
+  {
+    "id": 218,
+    "en": "house",
+    "ja": [
+      "house"
+    ],
+    "cat": "たんご",
+    "ex": "This is house.",
+    "exJa": "これはhouseです。"
+  },
+  {
+    "id": 219,
+    "en": "how",
+    "ja": [
+      "how"
+    ],
+    "cat": "たんご",
+    "ex": "This is how.",
+    "exJa": "これはhowです。"
+  },
+  {
+    "id": 220,
+    "en": "hundred",
+    "ja": [
+      "hundred"
+    ],
+    "cat": "たんご",
+    "ex": "This is hundred.",
+    "exJa": "これはhundredです。"
+  },
+  {
+    "id": 221,
+    "en": "hungry",
+    "ja": [
+      "hungry"
+    ],
+    "cat": "たんご",
+    "ex": "This is hungry.",
+    "exJa": "これはhungryです。"
+  },
+  {
+    "id": 222,
+    "en": "jump",
+    "ja": [
+      "jump"
+    ],
+    "cat": "たんご",
+    "ex": "This is jump.",
+    "exJa": "これはjumpです。"
+  },
+  {
+    "id": 223,
+    "en": "June",
+    "ja": [
+      "June"
+    ],
+    "cat": "たんご",
+    "ex": "This is June.",
+    "exJa": "これはJuneです。"
+  },
+  {
+    "id": 224,
+    "en": "just",
+    "ja": [
+      "just"
+    ],
+    "cat": "たんご",
+    "ex": "This is just.",
+    "exJa": "これはjustです。"
+  },
+  {
+    "id": 225,
+    "en": "hair",
+    "ja": [
+      "hair"
+    ],
+    "cat": "たんご",
+    "ex": "This is hair.",
+    "exJa": "これはhairです。"
+  },
+  {
+    "id": 226,
+    "en": "hamburger",
+    "ja": [
+      "hamburger"
+    ],
+    "cat": "たんご",
+    "ex": "This is hamburger.",
+    "exJa": "これはhamburgerです。"
+  },
+  {
+    "id": 227,
+    "en": "hamster",
+    "ja": [
+      "hamster"
+    ],
+    "cat": "たんご",
+    "ex": "This is hamster.",
+    "exJa": "これはhamsterです。"
+  },
+  {
+    "id": 228,
+    "en": "hand",
+    "ja": [
+      "hand"
+    ],
+    "cat": "たんご",
+    "ex": "This is hand.",
+    "exJa": "これはhandです。"
+  },
+  {
+    "id": 229,
+    "en": "happy",
+    "ja": [
+      "happy"
+    ],
+    "cat": "たんご",
+    "ex": "This is happy.",
+    "exJa": "これはhappyです。"
+  },
+  {
+    "id": 230,
+    "en": "hat",
+    "ja": [
+      "hat"
+    ],
+    "cat": "たんご",
+    "ex": "This is hat.",
+    "exJa": "これはhatです。"
+  },
+  {
+    "id": 231,
+    "en": "have",
+    "ja": [
+      "have"
+    ],
+    "cat": "たんご",
+    "ex": "This is have.",
+    "exJa": "これはhaveです。"
+  },
+  {
+    "id": 232,
+    "en": "he",
+    "ja": [
+      "he"
+    ],
+    "cat": "たんご",
+    "ex": "This is he.",
+    "exJa": "これはheです。"
+  },
+  {
+    "id": 233,
+    "en": "head",
+    "ja": [
+      "head"
+    ],
+    "cat": "たんご",
+    "ex": "This is head.",
+    "exJa": "これはheadです。"
+  },
+  {
+    "id": 234,
+    "en": "help",
+    "ja": [
+      "help"
+    ],
+    "cat": "たんご",
+    "ex": "This is help.",
+    "exJa": "これはhelpです。"
+  },
+  {
+    "id": 235,
+    "en": "her（所有格）",
+    "ja": [
+      "her"
+    ],
+    "cat": "たんご",
+    "ex": "This is her.",
+    "exJa": "これはherです。"
+  },
+  {
+    "id": 236,
+    "en": "her（目的格）",
+    "ja": [
+      "her"
+    ],
+    "cat": "たんご",
+    "ex": "This is her.",
+    "exJa": "これはherです。"
+  },
+  {
+    "id": 237,
+    "en": "here",
+    "ja": [
+      "here"
+    ],
+    "cat": "たんご",
+    "ex": "This is here.",
+    "exJa": "これはhereです。"
+  },
+  {
+    "id": 238,
+    "en": "hers",
+    "ja": [
+      "hers"
+    ],
+    "cat": "たんご",
+    "ex": "This is hers.",
+    "exJa": "これはhersです。"
+  },
+  {
+    "id": 239,
+    "en": "I",
+    "ja": [
+      "I"
+    ],
+    "cat": "たんご",
+    "ex": "This is I.",
+    "exJa": "これはIです。"
+  },
+  {
+    "id": 240,
+    "en": "ice cream",
+    "ja": [
+      "ice cream"
+    ],
+    "cat": "たんご",
+    "ex": "This is ice cream.",
+    "exJa": "これはice creamです。"
+  },
+  {
+    "id": 241,
+    "en": "idea",
+    "ja": [
+      "idea"
+    ],
+    "cat": "たんご",
+    "ex": "This is idea.",
+    "exJa": "これはideaです。"
+  },
+  {
+    "id": 242,
+    "en": "in",
+    "ja": [
+      "in"
+    ],
+    "cat": "たんご",
+    "ex": "This is in.",
+    "exJa": "これはinです。"
+  },
+  {
+    "id": 243,
+    "en": "is",
+    "ja": [
+      "is"
+    ],
+    "cat": "たんご",
+    "ex": "This is is.",
+    "exJa": "これはisです。"
+  },
+  {
+    "id": 244,
+    "en": "it（主格）",
+    "ja": [
+      "it"
+    ],
+    "cat": "たんご",
+    "ex": "This is it.",
+    "exJa": "これはitです。"
+  },
+  {
+    "id": 245,
+    "en": "it（目的格）",
+    "ja": [
+      "it"
+    ],
+    "cat": "たんご",
+    "ex": "This is it.",
+    "exJa": "これはitです。"
+  },
+  {
+    "id": 246,
+    "en": "Italian",
+    "ja": [
+      "Italian"
+    ],
+    "cat": "たんご",
+    "ex": "This is Italian.",
+    "exJa": "これはItalianです。"
+  },
+  {
+    "id": 247,
+    "en": "its",
+    "ja": [
+      "its"
+    ],
+    "cat": "たんご",
+    "ex": "This is its.",
+    "exJa": "これはitsです。"
+  },
+  {
+    "id": 248,
+    "en": "jacket",
+    "ja": [
+      "jacket"
+    ],
+    "cat": "たんご",
+    "ex": "This is jacket.",
+    "exJa": "これはjacketです。"
+  },
+  {
+    "id": 249,
+    "en": "jam",
+    "ja": [
+      "jam"
+    ],
+    "cat": "たんご",
+    "ex": "This is jam.",
+    "exJa": "これはjamです。"
+  },
+  {
+    "id": 250,
+    "en": "January",
+    "ja": [
+      "January"
+    ],
+    "cat": "たんご",
+    "ex": "This is January.",
+    "exJa": "これはJanuaryです。"
+  },
+  {
+    "id": 251,
+    "en": "Japan",
+    "ja": [
+      "Japan"
+    ],
+    "cat": "たんご",
+    "ex": "This is Japan.",
+    "exJa": "これはJapanです。"
+  },
+  {
+    "id": 252,
+    "en": "Japanese",
+    "ja": [
+      "Japanese"
+    ],
+    "cat": "たんご",
+    "ex": "This is Japanese.",
+    "exJa": "これはJapaneseです。"
+  },
+  {
+    "id": 253,
+    "en": "juice",
+    "ja": [
+      "juice"
+    ],
+    "cat": "たんご",
+    "ex": "This is juice.",
+    "exJa": "これはjuiceです。"
+  },
+  {
+    "id": 254,
+    "en": "July",
+    "ja": [
+      "July"
+    ],
+    "cat": "たんご",
+    "ex": "This is July.",
+    "exJa": "これはJulyです。"
+  },
+  {
+    "id": 255,
+    "en": "kilogram",
+    "ja": [
+      "kilogram"
+    ],
+    "cat": "たんご",
+    "ex": "This is kilogram.",
+    "exJa": "これはkilogramです。"
+  },
+  {
+    "id": 256,
+    "en": "kitchen",
+    "ja": [
+      "kitchen"
+    ],
+    "cat": "たんご",
+    "ex": "This is kitchen.",
+    "exJa": "これはkitchenです。"
+  },
+  {
+    "id": 257,
+    "en": "know",
+    "ja": [
+      "know"
+    ],
+    "cat": "たんご",
+    "ex": "This is know.",
+    "exJa": "これはknowです。"
+  },
+  {
+    "id": 258,
+    "en": "lady",
+    "ja": [
+      "lady"
+    ],
+    "cat": "たんご",
+    "ex": "This is lady.",
+    "exJa": "これはladyです。"
+  },
+  {
+    "id": 259,
+    "en": "large",
+    "ja": [
+      "large"
+    ],
+    "cat": "たんご",
+    "ex": "This is large.",
+    "exJa": "これはlargeです。"
+  },
+  {
+    "id": 260,
+    "en": "last",
+    "ja": [
+      "last"
+    ],
+    "cat": "たんご",
+    "ex": "This is last.",
+    "exJa": "これはlastです。"
+  },
+  {
+    "id": 261,
+    "en": "leg",
+    "ja": [
+      "leg"
+    ],
+    "cat": "たんご",
+    "ex": "This is leg.",
+    "exJa": "これはlegです。"
+  },
+  {
+    "id": 262,
+    "en": "lesson",
+    "ja": [
+      "lesson"
+    ],
+    "cat": "たんご",
+    "ex": "This is lesson.",
+    "exJa": "これはlessonです。"
+  },
+  {
+    "id": 263,
+    "en": "letter",
+    "ja": [
+      "letter"
+    ],
+    "cat": "たんご",
+    "ex": "This is letter.",
+    "exJa": "これはletterです。"
+  },
+  {
+    "id": 264,
+    "en": "library",
+    "ja": [
+      "library"
+    ],
+    "cat": "たんご",
+    "ex": "This is library.",
+    "exJa": "これはlibraryです。"
+  },
+  {
+    "id": 265,
+    "en": "like",
+    "ja": [
+      "like"
+    ],
+    "cat": "たんご",
+    "ex": "This is like.",
+    "exJa": "これはlikeです。"
+  },
+  {
+    "id": 266,
+    "en": "listen",
+    "ja": [
+      "listen"
+    ],
+    "cat": "たんご",
+    "ex": "This is listen.",
+    "exJa": "これはlistenです。"
+  },
+  {
+    "id": 267,
+    "en": "little",
+    "ja": [
+      "little"
+    ],
+    "cat": "たんご",
+    "ex": "This is little.",
+    "exJa": "これはlittleです。"
+  },
+  {
+    "id": 268,
+    "en": "live",
+    "ja": [
+      "live"
+    ],
+    "cat": "たんご",
+    "ex": "This is live.",
+    "exJa": "これはliveです。"
+  },
+  {
+    "id": 269,
+    "en": "living room",
+    "ja": [
+      "living room"
+    ],
+    "cat": "たんご",
+    "ex": "This is living room.",
+    "exJa": "これはliving roomです。"
+  },
+  {
+    "id": 270,
+    "en": "long",
+    "ja": [
+      "long"
+    ],
+    "cat": "たんご",
+    "ex": "This is long.",
+    "exJa": "これはlongです。"
+  },
+  {
+    "id": 271,
+    "en": "look",
+    "ja": [
+      "look"
+    ],
+    "cat": "たんご",
+    "ex": "This is look.",
+    "exJa": "これはlookです。"
+  },
+  {
+    "id": 272,
+    "en": "love",
+    "ja": [
+      "love"
+    ],
+    "cat": "たんご",
+    "ex": "This is love.",
+    "exJa": "これはloveです。"
+  },
+  {
+    "id": 273,
+    "en": "lunch",
+    "ja": [
+      "lunch"
+    ],
+    "cat": "たんご",
+    "ex": "This is lunch.",
+    "exJa": "これはlunchです。"
+  },
+  {
+    "id": 274,
+    "en": "lunchtime",
+    "ja": [
+      "lunchtime"
+    ],
+    "cat": "たんご",
+    "ex": "This is lunchtime.",
+    "exJa": "これはlunchtimeです。"
+  },
+  {
+    "id": 275,
+    "en": "magazine",
+    "ja": [
+      "magazine"
+    ],
+    "cat": "たんご",
+    "ex": "This is magazine.",
+    "exJa": "これはmagazineです。"
+  },
+  {
+    "id": 276,
+    "en": "make",
+    "ja": [
+      "make"
+    ],
+    "cat": "たんご",
+    "ex": "This is make.",
+    "exJa": "これはmakeです。"
+  },
+  {
+    "id": 277,
+    "en": "man",
+    "ja": [
+      "man"
+    ],
+    "cat": "たんご",
+    "ex": "This is man.",
+    "exJa": "これはmanです。"
+  },
+  {
+    "id": 278,
+    "en": "many",
+    "ja": [
+      "many"
+    ],
+    "cat": "たんご",
+    "ex": "This is many.",
+    "exJa": "これはmanyです。"
+  },
+  {
+    "id": 279,
+    "en": "March",
+    "ja": [
+      "March"
+    ],
+    "cat": "たんご",
+    "ex": "This is March.",
+    "exJa": "これはMarchです。"
+  },
+  {
+    "id": 280,
+    "en": "math",
+    "ja": [
+      "math"
+    ],
+    "cat": "たんご",
+    "ex": "This is math.",
+    "exJa": "これはmathです。"
+  },
+  {
+    "id": 281,
+    "en": "May",
+    "ja": [
+      "May"
+    ],
+    "cat": "たんご",
+    "ex": "This is May.",
+    "exJa": "これはMayです。"
+  },
+  {
+    "id": 282,
+    "en": "me",
+    "ja": [
+      "me"
+    ],
+    "cat": "たんご",
+    "ex": "This is me.",
+    "exJa": "これはmeです。"
+  },
+  {
+    "id": 283,
+    "en": "meat",
+    "ja": [
+      "meat"
+    ],
+    "cat": "たんご",
+    "ex": "This is meat.",
+    "exJa": "これはmeatです。"
+  },
+  {
+    "id": 284,
+    "en": "meet",
+    "ja": [
+      "meet"
+    ],
+    "cat": "たんご",
+    "ex": "This is meet.",
+    "exJa": "これはmeetです。"
+  },
+  {
+    "id": 285,
+    "en": "meter",
+    "ja": [
+      "meter"
+    ],
+    "cat": "たんご",
+    "ex": "This is meter.",
+    "exJa": "これはmeterです。"
+  },
+  {
+    "id": 286,
+    "en": "milk",
+    "ja": [
+      "milk"
+    ],
+    "cat": "たんご",
+    "ex": "This is milk.",
+    "exJa": "これはmilkです。"
+  },
+  {
+    "id": 287,
+    "en": "mine",
+    "ja": [
+      "mine"
+    ],
+    "cat": "たんご",
+    "ex": "This is mine.",
+    "exJa": "これはmineです。"
+  },
+  {
+    "id": 288,
+    "en": "minute",
+    "ja": [
+      "minute"
+    ],
+    "cat": "たんご",
+    "ex": "This is minute.",
+    "exJa": "これはminuteです。"
+  },
+  {
+    "id": 289,
+    "en": "Monday",
+    "ja": [
+      "Monday"
+    ],
+    "cat": "たんご",
+    "ex": "This is Monday.",
+    "exJa": "これはMondayです。"
+  },
+  {
+    "id": 290,
+    "en": "monkey",
+    "ja": [
+      "monkey"
+    ],
+    "cat": "たんご",
+    "ex": "This is monkey.",
+    "exJa": "これはmonkeyです。"
+  },
+  {
+    "id": 291,
+    "en": "month",
+    "ja": [
+      "month"
+    ],
+    "cat": "たんご",
+    "ex": "This is month.",
+    "exJa": "これはmonthです。"
+  },
+  {
+    "id": 292,
+    "en": "morning",
+    "ja": [
+      "morning"
+    ],
+    "cat": "たんご",
+    "ex": "This is morning.",
+    "exJa": "これはmorningです。"
+  },
+  {
+    "id": 293,
+    "en": "mother",
+    "ja": [
+      "mother"
+    ],
+    "cat": "たんご",
+    "ex": "This is mother.",
+    "exJa": "これはmotherです。"
+  },
+  {
+    "id": 294,
+    "en": "mountain",
+    "ja": [
+      "mountain"
+    ],
+    "cat": "たんご",
+    "ex": "This is mountain.",
+    "exJa": "これはmountainです。"
+  },
+  {
+    "id": 295,
+    "en": "mouth",
+    "ja": [
+      "mouth"
+    ],
+    "cat": "たんご",
+    "ex": "This is mouth.",
+    "exJa": "これはmouthです。"
+  },
+  {
+    "id": 296,
+    "en": "movie",
+    "ja": [
+      "movie"
+    ],
+    "cat": "たんご",
+    "ex": "This is movie.",
+    "exJa": "これはmovieです。"
+  },
+  {
+    "id": 297,
+    "en": "Mr.",
+    "ja": [
+      "Mr."
+    ],
+    "cat": "たんご",
+    "ex": "This is Mr..",
+    "exJa": "これはMr.です。"
+  },
+  {
+    "id": 298,
+    "en": "Mrs.",
+    "ja": [
+      "Mrs."
+    ],
+    "cat": "たんご",
+    "ex": "This is Mrs..",
+    "exJa": "これはMrs.です。"
+  },
+  {
+    "id": 299,
+    "en": "Ms.",
+    "ja": [
+      "Ms."
+    ],
+    "cat": "たんご",
+    "ex": "This is Ms..",
+    "exJa": "これはMs.です。"
+  },
+  {
+    "id": 300,
+    "en": "museum",
+    "ja": [
+      "museum"
+    ],
+    "cat": "たんご",
+    "ex": "This is museum.",
+    "exJa": "これはmuseumです。"
+  },
+  {
+    "id": 301,
+    "en": "music",
+    "ja": [
+      "music"
+    ],
+    "cat": "たんご",
+    "ex": "This is music.",
+    "exJa": "これはmusicです。"
+  },
+  {
+    "id": 302,
+    "en": "my",
+    "ja": [
+      "my"
+    ],
+    "cat": "たんご",
+    "ex": "This is my.",
+    "exJa": "これはmyです。"
+  },
+  {
+    "id": 303,
+    "en": "name",
+    "ja": [
+      "name"
+    ],
+    "cat": "たんご",
+    "ex": "This is name.",
+    "exJa": "これはnameです。"
+  },
+  {
+    "id": 304,
+    "en": "near",
+    "ja": [
+      "near"
+    ],
+    "cat": "たんご",
+    "ex": "This is near.",
+    "exJa": "これはnearです。"
+  },
+  {
+    "id": 305,
+    "en": "need",
+    "ja": [
+      "need"
+    ],
+    "cat": "たんご",
+    "ex": "This is need.",
+    "exJa": "これはneedです。"
+  },
+  {
+    "id": 306,
+    "en": "new",
+    "ja": [
+      "new"
+    ],
+    "cat": "たんご",
+    "ex": "This is new.",
+    "exJa": "これはnewです。"
+  },
+  {
+    "id": 307,
+    "en": "newspaper",
+    "ja": [
+      "newspaper"
+    ],
+    "cat": "たんご",
+    "ex": "This is newspaper.",
+    "exJa": "これはnewspaperです。"
+  },
+  {
+    "id": 308,
+    "en": "next",
+    "ja": [
+      "next"
+    ],
+    "cat": "たんご",
+    "ex": "This is next.",
+    "exJa": "これはnextです。"
+  },
+  {
+    "id": 309,
+    "en": "nice",
+    "ja": [
+      "nice"
+    ],
+    "cat": "たんご",
+    "ex": "This is nice.",
+    "exJa": "これはniceです。"
+  },
+  {
+    "id": 310,
+    "en": "night",
+    "ja": [
+      "night"
+    ],
+    "cat": "たんご",
+    "ex": "This is night.",
+    "exJa": "これはnightです。"
+  },
+  {
+    "id": 311,
+    "en": "nine",
+    "ja": [
+      "nine"
+    ],
+    "cat": "たんご",
+    "ex": "This is nine.",
+    "exJa": "これはnineです。"
+  },
+  {
+    "id": 312,
+    "en": "nineteen",
+    "ja": [
+      "nineteen"
+    ],
+    "cat": "たんご",
+    "ex": "This is nineteen.",
+    "exJa": "これはnineteenです。"
+  },
+  {
+    "id": 313,
+    "en": "ninety",
+    "ja": [
+      "ninety"
+    ],
+    "cat": "たんご",
+    "ex": "This is ninety.",
+    "exJa": "これはninetyです。"
+  },
+  {
+    "id": 314,
+    "en": "ninth",
+    "ja": [
+      "ninth"
+    ],
+    "cat": "たんご",
+    "ex": "This is ninth.",
+    "exJa": "これはninthです。"
+  },
+  {
+    "id": 315,
+    "en": "noon",
+    "ja": [
+      "noon"
+    ],
+    "cat": "たんご",
+    "ex": "This is noon.",
+    "exJa": "これはnoonです。"
+  },
+  {
+    "id": 316,
+    "en": "not",
+    "ja": [
+      "not"
+    ],
+    "cat": "たんご",
+    "ex": "This is not.",
+    "exJa": "これはnotです。"
+  },
+  {
+    "id": 317,
+    "en": "notebook",
+    "ja": [
+      "notebook"
+    ],
+    "cat": "たんご",
+    "ex": "This is notebook.",
+    "exJa": "これはnotebookです。"
+  },
+  {
+    "id": 318,
+    "en": "November",
+    "ja": [
+      "November"
+    ],
+    "cat": "たんご",
+    "ex": "This is November.",
+    "exJa": "これはNovemberです。"
+  },
+  {
+    "id": 319,
+    "en": "now",
+    "ja": [
+      "now"
+    ],
+    "cat": "たんご",
+    "ex": "This is now.",
+    "exJa": "これはnowです。"
+  },
+  {
+    "id": 320,
+    "en": "number",
+    "ja": [
+      "number"
+    ],
+    "cat": "たんご",
+    "ex": "This is number.",
+    "exJa": "これはnumberです。"
+  },
+  {
+    "id": 321,
+    "en": "nurse",
+    "ja": [
+      "nurse"
+    ],
+    "cat": "たんご",
+    "ex": "This is nurse.",
+    "exJa": "これはnurseです。"
+  },
+  {
+    "id": 322,
+    "en": "o'clock",
+    "ja": [
+      "o'clock"
+    ],
+    "cat": "たんご",
+    "ex": "This is o'clock.",
+    "exJa": "これはo'clockです。"
+  },
+  {
+    "id": 323,
+    "en": "October",
+    "ja": [
+      "October"
+    ],
+    "cat": "たんご",
+    "ex": "This is October.",
+    "exJa": "これはOctoberです。"
+  },
+  {
+    "id": 324,
+    "en": "of",
+    "ja": [
+      "of"
+    ],
+    "cat": "たんご",
+    "ex": "This is of.",
+    "exJa": "これはofです。"
+  },
+  {
+    "id": 325,
+    "en": "office",
+    "ja": [
+      "office"
+    ],
+    "cat": "たんご",
+    "ex": "This is office.",
+    "exJa": "これはofficeです。"
+  },
+  {
+    "id": 326,
+    "en": "often",
+    "ja": [
+      "often"
+    ],
+    "cat": "たんご",
+    "ex": "This is often.",
+    "exJa": "これはoftenです。"
+  },
+  {
+    "id": 327,
+    "en": "old",
+    "ja": [
+      "old"
+    ],
+    "cat": "たんご",
+    "ex": "This is old.",
+    "exJa": "これはoldです。"
+  },
+  {
+    "id": 328,
+    "en": "on",
+    "ja": [
+      "on"
+    ],
+    "cat": "たんご",
+    "ex": "This is on.",
+    "exJa": "これはonです。"
+  },
+  {
+    "id": 329,
+    "en": "one（代名詞）",
+    "ja": [
+      "one"
+    ],
+    "cat": "たんご",
+    "ex": "This is one.",
+    "exJa": "これはoneです。"
+  },
+  {
+    "id": 330,
+    "en": "one（数）",
+    "ja": [
+      "one"
+    ],
+    "cat": "たんご",
+    "ex": "This is one.",
+    "exJa": "これはoneです。"
+  },
+  {
+    "id": 331,
+    "en": "onion",
+    "ja": [
+      "onion"
+    ],
+    "cat": "たんご",
+    "ex": "This is onion.",
+    "exJa": "これはonionです。"
+  },
+  {
+    "id": 332,
+    "en": "only",
+    "ja": [
+      "only"
+    ],
+    "cat": "たんご",
+    "ex": "This is only.",
+    "exJa": "これはonlyです。"
+  },
+  {
+    "id": 333,
+    "en": "open",
+    "ja": [
+      "open"
+    ],
+    "cat": "たんご",
+    "ex": "This is open.",
+    "exJa": "これはopenです。"
+  },
+  {
+    "id": 334,
+    "en": "or",
+    "ja": [
+      "or"
+    ],
+    "cat": "たんご",
+    "ex": "This is or.",
+    "exJa": "これはorです。"
+  },
+  {
+    "id": 335,
+    "en": "orange",
+    "ja": [
+      "orange"
+    ],
+    "cat": "たんご",
+    "ex": "This is orange.",
+    "exJa": "これはorangeです。"
+  },
+  {
+    "id": 336,
+    "en": "our",
+    "ja": [
+      "our"
+    ],
+    "cat": "たんご",
+    "ex": "This is our.",
+    "exJa": "これはourです。"
+  },
+  {
+    "id": 337,
+    "en": "ours",
+    "ja": [
+      "ours"
+    ],
+    "cat": "たんご",
+    "ex": "This is ours.",
+    "exJa": "これはoursです。"
+  },
+  {
+    "id": 338,
+    "en": "out",
+    "ja": [
+      "out"
+    ],
+    "cat": "たんご",
+    "ex": "This is out.",
+    "exJa": "これはoutです。"
+  },
+  {
+    "id": 339,
+    "en": "page",
+    "ja": [
+      "page"
+    ],
+    "cat": "たんご",
+    "ex": "This is page.",
+    "exJa": "これはpageです。"
+  },
+  {
+    "id": 340,
+    "en": "paint",
+    "ja": [
+      "paint"
+    ],
+    "cat": "たんご",
+    "ex": "This is paint.",
+    "exJa": "これはpaintです。"
+  },
+  {
+    "id": 341,
+    "en": "park",
+    "ja": [
+      "park"
+    ],
+    "cat": "たんご",
+    "ex": "This is park.",
+    "exJa": "これはparkです。"
+  },
+  {
+    "id": 342,
+    "en": "party",
+    "ja": [
+      "party"
+    ],
+    "cat": "たんご",
+    "ex": "This is party.",
+    "exJa": "これはpartyです。"
+  },
+  {
+    "id": 343,
+    "en": "P.E.",
+    "ja": [
+      "P.E."
+    ],
+    "cat": "たんご",
+    "ex": "This is P.E..",
+    "exJa": "これはP.E.です。"
+  },
+  {
+    "id": 344,
+    "en": "pen",
+    "ja": [
+      "pen"
+    ],
+    "cat": "たんご",
+    "ex": "This is pen.",
+    "exJa": "これはpenです。"
+  },
+  {
+    "id": 345,
+    "en": "pencil",
+    "ja": [
+      "pencil"
+    ],
+    "cat": "たんご",
+    "ex": "This is pencil.",
+    "exJa": "これはpencilです。"
+  },
+  {
+    "id": 346,
+    "en": "pencil case",
+    "ja": [
+      "pencil case"
+    ],
+    "cat": "たんご",
+    "ex": "This is pencil case.",
+    "exJa": "これはpencil caseです。"
+  },
+  {
+    "id": 347,
+    "en": "people",
+    "ja": [
+      "people"
+    ],
+    "cat": "たんご",
+    "ex": "This is people.",
+    "exJa": "これはpeopleです。"
+  },
+  {
+    "id": 348,
+    "en": "pet",
+    "ja": [
+      "pet"
+    ],
+    "cat": "たんご",
+    "ex": "This is pet.",
+    "exJa": "これはpetです。"
+  },
+  {
+    "id": 349,
+    "en": "phone",
+    "ja": [
+      "phone"
+    ],
+    "cat": "たんご",
+    "ex": "This is phone.",
+    "exJa": "これはphoneです。"
+  },
+  {
+    "id": 350,
+    "en": "pianist",
+    "ja": [
+      "pianist"
+    ],
+    "cat": "たんご",
+    "ex": "This is pianist.",
+    "exJa": "これはpianistです。"
+  },
+  {
+    "id": 351,
+    "en": "piano",
+    "ja": [
+      "piano"
+    ],
+    "cat": "たんご",
+    "ex": "This is piano.",
+    "exJa": "これはpianoです。"
+  },
+  {
+    "id": 352,
+    "en": "picture",
+    "ja": [
+      "picture"
+    ],
+    "cat": "たんご",
+    "ex": "This is picture.",
+    "exJa": "これはpictureです。"
+  },
+  {
+    "id": 353,
+    "en": "pie",
+    "ja": [
+      "pie"
+    ],
+    "cat": "たんご",
+    "ex": "This is pie.",
+    "exJa": "これはpieです。"
+  },
+  {
+    "id": 354,
+    "en": "pilot",
+    "ja": [
+      "pilot"
+    ],
+    "cat": "たんご",
+    "ex": "This is pilot.",
+    "exJa": "これはpilotです。"
+  },
+  {
+    "id": 355,
+    "en": "pink",
+    "ja": [
+      "pink"
+    ],
+    "cat": "たんご",
+    "ex": "This is pink.",
+    "exJa": "これはpinkです。"
+  },
+  {
+    "id": 356,
+    "en": "pizza",
+    "ja": [
+      "pizza"
+    ],
+    "cat": "たんご",
+    "ex": "This is pizza.",
+    "exJa": "これはpizzaです。"
+  },
+  {
+    "id": 357,
+    "en": "plane",
+    "ja": [
+      "plane"
+    ],
+    "cat": "たんご",
+    "ex": "This is plane.",
+    "exJa": "これはplaneです。"
+  },
+  {
+    "id": 358,
+    "en": "plate",
+    "ja": [
+      "plate"
+    ],
+    "cat": "たんご",
+    "ex": "This is plate.",
+    "exJa": "これはplateです。"
+  },
+  {
+    "id": 359,
+    "en": "play",
+    "ja": [
+      "play"
+    ],
+    "cat": "たんご",
+    "ex": "This is play.",
+    "exJa": "これはplayです。"
+  },
+  {
+    "id": 360,
+    "en": "player",
+    "ja": [
+      "player"
+    ],
+    "cat": "たんご",
+    "ex": "This is player.",
+    "exJa": "これはplayerです。"
+  },
+  {
+    "id": 361,
+    "en": "pocket",
+    "ja": [
+      "pocket"
+    ],
+    "cat": "たんご",
+    "ex": "This is pocket.",
+    "exJa": "これはpocketです。"
+  },
+  {
+    "id": 362,
+    "en": "police officer",
+    "ja": [
+      "police officer"
+    ],
+    "cat": "たんご",
+    "ex": "This is police officer.",
+    "exJa": "これはpolice officerです。"
+  },
+  {
+    "id": 363,
+    "en": "police station",
+    "ja": [
+      "police station"
+    ],
+    "cat": "たんご",
+    "ex": "This is police station.",
+    "exJa": "これはpolice stationです。"
+  },
+  {
+    "id": 364,
+    "en": "pool",
+    "ja": [
+      "pool"
+    ],
+    "cat": "たんご",
+    "ex": "This is pool.",
+    "exJa": "これはpoolです。"
+  },
+  {
+    "id": 365,
+    "en": "postcard",
+    "ja": [
+      "postcard"
+    ],
+    "cat": "たんご",
+    "ex": "This is postcard.",
+    "exJa": "これはpostcardです。"
+  },
+  {
+    "id": 366,
+    "en": "post office",
+    "ja": [
+      "post office"
+    ],
+    "cat": "たんご",
+    "ex": "This is post office.",
+    "exJa": "これはpost officeです。"
+  },
+  {
+    "id": 367,
+    "en": "potato",
+    "ja": [
+      "potato"
+    ],
+    "cat": "たんご",
+    "ex": "This is potato.",
+    "exJa": "これはpotatoです。"
+  },
+  {
+    "id": 368,
+    "en": "practice",
+    "ja": [
+      "practice"
+    ],
+    "cat": "たんご",
+    "ex": "This is practice.",
+    "exJa": "これはpracticeです。"
+  },
+  {
+    "id": 369,
+    "en": "present",
+    "ja": [
+      "present"
+    ],
+    "cat": "たんご",
+    "ex": "This is present.",
+    "exJa": "これはpresentです。"
+  },
+  {
+    "id": 370,
+    "en": "pretty",
+    "ja": [
+      "pretty"
+    ],
+    "cat": "たんご",
+    "ex": "This is pretty.",
+    "exJa": "これはprettyです。"
+  },
+  {
+    "id": 371,
+    "en": "pumpkin",
+    "ja": [
+      "pumpkin"
+    ],
+    "cat": "たんご",
+    "ex": "This is pumpkin.",
+    "exJa": "これはpumpkinです。"
+  },
+  {
+    "id": 372,
+    "en": "purple",
+    "ja": [
+      "purple"
+    ],
+    "cat": "たんご",
+    "ex": "This is purple.",
+    "exJa": "これはpurpleです。"
+  },
+  {
+    "id": 373,
+    "en": "put",
+    "ja": [
+      "put"
+    ],
+    "cat": "たんご",
+    "ex": "This is put.",
+    "exJa": "これはputです。"
+  },
+  {
+    "id": 374,
+    "en": "rabbit",
+    "ja": [
+      "rabbit"
+    ],
+    "cat": "たんご",
+    "ex": "This is rabbit.",
+    "exJa": "これはrabbitです。"
+  },
+  {
+    "id": 375,
+    "en": "racket",
+    "ja": [
+      "racket"
+    ],
+    "cat": "たんご",
+    "ex": "This is racket.",
+    "exJa": "これはracketです。"
+  },
+  {
+    "id": 376,
+    "en": "radio",
+    "ja": [
+      "radio"
+    ],
+    "cat": "たんご",
+    "ex": "This is radio.",
+    "exJa": "これはradioです。"
+  },
+  {
+    "id": 377,
+    "en": "rain",
+    "ja": [
+      "rain"
+    ],
+    "cat": "たんご",
+    "ex": "This is rain.",
+    "exJa": "これはrainです。"
+  },
+  {
+    "id": 378,
+    "en": "rainy",
+    "ja": [
+      "rainy"
+    ],
+    "cat": "たんご",
+    "ex": "This is rainy.",
+    "exJa": "これはrainyです。"
+  },
+  {
+    "id": 379,
+    "en": "read",
+    "ja": [
+      "read"
+    ],
+    "cat": "たんご",
+    "ex": "This is read.",
+    "exJa": "これはreadです。"
+  },
+  {
+    "id": 380,
+    "en": "ready",
+    "ja": [
+      "ready"
+    ],
+    "cat": "たんご",
+    "ex": "This is ready.",
+    "exJa": "これはreadyです。"
+  },
+  {
+    "id": 381,
+    "en": "really",
+    "ja": [
+      "really"
+    ],
+    "cat": "たんご",
+    "ex": "This is really.",
+    "exJa": "これはreallyです。"
+  },
+  {
+    "id": 382,
+    "en": "red",
+    "ja": [
+      "red"
+    ],
+    "cat": "たんご",
+    "ex": "This is red.",
+    "exJa": "これはredです。"
+  },
+  {
+    "id": 383,
+    "en": "restaurant",
+    "ja": [
+      "restaurant"
+    ],
+    "cat": "たんご",
+    "ex": "This is restaurant.",
+    "exJa": "これはrestaurantです。"
+  },
+  {
+    "id": 384,
+    "en": "rice",
+    "ja": [
+      "rice"
+    ],
+    "cat": "たんご",
+    "ex": "This is rice.",
+    "exJa": "これはriceです。"
+  },
+  {
+    "id": 385,
+    "en": "right",
+    "ja": [
+      "right"
+    ],
+    "cat": "たんご",
+    "ex": "This is right.",
+    "exJa": "これはrightです。"
+  },
+  {
+    "id": 386,
+    "en": "river",
+    "ja": [
+      "river"
+    ],
+    "cat": "たんご",
+    "ex": "This is river.",
+    "exJa": "これはriverです。"
+  },
+  {
+    "id": 387,
+    "en": "room",
+    "ja": [
+      "room"
+    ],
+    "cat": "たんご",
+    "ex": "This is room.",
+    "exJa": "これはroomです。"
+  },
+  {
+    "id": 388,
+    "en": "rose",
+    "ja": [
+      "rose"
+    ],
+    "cat": "たんご",
+    "ex": "This is rose.",
+    "exJa": "これはroseです。"
+  },
+  {
+    "id": 389,
+    "en": "ruler",
+    "ja": [
+      "ruler"
+    ],
+    "cat": "たんご",
+    "ex": "This is ruler.",
+    "exJa": "これはrulerです。"
+  },
+  {
+    "id": 390,
+    "en": "run",
+    "ja": [
+      "run"
+    ],
+    "cat": "たんご",
+    "ex": "This is run.",
+    "exJa": "これはrunです。"
+  },
+  {
+    "id": 391,
+    "en": "salad",
+    "ja": [
+      "salad"
+    ],
+    "cat": "たんご",
+    "ex": "This is salad.",
+    "exJa": "これはsaladです。"
+  },
+  {
+    "id": 392,
+    "en": "sandwich",
+    "ja": [
+      "sandwich"
+    ],
+    "cat": "たんご",
+    "ex": "This is sandwich.",
+    "exJa": "これはsandwichです。"
+  },
+  {
+    "id": 393,
+    "en": "Saturday",
+    "ja": [
+      "Saturday"
+    ],
+    "cat": "たんご",
+    "ex": "This is Saturday.",
+    "exJa": "これはSaturdayです。"
+  },
+  {
+    "id": 394,
+    "en": "school",
+    "ja": [
+      "school"
+    ],
+    "cat": "たんご",
+    "ex": "This is school.",
+    "exJa": "これはschoolです。"
+  },
+  {
+    "id": 395,
+    "en": "science",
+    "ja": [
+      "science"
+    ],
+    "cat": "たんご",
+    "ex": "This is science.",
+    "exJa": "これはscienceです。"
+  },
+  {
+    "id": 396,
+    "en": "score",
+    "ja": [
+      "score"
+    ],
+    "cat": "たんご",
+    "ex": "This is score.",
+    "exJa": "これはscoreです。"
+  },
+  {
+    "id": 397,
+    "en": "sea",
+    "ja": [
+      "sea"
+    ],
+    "cat": "たんご",
+    "ex": "This is sea.",
+    "exJa": "これはseaです。"
+  },
+  {
+    "id": 398,
+    "en": "second",
+    "ja": [
+      "second"
+    ],
+    "cat": "たんご",
+    "ex": "This is second.",
+    "exJa": "これはsecondです。"
+  },
+  {
+    "id": 399,
+    "en": "see",
+    "ja": [
+      "see"
+    ],
+    "cat": "たんご",
+    "ex": "This is see.",
+    "exJa": "これはseeです。"
+  },
+  {
+    "id": 400,
+    "en": "September",
+    "ja": [
+      "September"
+    ],
+    "cat": "たんご",
+    "ex": "This is September.",
+    "exJa": "これはSeptemberです。"
+  },
+  {
+    "id": 401,
+    "en": "seven",
+    "ja": [
+      "seven"
+    ],
+    "cat": "たんご",
+    "ex": "This is seven.",
+    "exJa": "これはsevenです。"
+  },
+  {
+    "id": 402,
+    "en": "seventeen",
+    "ja": [
+      "seventeen"
+    ],
+    "cat": "たんご",
+    "ex": "This is seventeen.",
+    "exJa": "これはseventeenです。"
+  },
+  {
+    "id": 403,
+    "en": "seventh",
+    "ja": [
+      "seventh"
+    ],
+    "cat": "たんご",
+    "ex": "This is seventh.",
+    "exJa": "これはseventhです。"
+  },
+  {
+    "id": 404,
+    "en": "seventy",
+    "ja": [
+      "seventy"
+    ],
+    "cat": "たんご",
+    "ex": "This is seventy.",
+    "exJa": "これはseventyです。"
+  },
+  {
+    "id": 405,
+    "en": "she",
+    "ja": [
+      "she"
+    ],
+    "cat": "たんご",
+    "ex": "This is she.",
+    "exJa": "これはsheです。"
+  },
+  {
+    "id": 406,
+    "en": "sheep",
+    "ja": [
+      "sheep"
+    ],
+    "cat": "たんご",
+    "ex": "This is sheep.",
+    "exJa": "これはsheepです。"
+  },
+  {
+    "id": 407,
+    "en": "ship",
+    "ja": [
+      "ship"
+    ],
+    "cat": "たんご",
+    "ex": "This is ship.",
+    "exJa": "これはshipです。"
+  },
+  {
+    "id": 408,
+    "en": "shirt",
+    "ja": [
+      "shirt"
+    ],
+    "cat": "たんご",
+    "ex": "This is shirt.",
+    "exJa": "これはshirtです。"
+  },
+  {
+    "id": 409,
+    "en": "shoe",
+    "ja": [
+      "shoe"
+    ],
+    "cat": "たんご",
+    "ex": "This is shoe.",
+    "exJa": "これはshoeです。"
+  },
+  {
+    "id": 410,
+    "en": "shop",
+    "ja": [
+      "shop"
+    ],
+    "cat": "たんご",
+    "ex": "This is shop.",
+    "exJa": "これはshopです。"
+  },
+  {
+    "id": 411,
+    "en": "short",
+    "ja": [
+      "short"
+    ],
+    "cat": "たんご",
+    "ex": "This is short.",
+    "exJa": "これはshortです。"
+  },
+  {
+    "id": 412,
+    "en": "shoulder",
+    "ja": [
+      "shoulder"
+    ],
+    "cat": "たんご",
+    "ex": "This is shoulder.",
+    "exJa": "これはshoulderです。"
+  },
+  {
+    "id": 413,
+    "en": "show",
+    "ja": [
+      "show"
+    ],
+    "cat": "たんご",
+    "ex": "This is show.",
+    "exJa": "これはshowです。"
+  },
+  {
+    "id": 414,
+    "en": "shower",
+    "ja": [
+      "shower"
+    ],
+    "cat": "たんご",
+    "ex": "This is shower.",
+    "exJa": "これはshowerです。"
+  },
+  {
+    "id": 415,
+    "en": "sing",
+    "ja": [
+      "sing"
+    ],
+    "cat": "たんご",
+    "ex": "This is sing.",
+    "exJa": "これはsingです。"
+  },
+  {
+    "id": 416,
+    "en": "Singapore",
+    "ja": [
+      "Singapore"
+    ],
+    "cat": "たんご",
+    "ex": "This is Singapore.",
+    "exJa": "これはSingaporeです。"
+  },
+  {
+    "id": 417,
+    "en": "singer",
+    "ja": [
+      "singer"
+    ],
+    "cat": "たんご",
+    "ex": "This is singer.",
+    "exJa": "これはsingerです。"
+  },
+  {
+    "id": 418,
+    "en": "sister",
+    "ja": [
+      "sister"
+    ],
+    "cat": "たんご",
+    "ex": "This is sister.",
+    "exJa": "これはsisterです。"
+  },
+  {
+    "id": 419,
+    "en": "sit",
+    "ja": [
+      "sit"
+    ],
+    "cat": "たんご",
+    "ex": "This is sit.",
+    "exJa": "これはsitです。"
+  },
+  {
+    "id": 420,
+    "en": "six",
+    "ja": [
+      "six"
+    ],
+    "cat": "たんご",
+    "ex": "This is six.",
+    "exJa": "これはsixです。"
+  },
+  {
+    "id": 421,
+    "en": "sixteen",
+    "ja": [
+      "sixteen"
+    ],
+    "cat": "たんご",
+    "ex": "This is sixteen.",
+    "exJa": "これはsixteenです。"
+  },
+  {
+    "id": 422,
+    "en": "sixth",
+    "ja": [
+      "sixth"
+    ],
+    "cat": "たんご",
+    "ex": "This is sixth.",
+    "exJa": "これはsixthです。"
+  },
+  {
+    "id": 423,
+    "en": "sixty",
+    "ja": [
+      "sixty"
+    ],
+    "cat": "たんご",
+    "ex": "This is sixty.",
+    "exJa": "これはsixtyです。"
+  },
+  {
+    "id": 424,
+    "en": "skate",
+    "ja": [
+      "skate"
+    ],
+    "cat": "たんご",
+    "ex": "This is skate.",
+    "exJa": "これはskateです。"
+  },
+  {
+    "id": 425,
+    "en": "ski",
+    "ja": [
+      "ski"
+    ],
+    "cat": "たんご",
+    "ex": "This is ski.",
+    "exJa": "これはskiです。"
+  },
+  {
+    "id": 426,
+    "en": "skirt",
+    "ja": [
+      "skirt"
+    ],
+    "cat": "たんご",
+    "ex": "This is skirt.",
+    "exJa": "これはskirtです。"
+  },
+  {
+    "id": 427,
+    "en": "sky",
+    "ja": [
+      "sky"
+    ],
+    "cat": "たんご",
+    "ex": "This is sky.",
+    "exJa": "これはskyです。"
+  },
+  {
+    "id": 428,
+    "en": "sleep",
+    "ja": [
+      "sleep"
+    ],
+    "cat": "たんご",
+    "ex": "This is sleep.",
+    "exJa": "これはsleepです。"
+  },
+  {
+    "id": 429,
+    "en": "sleepy",
+    "ja": [
+      "sleepy"
+    ],
+    "cat": "たんご",
+    "ex": "This is sleepy.",
+    "exJa": "これはsleepyです。"
+  },
+  {
+    "id": 430,
+    "en": "slow",
+    "ja": [
+      "slow"
+    ],
+    "cat": "たんご",
+    "ex": "This is slow.",
+    "exJa": "これはslowです。"
+  },
+  {
+    "id": 431,
+    "en": "small",
+    "ja": [
+      "small"
+    ],
+    "cat": "たんご",
+    "ex": "This is small.",
+    "exJa": "これはsmallです。"
+  },
+  {
+    "id": 432,
+    "en": "snow",
+    "ja": [
+      "snow"
+    ],
+    "cat": "たんご",
+    "ex": "This is snow.",
+    "exJa": "これはsnowです。"
+  },
+  {
+    "id": 433,
+    "en": "snowy",
+    "ja": [
+      "snowy"
+    ],
+    "cat": "たんご",
+    "ex": "This is snowy.",
+    "exJa": "これはsnowyです。"
+  },
+  {
+    "id": 434,
+    "en": "so",
+    "ja": [
+      "so"
+    ],
+    "cat": "たんご",
+    "ex": "This is so.",
+    "exJa": "これはsoです。"
+  },
+  {
+    "id": 435,
+    "en": "soccer",
+    "ja": [
+      "soccer"
+    ],
+    "cat": "たんご",
+    "ex": "This is soccer.",
+    "exJa": "これはsoccerです。"
+  },
+  {
+    "id": 436,
+    "en": "sofa",
+    "ja": [
+      "sofa"
+    ],
+    "cat": "たんご",
+    "ex": "This is sofa.",
+    "exJa": "これはsofaです。"
+  },
+  {
+    "id": 437,
+    "en": "soft",
+    "ja": [
+      "soft"
+    ],
+    "cat": "たんご",
+    "ex": "This is soft.",
+    "exJa": "これはsoftです。"
+  },
+  {
+    "id": 438,
+    "en": "softball",
+    "ja": [
+      "softball"
+    ],
+    "cat": "たんご",
+    "ex": "This is softball.",
+    "exJa": "これはsoftballです。"
+  },
+  {
+    "id": 439,
+    "en": "some",
+    "ja": [
+      "some"
+    ],
+    "cat": "たんご",
+    "ex": "This is some.",
+    "exJa": "これはsomeです。"
+  },
+  {
+    "id": 440,
+    "en": "sometimes",
+    "ja": [
+      "sometimes"
+    ],
+    "cat": "たんご",
+    "ex": "This is sometimes.",
+    "exJa": "これはsometimesです。"
+  },
+  {
+    "id": 441,
+    "en": "son",
+    "ja": [
+      "son"
+    ],
+    "cat": "たんご",
+    "ex": "This is son.",
+    "exJa": "これはsonです。"
+  },
+  {
+    "id": 442,
+    "en": "song",
+    "ja": [
+      "song"
+    ],
+    "cat": "たんご",
+    "ex": "This is song.",
+    "exJa": "これはsongです。"
+  },
+  {
+    "id": 443,
+    "en": "soup",
+    "ja": [
+      "soup"
+    ],
+    "cat": "たんご",
+    "ex": "This is soup.",
+    "exJa": "これはsoupです。"
+  },
+  {
+    "id": 444,
+    "en": "speak",
+    "ja": [
+      "speak"
+    ],
+    "cat": "たんご",
+    "ex": "This is speak.",
+    "exJa": "これはspeakです。"
+  },
+  {
+    "id": 445,
+    "en": "spoon",
+    "ja": [
+      "spoon"
+    ],
+    "cat": "たんご",
+    "ex": "This is spoon.",
+    "exJa": "これはspoonです。"
+  },
+  {
+    "id": 446,
+    "en": "sport",
+    "ja": [
+      "sport"
+    ],
+    "cat": "たんご",
+    "ex": "This is sport.",
+    "exJa": "これはsportです。"
+  },
+  {
+    "id": 447,
+    "en": "spring",
+    "ja": [
+      "spring"
+    ],
+    "cat": "たんご",
+    "ex": "This is spring.",
+    "exJa": "これはspringです。"
+  },
+  {
+    "id": 448,
+    "en": "stand",
+    "ja": [
+      "stand"
+    ],
+    "cat": "たんご",
+    "ex": "This is stand.",
+    "exJa": "これはstandです。"
+  },
+  {
+    "id": 449,
+    "en": "start",
+    "ja": [
+      "start"
+    ],
+    "cat": "たんご",
+    "ex": "This is start.",
+    "exJa": "これはstartです。"
+  },
+  {
+    "id": 450,
+    "en": "station",
+    "ja": [
+      "station"
+    ],
+    "cat": "たんご",
+    "ex": "This is station.",
+    "exJa": "これはstationです。"
+  },
+  {
+    "id": 451,
+    "en": "stop",
+    "ja": [
+      "stop"
+    ],
+    "cat": "たんご",
+    "ex": "This is stop.",
+    "exJa": "これはstopです。"
+  },
+  {
+    "id": 452,
+    "en": "store",
+    "ja": [
+      "store"
+    ],
+    "cat": "たんご",
+    "ex": "This is store.",
+    "exJa": "これはstoreです。"
+  },
+  {
+    "id": 453,
+    "en": "story",
+    "ja": [
+      "story"
+    ],
+    "cat": "たんご",
+    "ex": "This is story.",
+    "exJa": "これはstoryです。"
+  },
+  {
+    "id": 454,
+    "en": "strawberry",
+    "ja": [
+      "strawberry"
+    ],
+    "cat": "たんご",
+    "ex": "This is strawberry.",
+    "exJa": "これはstrawberryです。"
+  },
+  {
+    "id": 455,
+    "en": "street",
+    "ja": [
+      "street"
+    ],
+    "cat": "たんご",
+    "ex": "This is street.",
+    "exJa": "これはstreetです。"
+  },
+  {
+    "id": 456,
+    "en": "student",
+    "ja": [
+      "student"
+    ],
+    "cat": "たんご",
+    "ex": "This is student.",
+    "exJa": "これはstudentです。"
+  },
+  {
+    "id": 457,
+    "en": "study",
+    "ja": [
+      "study"
+    ],
+    "cat": "たんご",
+    "ex": "This is study.",
+    "exJa": "これはstudyです。"
+  },
+  {
+    "id": 458,
+    "en": "subject",
+    "ja": [
+      "subject"
+    ],
+    "cat": "たんご",
+    "ex": "This is subject.",
+    "exJa": "これはsubjectです。"
+  },
+  {
+    "id": 459,
+    "en": "summer",
+    "ja": [
+      "summer"
+    ],
+    "cat": "たんご",
+    "ex": "This is summer.",
+    "exJa": "これはsummerです。"
+  },
+  {
+    "id": 460,
+    "en": "Sunday",
+    "ja": [
+      "Sunday"
+    ],
+    "cat": "たんご",
+    "ex": "This is Sunday.",
+    "exJa": "これはSundayです。"
+  },
+  {
+    "id": 461,
+    "en": "sunny",
+    "ja": [
+      "sunny"
+    ],
+    "cat": "たんご",
+    "ex": "This is sunny.",
+    "exJa": "これはsunnyです。"
+  },
+  {
+    "id": 462,
+    "en": "supermarket",
+    "ja": [
+      "supermarket"
+    ],
+    "cat": "たんご",
+    "ex": "This is supermarket.",
+    "exJa": "これはsupermarketです。"
+  },
+  {
+    "id": 463,
+    "en": "sweet",
+    "ja": [
+      "sweet"
+    ],
+    "cat": "たんご",
+    "ex": "This is sweet.",
+    "exJa": "これはsweetです。"
+  },
+  {
+    "id": 464,
+    "en": "swim",
+    "ja": [
+      "swim"
+    ],
+    "cat": "たんご",
+    "ex": "This is swim.",
+    "exJa": "これはswimです。"
+  },
+  {
+    "id": 465,
+    "en": "table",
+    "ja": [
+      "table"
+    ],
+    "cat": "たんご",
+    "ex": "This is table.",
+    "exJa": "これはtableです。"
+  },
+  {
+    "id": 466,
+    "en": "take",
+    "ja": [
+      "take"
+    ],
+    "cat": "たんご",
+    "ex": "This is take.",
+    "exJa": "これはtakeです。"
+  },
+  {
+    "id": 467,
+    "en": "talk",
+    "ja": [
+      "talk"
+    ],
+    "cat": "たんご",
+    "ex": "This is talk.",
+    "exJa": "これはtalkです。"
+  },
+  {
+    "id": 468,
+    "en": "tall",
+    "ja": [
+      "tall"
+    ],
+    "cat": "たんご",
+    "ex": "This is tall.",
+    "exJa": "これはtallです。"
+  },
+  {
+    "id": 469,
+    "en": "taxi",
+    "ja": [
+      "taxi"
+    ],
+    "cat": "たんご",
+    "ex": "This is taxi.",
+    "exJa": "これはtaxiです。"
+  },
+  {
+    "id": 470,
+    "en": "tea",
+    "ja": [
+      "tea"
+    ],
+    "cat": "たんご",
+    "ex": "This is tea.",
+    "exJa": "これはteaです。"
+  },
+  {
+    "id": 471,
+    "en": "teach",
+    "ja": [
+      "teach"
+    ],
+    "cat": "たんご",
+    "ex": "This is teach.",
+    "exJa": "これはteachです。"
+  },
+  {
+    "id": 472,
+    "en": "teacher",
+    "ja": [
+      "teacher"
+    ],
+    "cat": "たんご",
+    "ex": "This is teacher.",
+    "exJa": "これはteacherです。"
+  },
+  {
+    "id": 473,
+    "en": "team",
+    "ja": [
+      "team"
+    ],
+    "cat": "たんご",
+    "ex": "This is team.",
+    "exJa": "これはteamです。"
+  },
+  {
+    "id": 474,
+    "en": "teeth",
+    "ja": [
+      "teeth"
+    ],
+    "cat": "たんご",
+    "ex": "This is teeth.",
+    "exJa": "これはteethです。"
+  },
+  {
+    "id": 475,
+    "en": "ten",
+    "ja": [
+      "ten"
+    ],
+    "cat": "たんご",
+    "ex": "This is ten.",
+    "exJa": "これはtenです。"
+  },
+  {
+    "id": 476,
+    "en": "tennis",
+    "ja": [
+      "tennis"
+    ],
+    "cat": "たんご",
+    "ex": "This is tennis.",
+    "exJa": "これはtennisです。"
+  },
+  {
+    "id": 477,
+    "en": "tenth",
+    "ja": [
+      "tenth"
+    ],
+    "cat": "たんご",
+    "ex": "This is tenth.",
+    "exJa": "これはtenthです。"
+  },
+  {
+    "id": 478,
+    "en": "test",
+    "ja": [
+      "test"
+    ],
+    "cat": "たんご",
+    "ex": "This is test.",
+    "exJa": "これはtestです。"
+  },
+  {
+    "id": 479,
+    "en": "textbook",
+    "ja": [
+      "textbook"
+    ],
+    "cat": "たんご",
+    "ex": "This is textbook.",
+    "exJa": "これはtextbookです。"
+  },
+  {
+    "id": 480,
+    "en": "that",
+    "ja": [
+      "that"
+    ],
+    "cat": "たんご",
+    "ex": "This is that.",
+    "exJa": "これはthatです。"
+  },
+  {
+    "id": 481,
+    "en": "the",
+    "ja": [
+      "the"
+    ],
+    "cat": "たんご",
+    "ex": "This is the.",
+    "exJa": "これはtheです。"
+  },
+  {
+    "id": 482,
+    "en": "their",
+    "ja": [
+      "their"
+    ],
+    "cat": "たんご",
+    "ex": "This is their.",
+    "exJa": "これはtheirです。"
+  },
+  {
+    "id": 483,
+    "en": "theirs",
+    "ja": [
+      "theirs"
+    ],
+    "cat": "たんご",
+    "ex": "This is theirs.",
+    "exJa": "これはtheirsです。"
+  },
+  {
+    "id": 484,
+    "en": "them",
+    "ja": [
+      "them"
+    ],
+    "cat": "たんご",
+    "ex": "This is them.",
+    "exJa": "これはthemです。"
+  },
+  {
+    "id": 485,
+    "en": "then",
+    "ja": [
+      "then"
+    ],
+    "cat": "たんご",
+    "ex": "This is then.",
+    "exJa": "これはthenです。"
+  },
+  {
+    "id": 486,
+    "en": "there",
+    "ja": [
+      "there"
+    ],
+    "cat": "たんご",
+    "ex": "This is there.",
+    "exJa": "これはthereです。"
+  },
+  {
+    "id": 487,
+    "en": "these",
+    "ja": [
+      "these"
+    ],
+    "cat": "たんご",
+    "ex": "This is these.",
+    "exJa": "これはtheseです。"
+  },
+  {
+    "id": 488,
+    "en": "they",
+    "ja": [
+      "they"
+    ],
+    "cat": "たんご",
+    "ex": "This is they.",
+    "exJa": "これはtheyです。"
+  },
+  {
+    "id": 489,
+    "en": "think",
+    "ja": [
+      "think"
+    ],
+    "cat": "たんご",
+    "ex": "This is think.",
+    "exJa": "これはthinkです。"
+  },
+  {
+    "id": 490,
+    "en": "third",
+    "ja": [
+      "third"
+    ],
+    "cat": "たんご",
+    "ex": "This is third.",
+    "exJa": "これはthirdです。"
+  },
+  {
+    "id": 491,
+    "en": "thirteen",
+    "ja": [
+      "thirteen"
+    ],
+    "cat": "たんご",
+    "ex": "This is thirteen.",
+    "exJa": "これはthirteenです。"
+  },
+  {
+    "id": 492,
+    "en": "thirty",
+    "ja": [
+      "thirty"
+    ],
+    "cat": "たんご",
+    "ex": "This is thirty.",
+    "exJa": "これはthirtyです。"
+  },
+  {
+    "id": 493,
+    "en": "this",
+    "ja": [
+      "this"
+    ],
+    "cat": "たんご",
+    "ex": "This is this.",
+    "exJa": "これはthisです。"
+  },
+  {
+    "id": 494,
+    "en": "those",
+    "ja": [
+      "those"
+    ],
+    "cat": "たんご",
+    "ex": "This is those.",
+    "exJa": "これはthoseです。"
+  },
+  {
+    "id": 495,
+    "en": "thousand",
+    "ja": [
+      "thousand"
+    ],
+    "cat": "たんご",
+    "ex": "This is thousand.",
+    "exJa": "これはthousandです。"
+  },
+  {
+    "id": 496,
+    "en": "three",
+    "ja": [
+      "three"
+    ],
+    "cat": "たんご",
+    "ex": "This is three.",
+    "exJa": "これはthreeです。"
+  },
+  {
+    "id": 497,
+    "en": "Thursday",
+    "ja": [
+      "Thursday"
+    ],
+    "cat": "たんご",
+    "ex": "This is Thursday.",
+    "exJa": "これはThursdayです。"
+  },
+  {
+    "id": 498,
+    "en": "ticket",
+    "ja": [
+      "ticket"
+    ],
+    "cat": "たんご",
+    "ex": "This is ticket.",
+    "exJa": "これはticketです。"
+  },
+  {
+    "id": 499,
+    "en": "time",
+    "ja": [
+      "time"
+    ],
+    "cat": "たんご",
+    "ex": "This is time.",
+    "exJa": "これはtimeです。"
+  },
+  {
+    "id": 500,
+    "en": "to",
+    "ja": [
+      "to"
+    ],
+    "cat": "たんご",
+    "ex": "This is to.",
+    "exJa": "これはtoです。"
+  },
+  {
+    "id": 501,
+    "en": "today",
+    "ja": [
+      "today"
+    ],
+    "cat": "たんご",
+    "ex": "This is today.",
+    "exJa": "これはtodayです。"
+  },
+  {
+    "id": 502,
+    "en": "together",
+    "ja": [
+      "together"
+    ],
+    "cat": "たんご",
+    "ex": "This is together.",
+    "exJa": "これはtogetherです。"
+  },
+  {
+    "id": 503,
+    "en": "tomato",
+    "ja": [
+      "tomato"
+    ],
+    "cat": "たんご",
+    "ex": "This is tomato.",
+    "exJa": "これはtomatoです。"
+  },
+  {
+    "id": 504,
+    "en": "tomorrow",
+    "ja": [
+      "tomorrow"
+    ],
+    "cat": "たんご",
+    "ex": "This is tomorrow.",
+    "exJa": "これはtomorrowです。"
+  },
+  {
+    "id": 505,
+    "en": "too",
+    "ja": [
+      "too"
+    ],
+    "cat": "たんご",
+    "ex": "This is too.",
+    "exJa": "これはtooです。"
+  },
+  {
+    "id": 506,
+    "en": "towel",
+    "ja": [
+      "towel"
+    ],
+    "cat": "たんご",
+    "ex": "This is towel.",
+    "exJa": "これはtowelです。"
+  },
+  {
+    "id": 507,
+    "en": "tower",
+    "ja": [
+      "tower"
+    ],
+    "cat": "たんご",
+    "ex": "This is tower.",
+    "exJa": "これはtowerです。"
+  },
+  {
+    "id": 508,
+    "en": "toy",
+    "ja": [
+      "toy"
+    ],
+    "cat": "たんご",
+    "ex": "This is toy.",
+    "exJa": "これはtoyです。"
+  },
+  {
+    "id": 509,
+    "en": "train",
+    "ja": [
+      "train"
+    ],
+    "cat": "たんご",
+    "ex": "This is train.",
+    "exJa": "これはtrainです。"
+  },
+  {
+    "id": 510,
+    "en": "tree",
+    "ja": [
+      "tree"
+    ],
+    "cat": "たんご",
+    "ex": "This is tree.",
+    "exJa": "これはtreeです。"
+  },
+  {
+    "id": 511,
+    "en": "T-shirt",
+    "ja": [
+      "T-shirt"
+    ],
+    "cat": "たんご",
+    "ex": "This is T-shirt.",
+    "exJa": "これはT-shirtです。"
+  },
+  {
+    "id": 512,
+    "en": "Tuesday",
+    "ja": [
+      "Tuesday"
+    ],
+    "cat": "たんご",
+    "ex": "This is Tuesday.",
+    "exJa": "これはTuesdayです。"
+  },
+  {
+    "id": 513,
+    "en": "umbrella",
+    "ja": [
+      "umbrella"
+    ],
+    "cat": "たんご",
+    "ex": "This is umbrella.",
+    "exJa": "これはumbrellaです。"
+  },
+  {
+    "id": 514,
+    "en": "uncle",
+    "ja": [
+      "uncle"
+    ],
+    "cat": "たんご",
+    "ex": "This is uncle.",
+    "exJa": "これはuncleです。"
+  },
+  {
+    "id": 515,
+    "en": "under",
+    "ja": [
+      "under"
+    ],
+    "cat": "たんご",
+    "ex": "This is under.",
+    "exJa": "これはunderです。"
+  },
+  {
+    "id": 516,
+    "en": "up",
+    "ja": [
+      "up"
+    ],
+    "cat": "たんご",
+    "ex": "This is up.",
+    "exJa": "これはupです。"
+  },
+  {
+    "id": 517,
+    "en": "us",
+    "ja": [
+      "us"
+    ],
+    "cat": "たんご",
+    "ex": "This is us.",
+    "exJa": "これはusです。"
+  },
+  {
+    "id": 518,
+    "en": "use",
+    "ja": [
+      "use"
+    ],
+    "cat": "たんご",
+    "ex": "This is use.",
+    "exJa": "これはuseです。"
+  },
+  {
+    "id": 519,
+    "en": "usually",
+    "ja": [
+      "usually"
+    ],
+    "cat": "たんご",
+    "ex": "This is usually.",
+    "exJa": "これはusuallyです。"
+  },
+  {
+    "id": 520,
+    "en": "vegetable",
+    "ja": [
+      "vegetable"
+    ],
+    "cat": "たんご",
+    "ex": "This is vegetable.",
+    "exJa": "これはvegetableです。"
+  },
+  {
+    "id": 521,
+    "en": "very",
+    "ja": [
+      "very"
+    ],
+    "cat": "たんご",
+    "ex": "This is very.",
+    "exJa": "これはveryです。"
+  },
+  {
+    "id": 522,
+    "en": "violin",
+    "ja": [
+      "violin"
+    ],
+    "cat": "たんご",
+    "ex": "This is violin.",
+    "exJa": "これはviolinです。"
+  },
+  {
+    "id": 523,
+    "en": "volleyball",
+    "ja": [
+      "volleyball"
+    ],
+    "cat": "たんご",
+    "ex": "This is volleyball.",
+    "exJa": "これはvolleyballです。"
+  },
+  {
+    "id": 524,
+    "en": "waiter",
+    "ja": [
+      "waiter"
+    ],
+    "cat": "たんご",
+    "ex": "This is waiter.",
+    "exJa": "これはwaiterです。"
+  },
+  {
+    "id": 525,
+    "en": "walk",
+    "ja": [
+      "walk"
+    ],
+    "cat": "たんご",
+    "ex": "This is walk.",
+    "exJa": "これはwalkです。"
+  },
+  {
+    "id": 526,
+    "en": "wall",
+    "ja": [
+      "wall"
+    ],
+    "cat": "たんご",
+    "ex": "This is wall.",
+    "exJa": "これはwallです。"
+  },
+  {
+    "id": 527,
+    "en": "want",
+    "ja": [
+      "want"
+    ],
+    "cat": "たんご",
+    "ex": "This is want.",
+    "exJa": "これはwantです。"
+  },
+  {
+    "id": 528,
+    "en": "warm",
+    "ja": [
+      "warm"
+    ],
+    "cat": "たんご",
+    "ex": "This is warm.",
+    "exJa": "これはwarmです。"
+  },
+  {
+    "id": 529,
+    "en": "wash",
+    "ja": [
+      "wash"
+    ],
+    "cat": "たんご",
+    "ex": "This is wash.",
+    "exJa": "これはwashです。"
+  },
+  {
+    "id": 530,
+    "en": "watch（名詞）",
+    "ja": [
+      "watch"
+    ],
+    "cat": "たんご",
+    "ex": "This is watch.",
+    "exJa": "これはwatchです。"
+  },
+  {
+    "id": 531,
+    "en": "watch（動詞）",
+    "ja": [
+      "watch"
+    ],
+    "cat": "たんご",
+    "ex": "This is watch.",
+    "exJa": "これはwatchです。"
+  },
+  {
+    "id": 532,
+    "en": "water",
+    "ja": [
+      "water"
+    ],
+    "cat": "たんご",
+    "ex": "This is water.",
+    "exJa": "これはwaterです。"
+  },
+  {
+    "id": 533,
+    "en": "we",
+    "ja": [
+      "we"
+    ],
+    "cat": "たんご",
+    "ex": "This is we.",
+    "exJa": "これはweです。"
+  },
+  {
+    "id": 534,
+    "en": "weather",
+    "ja": [
+      "weather"
+    ],
+    "cat": "たんご",
+    "ex": "This is weather.",
+    "exJa": "これはweatherです。"
+  },
+  {
+    "id": 535,
+    "en": "Wednesday",
+    "ja": [
+      "Wednesday"
+    ],
+    "cat": "たんご",
+    "ex": "This is Wednesday.",
+    "exJa": "これはWednesdayです。"
+  },
+  {
+    "id": 536,
+    "en": "week",
+    "ja": [
+      "week"
+    ],
+    "cat": "たんご",
+    "ex": "This is week.",
+    "exJa": "これはweekです。"
+  },
+  {
+    "id": 537,
+    "en": "weekend",
+    "ja": [
+      "weekend"
+    ],
+    "cat": "たんご",
+    "ex": "This is weekend.",
+    "exJa": "これはweekendです。"
+  },
+  {
+    "id": 538,
+    "en": "well",
+    "ja": [
+      "well"
+    ],
+    "cat": "たんご",
+    "ex": "This is well.",
+    "exJa": "これはwellです。"
+  },
+  {
+    "id": 539,
+    "en": "what",
+    "ja": [
+      "what"
+    ],
+    "cat": "たんご",
+    "ex": "This is what.",
+    "exJa": "これはwhatです。"
+  },
+  {
+    "id": 540,
+    "en": "when",
+    "ja": [
+      "when"
+    ],
+    "cat": "たんご",
+    "ex": "This is when.",
+    "exJa": "これはwhenです。"
+  },
+  {
+    "id": 541,
+    "en": "where",
+    "ja": [
+      "where"
+    ],
+    "cat": "たんご",
+    "ex": "This is where.",
+    "exJa": "これはwhereです。"
+  },
+  {
+    "id": 542,
+    "en": "which",
+    "ja": [
+      "which"
+    ],
+    "cat": "たんご",
+    "ex": "This is which.",
+    "exJa": "これはwhichです。"
+  },
+  {
+    "id": 543,
+    "en": "white",
+    "ja": [
+      "white"
+    ],
+    "cat": "たんご",
+    "ex": "This is white.",
+    "exJa": "これはwhiteです。"
+  },
+  {
+    "id": 544,
+    "en": "who",
+    "ja": [
+      "who"
+    ],
+    "cat": "たんご",
+    "ex": "This is who.",
+    "exJa": "これはwhoです。"
+  },
+  {
+    "id": 545,
+    "en": "whose",
+    "ja": [
+      "whose"
+    ],
+    "cat": "たんご",
+    "ex": "This is whose.",
+    "exJa": "これはwhoseです。"
+  },
+  {
+    "id": 546,
+    "en": "why",
+    "ja": [
+      "why"
+    ],
+    "cat": "たんご",
+    "ex": "This is why.",
+    "exJa": "これはwhyです。"
+  },
+  {
+    "id": 547,
+    "en": "window",
+    "ja": [
+      "window"
+    ],
+    "cat": "たんご",
+    "ex": "This is window.",
+    "exJa": "これはwindowです。"
+  },
+  {
+    "id": 548,
+    "en": "windy",
+    "ja": [
+      "windy"
+    ],
+    "cat": "たんご",
+    "ex": "This is windy.",
+    "exJa": "これはwindyです。"
+  },
+  {
+    "id": 549,
+    "en": "winter",
+    "ja": [
+      "winter"
+    ],
+    "cat": "たんご",
+    "ex": "This is winter.",
+    "exJa": "これはwinterです。"
+  },
+  {
+    "id": 550,
+    "en": "with",
+    "ja": [
+      "with"
+    ],
+    "cat": "たんご",
+    "ex": "This is with.",
+    "exJa": "これはwithです。"
+  },
+  {
+    "id": 551,
+    "en": "woman",
+    "ja": [
+      "woman"
+    ],
+    "cat": "たんご",
+    "ex": "This is woman.",
+    "exJa": "これはwomanです。"
+  },
+  {
+    "id": 552,
+    "en": "wonderful",
+    "ja": [
+      "wonderful"
+    ],
+    "cat": "たんご",
+    "ex": "This is wonderful.",
+    "exJa": "これはwonderfulです。"
+  },
+  {
+    "id": 553,
+    "en": "work",
+    "ja": [
+      "work"
+    ],
+    "cat": "たんご",
+    "ex": "This is work.",
+    "exJa": "これはworkです。"
+  },
+  {
+    "id": 554,
+    "en": "world",
+    "ja": [
+      "world"
+    ],
+    "cat": "たんご",
+    "ex": "This is world.",
+    "exJa": "これはworldです。"
+  },
+  {
+    "id": 555,
+    "en": "write",
+    "ja": [
+      "write"
+    ],
+    "cat": "たんご",
+    "ex": "This is write.",
+    "exJa": "これはwriteです。"
+  },
+  {
+    "id": 556,
+    "en": "year",
+    "ja": [
+      "year"
+    ],
+    "cat": "たんご",
+    "ex": "This is year.",
+    "exJa": "これはyearです。"
+  },
+  {
+    "id": 557,
+    "en": "yellow",
+    "ja": [
+      "yellow"
+    ],
+    "cat": "たんご",
+    "ex": "This is yellow.",
+    "exJa": "これはyellowです。"
+  },
+  {
+    "id": 558,
+    "en": "yen",
+    "ja": [
+      "yen"
+    ],
+    "cat": "たんご",
+    "ex": "This is yen.",
+    "exJa": "これはyenです。"
+  },
+  {
+    "id": 559,
+    "en": "you（主格）",
+    "ja": [
+      "you"
+    ],
+    "cat": "たんご",
+    "ex": "This is you.",
+    "exJa": "これはyouです。"
+  },
+  {
+    "id": 560,
+    "en": "you（目的格）",
+    "ja": [
+      "you"
+    ],
+    "cat": "たんご",
+    "ex": "This is you.",
+    "exJa": "これはyouです。"
+  },
+  {
+    "id": 561,
+    "en": "your",
+    "ja": [
+      "your"
+    ],
+    "cat": "たんご",
+    "ex": "This is your.",
+    "exJa": "これはyourです。"
+  },
+  {
+    "id": 562,
+    "en": "yours",
+    "ja": [
+      "yours"
+    ],
+    "cat": "たんご",
+    "ex": "This is yours.",
+    "exJa": "これはyoursです。"
+  },
+  {
+    "id": 563,
+    "en": "zoo",
+    "ja": [
+      "zoo"
+    ],
+    "cat": "たんご",
+    "ex": "This is zoo.",
+    "exJa": "これはzooです。"
+  }
 ]
