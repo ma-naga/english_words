@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>しゃべって☆えいたんご</title>
+<style>
+:root{
+  --paper:#EAF5F3; --card:#FFFFFF; --ink:#17324D; --muted:#5B7186;
+  --orange:#FF8A3D; --orange-d:#E06F22; --grape:#6C4AB6; --grape-d:#553894;
+  --ok:#E5484D; --ng:#2F6FDB; --line:#C9DCE0; --mint:#1FA971;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  font-size:18px; line-height:1.6; -webkit-text-size-adjust:100%;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+#app{max-width:760px;margin:0 auto;padding:20px 20px 40px;min-height:100%}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;-webkit-tap-highlight-color:transparent}
+button:focus-visible,input:focus-visible,summary:focus-visible,textarea:focus-visible{outline:4px solid #FFC94D;outline-offset:2px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  min-height:60px;padding:0 28px;border-radius:18px;font-weight:700;font-size:1.1rem;
+  background:var(--orange);color:#fff;box-shadow:0 5px 0 var(--orange-d);
+  transition:transform .08s, box-shadow .08s;
+}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--orange-d)}
+.btn.grape{background:var(--grape);box-shadow:0 5px 0 var(--grape-d)}
+.btn.grape:active{box-shadow:0 1px 0 var(--grape-d)}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line);border:2px solid var(--line)}
+.btn.ghost:active{box-shadow:0 1px 0 var(--line)}
+.btn.small{min-height:44px;padding:0 16px;font-size:.95rem;border-radius:12px;box-shadow:none}
+.btn[disabled]{opacity:.5;pointer-events:none}
+h1{margin:0;font-size:2rem;line-height:1.25}
+.sub{color:var(--muted);margin:.3em 0 0}
+
+/* home */
+.hero{padding:28px 0 8px}
+.tagline{font-size:1.05rem;color:var(--muted)}
+.stats{display:flex;gap:12px;margin:24px 0}
+.stat{flex:1;background:var(--card);border-radius:18px;padding:14px 16px;border:2px solid var(--line)}
+.stat b{display:block;font-size:1.9rem;line-height:1.1}
+.stat span{color:var(--muted);font-size:.85rem}
+.startrow{margin:8px 0 28px}
+.startrow .btn{width:100%;min-height:76px;font-size:1.4rem}
+.note{background:#FFF3D6;border-radius:14px;padding:12px 16px;font-size:.92rem;margin:14px 0}
+.check{font-size:.9rem;color:var(--muted)}
+.check b{color:var(--ink)}
+details{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:10px 16px;margin-top:14px}
+summary{cursor:pointer;font-weight:700}
+details p{font-size:.9rem;color:var(--muted);margin:.5em 0}
+textarea{width:100%;height:90px;font:14px/1.4 monospace;border:2px solid var(--line);border-radius:10px;padding:8px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+label.sw{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:.95rem}
+label.sw input{width:22px;height:22px}
+
+/* quiz */
+.top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.bar{flex:1;height:14px;background:#fff;border-radius:99px;border:2px solid var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--mint);border-radius:99px;transition:width .3s}
+.count{font-weight:700;min-width:3.5em;text-align:right}
+.card{
+  background:var(--card);border-radius:28px;border:2px solid var(--line);
+  padding:32px 24px 28px;text-align:center;
+}
+.tag{display:inline-block;background:#FFF3D6;border-radius:99px;padding:2px 14px;font-size:.85rem;margin-bottom:6px}
+.word{
+  font-family:"Avenir Next","Trebuchet MS","Segoe UI",sans-serif;
+  font-size:clamp(3.2rem,12vw,5.6rem);font-weight:800;letter-spacing:.02em;line-height:1.15;margin:.1em 0;
+  word-break:break-all;
+}
+.speaker{
+  width:76px;height:76px;border-radius:50%;background:#EAF1FF;font-size:2rem;
+  border:3px solid #BBD0F5;margin:4px auto 0;display:block;
+}
+.speaker:active{background:#D5E4FF}
+.step{margin-top:26px;text-align:center}
+.step h2{font-size:1.05rem;margin:0 0 12px;color:var(--muted);font-weight:700}
+.mic{
+  width:150px;height:150px;border-radius:50%;background:var(--grape);color:#fff;
+  font-size:1.05rem;font-weight:700;box-shadow:0 7px 0 var(--grape-d);
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+}
+.mic span{font-size:3rem;line-height:1}
+.mic:active{transform:translateY(5px);box-shadow:0 2px 0 var(--grape-d)}
+.mic.live{background:var(--ok);box-shadow:0 7px 0 #B5282D;animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.mic.live{animation:none}.stamp{animation:none!important}}
+.msg{min-height:1.8em;margin:14px 0 0;font-weight:700}
+.self{margin-top:14px;padding-top:14px;border-top:2px dashed var(--line)}
+.self p{margin:0 0 10px;color:var(--muted);font-size:.95rem}
+.chip{display:inline-block;border-radius:99px;padding:2px 14px;font-size:.9rem;font-weight:700;background:#E4F7EE;color:#137A50;margin-bottom:12px}
+input.ans{
+  width:100%;max-width:440px;height:64px;font-size:1.6rem;text-align:center;
+  border:3px solid var(--line);border-radius:16px;padding:0 14px;font-family:inherit;color:var(--ink);
+}
+input.ans:focus{border-color:var(--grape)}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:480px;margin:16px auto 0}
+.choices .btn{min-height:64px;font-size:1.2rem}
+
+/* result */
+.stamps{display:flex;justify-content:center;gap:28px;margin:12px 0 4px;flex-wrap:wrap}
+.mini{text-align:center}
+.mini small{display:block;color:var(--muted);font-weight:700}
+.stamp{
+  display:inline-flex;align-items:center;justify-content:center;
+  border-radius:50%;font-weight:900;line-height:1;transform:rotate(-8deg);
+  animation:pop .35s cubic-bezier(.2,1.6,.4,1);
+}
+@keyframes pop{from{transform:scale(2.2) rotate(-20deg);opacity:0}}
+.stamp.ok{border:9px solid var(--ok);color:var(--ok)}
+.stamp.ng{color:var(--ng)}
+.stamp.big{width:150px;height:150px;font-size:5.4rem}
+.stamp.sm{width:64px;height:64px;font-size:2.2rem}
+.stamp.sm.ok{border-width:5px}
+.stamp.ng.big,.stamp.ng.sm{border:0}
+.stamp.ng.big{font-size:7rem}
+.stamp.ng.sm{font-size:3rem}
+.answer{margin:18px 0 4px;font-size:1.5rem;font-weight:800}
+.answer small{display:block;font-size:.9rem;font-weight:400;color:var(--muted)}
+.detail{color:var(--muted);font-size:.95rem;margin:2px 0}
+.example{background:#F3F8FA;border-radius:14px;padding:10px 16px;margin:16px auto 0;max-width:520px}
+.example .en{font-family:"Avenir Next","Trebuchet MS",sans-serif;font-weight:700;font-size:1.15rem}
+.example .ja{color:var(--muted);font-size:.9rem}
+.again{display:inline-block;background:#FFF3D6;border-radius:99px;padding:0 12px;font-size:.85rem;margin-left:8px;vertical-align:middle}
+.actions{display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+
+/* summary */
+.stars{font-size:3rem;letter-spacing:.1em;color:#FFB800;margin:6px 0}
+.stars .off{color:#D9E3E6}
+.list{list-style:none;margin:12px 0 0;padding:0;text-align:left}
+.list li{display:flex;justify-content:space-between;gap:12px;padding:10px 4px;border-bottom:2px dashed var(--line)}
+.list .en{font-family:"Avenir Next","Trebuchet MS",sans-serif;font-weight:800}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/* ============================================================
+   単語データ  [英語, 日本語(許容リスト), カテゴリ, 例文, 例文の日本語]
+   ※ 本番では words.json に切り出せる形式です
+   ============================================================ */
+const RAW = `
+dog|いぬ,犬|どうぶつ|I have a dog.|わたしはいぬをかっています。
+cat|ねこ,猫|どうぶつ|The cat is cute.|そのねこはかわいいです。
+bird|とり,鳥|どうぶつ|A bird can fly.|とりはとべます。
+fish|さかな,魚|どうぶつ|I like fish.|わたしはさかながすきです。
+horse|うま,馬|どうぶつ|This is a horse.|これはうまです。
+rabbit|うさぎ,兎|どうぶつ|The rabbit is white.|そのうさぎはしろいです。
+monkey|さる,猿|どうぶつ|A monkey likes bananas.|さるはバナナがすきです。
+cow|うし,牛|どうぶつ|The cow eats grass.|うしはくさをたべます。
+pig|ぶた,豚|どうぶつ|The pig is big.|そのぶたはおおきいです。
+bear|くま,熊|どうぶつ|I see a bear.|くまがみえます。
+apple|りんご,リンゴ,林檎|たべもの|I like apples.|わたしはりんごがすきです。
+banana|バナナ,ばなな|たべもの|I eat a banana.|わたしはバナナをたべます。
+orange|オレンジ,おれんじ|たべもの|This orange is sweet.|このオレンジはあまいです。
+milk|ぎゅうにゅう,牛乳,ミルク|たべもの|I drink milk.|わたしはぎゅうにゅうをのみます。
+egg|たまご,卵,玉子|たべもの|I eat an egg.|わたしはたまごをたべます。
+bread|パン,ぱん|たべもの|I like bread.|わたしはパンがすきです。
+rice|ごはん,ご飯,こめ,米,ライス|たべもの|I eat rice.|わたしはごはんをたべます。
+water|みず,水|たべもの|Water, please.|おみずをください。
+cake|ケーキ,けーき|たべもの|This cake is nice.|このケーキはおいしいです。
+tea|おちゃ,お茶,ちゃ,茶,こうちゃ,紅茶|たべもの|I drink tea.|わたしはおちゃをのみます。
+lunch|ひるごはん,昼ご飯,昼ごはん,昼食,ランチ,おひる|たべもの|Lunch is ready.|ひるごはんができました。
+breakfast|あさごはん,朝ご飯,朝ごはん,朝食,ちょうしょく|たべもの|I eat breakfast.|わたしはあさごはんをたべます。
+red|あか,赤,あかい,赤い|いろ|The apple is red.|そのりんごはあかいです。
+blue|あお,青,あおい,青い,ブルー|いろ|The sky is blue.|そらはあおいです。
+yellow|きいろ,黄色,きいろい,黄色い|いろ|I like yellow.|わたしはきいろがすきです。
+green|みどり,緑,みどりいろ,グリーン|いろ|The tree is green.|その木はみどりです。
+white|しろ,白,しろい,白い|いろ|The cat is white.|そのねこはしろいです。
+black|くろ,黒,くろい,黒い|いろ|I have a black bag.|わたしはくろいかばんをもっています。
+one|いち,一,1|かず|I have one pen.|わたしはペンを1ぽんもっています。
+two|に,二,2|かず|I have two dogs.|わたしはいぬを2ひきかっています。
+three|さん,三,3|かず|Three cats are here.|ここにねこが3びきいます。
+four|よん,し,四,4|かず|I am four years old.|わたしは4さいです。
+five|ご,五,5|かず|Five apples, please.|りんごを5こください。
+six|ろく,六,6|かず|It is six o'clock.|6じです。
+seven|なな,しち,七,7|かず|I get up at seven.|わたしは7じにおきます。
+eight|はち,八,8|かず|Eight birds are there.|そこに8わのとりがいます。
+nine|きゅう,く,九,9|かず|I have nine books.|わたしはほんを9さつもっています。
+ten|じゅう,とお,十,10|かず|Ten students are here.|ここにせいとが10にんいます。
+book|ほん,本|がっこう|This is my book.|これはわたしのほんです。
+pen|ペン,ぺん|がっこう|I have a pen.|わたしはペンをもっています。
+pencil|えんぴつ,鉛筆|がっこう|Use a pencil.|えんぴつをつかいましょう。
+desk|つくえ,机,デスク|がっこう|My desk is big.|わたしのつくえはおおきいです。
+bag|かばん,鞄,バッグ|がっこう|My bag is new.|わたしのかばんはあたらしいです。
+school|がっこう,学校|がっこう|I go to school.|わたしはがっこうにいきます。
+teacher|せんせい,先生|がっこう|She is my teacher.|かのじょはわたしのせんせいです。
+student|せいと,生徒,がくせい,学生|がっこう|I am a student.|わたしはせいとです。
+classroom|きょうしつ,教室|がっこう|This is my classroom.|ここはわたしのきょうしつです。
+eraser|けしゴム,消しゴム,けしごむ|がっこう|I need an eraser.|わたしはけしゴムがひつようです。
+notebook|ノート,のーと|がっこう|Open your notebook.|ノートをひらいてください。
+music|おんがく,音楽,ミュージック|がっこう|I like music.|わたしはおんがくがすきです。
+mother|おかあさん,お母さん,はは,母,ママ|かぞく|My mother is kind.|わたしのおかあさんはやさしいです。
+father|おとうさん,お父さん,ちち,父,パパ|かぞく|My father is tall.|わたしのおとうさんはせがたかいです。
+brother|おにいさん,お兄さん,あに,兄,おとうと,弟,きょうだい,兄弟|かぞく|I have a brother.|わたしにはきょうだい(おとこ)がいます。
+sister|おねえさん,お姉さん,あね,姉,いもうと,妹,しまい,姉妹|かぞく|I have a sister.|わたしにはしまい(おんな)がいます。
+friend|ともだち,友達,友だち,ゆうじん,友人|かぞく|He is my friend.|かれはわたしのともだちです。
+family|かぞく,家族,ファミリー|かぞく|I love my family.|わたしはかぞくがだいすきです。
+run|はしる,走る|どうし|I run every day.|わたしはまいにちはしります。
+eat|たべる,食べる|どうし|I eat lunch.|わたしはひるごはんをたべます。
+drink|のむ,飲む|どうし|I drink water.|わたしはみずをのみます。
+read|よむ,読む|どうし|I read a book.|わたしはほんをよみます。
+write|かく,書く|どうし|I write a letter.|わたしはてがみをかきます。
+play|あそぶ,遊ぶ,する,やる|どうし|I play soccer.|わたしはサッカーをします。
+go|いく,行く|どうし|I go to school.|わたしはがっこうにいきます。
+come|くる,来る|どうし|Come here.|ここにきてください。
+see|みる,見る,みえる,見える,あう,会う|どうし|I see a bird.|とりがみえます。
+sing|うたう,歌う|どうし|I sing a song.|わたしはうたをうたいます。
+swim|およぐ,泳ぐ|どうし|I can swim.|わたしはおよげます。
+walk|あるく,歩く|どうし|I walk to school.|わたしはがっこうまであるきます。
+study|べんきょうする,勉強する,べんきょう,勉強,まなぶ,学ぶ|どうし|I study English.|わたしはえいごをべんきょうします。
+like|すき,好き,すきだ,好きだ,このむ,好む|どうし|I like cats.|わたしはねこがすきです。
+have|もつ,持つ,もっている,持っている,かっている,飼っている,ある,いる|どうし|I have a pen.|わたしはペンをもっています。
+speak|はなす,話す|どうし|I speak English.|わたしはえいごをはなします。
+listen|きく,聞く,聴く|どうし|Listen to me.|わたしのはなしをきいて。
+open|あける,開ける,ひらく,開く|どうし|Open the door.|ドアをあけて。
+sleep|ねる,寝る,ねむる,眠る|どうし|I sleep at ten.|わたしは10じにねます。
+big|おおきい,大きい,おおきな,大きな|けいようし|This is a big dog.|これはおおきないぬです。
+small|ちいさい,小さい,ちいさな,小さな|けいようし|I have a small bag.|わたしはちいさなかばんをもっています。
+happy|うれしい,嬉しい,しあわせ,幸せ,たのしい,楽しい,ハッピー|けいようし|I am happy.|わたしはうれしいです。
+good|いい,よい,良い,すばらしい|けいようし|Good idea!|いいかんがえだね！
+new|あたらしい,新しい,ニュー|けいようし|I have a new bag.|わたしはあたらしいかばんをもっています。
+old|ふるい,古い,としをとった,年をとった|けいようし|This is an old book.|これはふるいほんです。
+hot|あつい,暑い,熱い,ホット|けいようし|It is hot today.|きょうはあついです。
+cold|さむい,寒い,つめたい,冷たい|けいようし|It is cold today.|きょうはさむいです。
+sun|たいよう,太陽,おひさま,日|しぜん|The sun is bright.|たいようはあかるいです。
+moon|つき,月|しぜん|Look at the moon.|つきをみて。
+day|ひ,日,いちにち,一日|じかん|It is a nice day.|いいてんきのひですね。
+morning|あさ,朝|じかん|Good morning.|おはよう。
+night|よる,夜,ばん,晩|じかん|Good night.|おやすみなさい。
+rain|あめ,雨|しぜん|It is rain today.|きょうはあめです。
+snow|ゆき,雪|しぜん|I like snow.|わたしはゆきがすきです。
+house|いえ,家,うち|ばしょ|This is my house.|これはわたしのいえです。
+park|こうえん,公園,パーク|ばしょ|I go to the park.|わたしはこうえんにいきます。
+car|くるま,車,じどうしゃ,自動車,カー|ばしょ|My father has a car.|わたしのおとうさんはくるまをもっています。
+bus|バス,ばす|ばしょ|I take a bus.|わたしはバスにのります。
+train|でんしゃ,電車,れっしゃ,列車,トレイン|ばしょ|I take a train.|わたしはでんしゃにのります。
+boy|おとこのこ,男の子,しょうねん,少年,おとこ,男|ひと|The boy is tall.|そのおとこのこはせがたかいです。
+girl|おんなのこ,女の子,しょうじょ,少女,おんな,女|ひと|The girl is happy.|そのおんなのこはうれしそうです。
+hand|て,手|からだ|Wash your hands.|てをあらいましょう。
+eye|め,目|からだ|I have two eyes.|わたしにはめが2つあります。
+name|なまえ,名前,な,名|ひと|What is your name?|あなたのなまえはなんですか？
+`;
+const WORDS = RAW.trim().split("\n").map((line,i)=>{
+  const [en,ja,cat,ex,exJa]=line.split("|");
+  return {id:i+1,en,ja:ja.split(","),cat,ex,exJa};
+});
+const BYID = Object.fromEntries(WORDS.map(w=>[w.id,w]));
+
+/* ============================================================
+   保存 (localStorage)
+   ============================================================ */
+const KEY="eitango_v1";
+const INTERVALS=[0,1,3,7,14,30]; // 箱 0..5 の次回までの日数
+let P = load();
+function load(){
+  try{
+    const d = JSON.parse(localStorage.getItem(KEY)||"null");
+    if(d && d.v===1) return d;
+  }catch(e){}
+  return {v:1, words:{}, streak:{last:"",count:0}, settings:{mic:true}, sessions:0};
+}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(P)); }catch(e){} }
+function today(offset=0){
+  const d=new Date(); d.setDate(d.getDate()+offset);
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+
+/* ============================================================
+   ユーティリティ
+   ============================================================ */
+const $app=document.getElementById("app");
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+
+/* 日本語の正規化: 全角半角・カタカナ→ひらがな・空白記号を除去 */
+function normJa(s){
+  return s.normalize("NFKC").toLowerCase()
+    .replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60))
+    .replace(/[\s。、．，.,!！?？「」]/g,"");
+}
+function matchJa(input, list){
+  const n=normJa(input); if(!n) return false;
+  return list.some(a=>normJa(a)===n);
+}
+
+/* 英語の発音判定 (甘め) */
+const DIG={"0":"zero","1":"one","2":"two","3":"three","4":"four","5":"five","6":"six","7":"seven","8":"eight","9":"nine","10":"ten"};
+const HOMO={
+  one:["won"], two:["to","too"], four:["for","fore"], eight:["ate"],
+  red:["read"], read:["red","reed"], write:["right","rite"], see:["sea","c"],
+  blue:["blew"], eye:["i","aye"], bear:["bare"], sun:["son"], hand:["and"],
+  bird:["bud","burd"], pig:["big"], go:["goh"], tea:["t","tee"], name:["nam"]
+};
+function normEn(s){return s.toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();}
+function lev(a,b){
+  const m=a.length,n=b.length; if(!m) return n; if(!n) return m;
+  let prev=Array.from({length:n+1},(_,j)=>j);
+  for(let i=1;i<=m;i++){
+    const cur=[i];
+    for(let j=1;j<=n;j++) cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));
+    prev=cur;
+  }
+  return prev[n];
+}
+function judgePron(alts, target){
+  const accept=[target,...(HOMO[target]||[])];
+  for(const alt of alts){
+    const tokens=normEn(alt).split(" ").filter(Boolean).map(t=>DIG[t]||t);
+    for(const t of tokens){
+      if(accept.includes(t)) return true;
+      if(target.length>=5 && lev(t,target)<=1) return true;
+    }
+  }
+  return false;
+}
+
+/* ============================================================
+   音声 (お手本 / 認識)
+   ============================================================ */
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+const hasTTS = "speechSynthesis" in window;
+let recognizer=null;
+
+function speak(text){
+  if(!hasTTS) return;
+  try{
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(text);
+    u.lang="en-US"; u.rate=0.85;
+    const v=speechSynthesis.getVoices().find(v=>/^en[-_]US/i.test(v.lang));
+    if(v) u.voice=v;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+function recognize(){
+  return new Promise(resolve=>{
+    let alts=[], err=null, done=false, timer;
+    const r=new SR();
+    r.lang="en-US"; r.maxAlternatives=5; r.interimResults=false; r.continuous=false;
+    const finish=()=>{ if(done) return; done=true; clearTimeout(timer); recognizer=null; resolve({alts,err}); };
+    r.onresult=e=>{ for(const res of e.results) for(let i=0;i<res.length;i++) alts.push(res[i].transcript); };
+    r.onerror=e=>{ err=e.error; };
+    r.onend=finish;
+    timer=setTimeout(()=>{ try{r.stop();}catch(e){} setTimeout(finish,1200); },7000);
+    recognizer=r;
+    try{ r.start(); }catch(e){ err="start"; finish(); }
+  });
+}
+
+/* ============================================================
+   出題の選び方 (復習5 + 新規5)
+   ============================================================ */
+function pickSession(n=10){
+  const t=today();
+  const due=shuffle(WORDS.filter(w=>P.words[w.id] && P.words[w.id].due<=t));
+  const fresh=shuffle(WORDS.filter(w=>!P.words[w.id]));
+  let rev=due.slice(0,5);
+  let news=fresh.slice(0,n-rev.length);
+  let ids=[...rev,...news];
+  if(ids.length<n){ // 足りなければ復習をさらに追加
+    ids=[...ids,...due.slice(5,5+n-ids.length)];
+  }
+  if(ids.length<n){ // それでも足りなければ、まだ期日でない単語も
+    const rest=shuffle(WORDS.filter(w=>!ids.includes(w)));
+    ids=[...ids,...rest.slice(0,n-ids.length)];
+  }
+  return shuffle(ids).map(w=>w.id);
+}
+
+/* ============================================================
+   状態
+   ============================================================ */
+let S=null; // セッション
+let listening=false;
+
+function micAvailable(){ return !!SR && P.settings.mic && !(S&&S.q&&S.q.micBlocked); }
+
+/* ============================================================
+   ホーム画面
+   ============================================================ */
+function showHome(){
+  S=null;
+  const t=today();
+  const known=Object.values(P.words).filter(x=>x.box>=3).length;
+  const dueN=WORDS.filter(w=>P.words[w.id] && P.words[w.id].due<=t).length;
+  const streak = (P.streak.last===t||P.streak.last===today(-1)) ? P.streak.count : 0;
+  $app.innerHTML=`
+    <div class="hero">
+      <h1>しゃべって☆えいたんご</h1>
+      <p class="tagline">きく → いう → いみを こたえる。1かい 10もん、3ぶんで おわるよ。</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>${streak}</b><span>れんぞく にっすう</span></div>
+      <div class="stat"><b>${known}<small style="font-size:1rem"> / ${WORDS.length}</small></b><span>おぼえた たんご</span></div>
+      <div class="stat"><b>${dueN}</b><span>ふくしゅう まち</span></div>
+    </div>
+    <div class="startrow"><button class="btn" onclick="startSession()">スタート</button></div>
+    <div class="check" id="check"></div>
+    <details>
+      <summary>せってい</summary>
+      <label class="sw"><input type="checkbox" id="micSw" ${P.settings.mic?"checked":""} onchange="toggleMic(this.checked)"> マイクで はつおんを チェックする</label>
+      <p>オフにすると、おてほんを きいて じぶんで「いえた／むずかしい」を えらぶ ほうほうになります。</p>
+    </details>
+    <details>
+      <summary>きろくの バックアップ</summary>
+      <p>ブラウザのデータが きえることがあるので、ときどき「かきだす」で コピーして メモに とっておいてね。</p>
+      <textarea id="bk" placeholder="ここに きろくが でます／ここに はりつけて よみこみます"></textarea>
+      <div class="row">
+        <button class="btn small ghost" onclick="exportData()">かきだす</button>
+        <button class="btn small ghost" onclick="importData()">よみこむ</button>
+        <button class="btn small ghost" onclick="resetData()">ぜんぶ けす</button>
+      </div>
+    </details>
+    <div class="note">きろくは この ブラウザの なかに ほぞんされます。Safari の タブで つかってね。</div>
+  `;
+  const notes=[];
+  notes.push(`おてほんの おと: <b>${hasTTS?"つかえる":"つかえない"}</b>`);
+  notes.push(`マイク(おんせいにんしき): <b>${SR?"つかえそう":"つかえない → じぶんで チェックします"}</b>`);
+  document.getElementById("check").innerHTML="この たんまつ: "+notes.join(" / ");
+}
+function toggleMic(v){ P.settings.mic=v; save(); }
+function exportData(){ document.getElementById("bk").value=JSON.stringify(P); }
+function importData(){
+  try{
+    const d=JSON.parse(document.getElementById("bk").value);
+    if(!d||d.v!==1) throw 0;
+    P=d; save(); showHome();
+  }catch(e){ alert("よみこめませんでした。かきだした ぶんしょうを そのまま はりつけてね。"); }
+}
+function resetData(){
+  if(confirm("きろくを ぜんぶ けします。いい？")){ localStorage.removeItem(KEY); P=load(); showHome(); }
+}
+
+/* ============================================================
+   セッション
+   ============================================================ */
+function startSession(){
+  const ids=pickSession(10);
+  S={queue:ids,idx:0,total:ids.length,firstDone:0,correct:0,wrong:[],retried:new Set(),seen:new Set(),q:null};
+  nextQuestion();
+}
+function nextQuestion(){
+  if(S.idx>=S.queue.length){ return showSummary(); }
+  const id=S.queue[S.idx];
+  S.q={id,step:"speak",pron:null,pronBy:"",heard:"",fails:0,meaning:null,typed:"",hint:false,choices:null,msg:"",micBlocked:false,repeat:S.seen.has(id)};
+  renderQuiz();
+  speak(BYID[id].en);
+}
+function quit(){ if(confirm("やめる？ ここまでの きろくは のこるよ。")){ if(recognizer){try{recognizer.abort()}catch(e){}} showHome(); } }
+
+/* ---- 発音 ---- */
+async function doMic(){
+  if(listening) return;
+  const q=S.q; if(q.step!=="speak") return;
+  listening=true;
+  try{ speechSynthesis.cancel(); }catch(e){}
+  const btn=document.getElementById("micBtn");
+  if(btn){ btn.classList.add("live"); btn.innerHTML='<span>👂</span>きいてるよ…'; }
+  const {alts,err}=await recognize();
+  listening=false;
+  if(!S||S.q!==q) return; // 途中で画面を離れた
+  if(err==="not-allowed"||err==="service-not-allowed"){
+    q.micBlocked=true; q.msg="マイクが つかえないよ。おてほんを きいて、じぶんで えらんでね。";
+  }else if(!alts.length){
+    q.fails++; q.msg="きこえなかったよ。もういちど！ (ちかくで はっきり いってみてね)";
+  }else if(judgePron(alts,BYID[q.id].en)){
+    q.pron=true; q.pronBy="mic"; q.heard=alts[0]; q.step="meaning";
+  }else{
+    q.fails++; q.heard=alts[0]; q.msg=`「${alts[0]}」と きこえたよ。おてほんを きいて もういちど！`;
+  }
+  renderQuiz();
+}
+function selfPron(ok){
+  const q=S.q;
+  q.pron=ok; q.pronBy="self"; q.step="meaning"; q.msg="";
+  renderQuiz();
+}
+
+/* ---- 意味 ---- */
+function submitMeaning(){
+  const inp=document.getElementById("ans"); if(!inp) return;
+  const v=inp.value.trim(); if(!v){ inp.focus(); return; }
+  const q=S.q; q.typed=v; q.meaning=matchJa(v,BYID[q.id].ja);
+  finishQuestion();
+}
+function showHint(){
+  const q=S.q; const w=BYID[q.id];
+  const others=shuffle(WORDS.filter(x=>x.id!==w.id && x.ja[0]!==w.ja[0])).slice(0,3).map(x=>x.ja[0]);
+  q.choices=shuffle([w.ja[0],...others]); q.hint=true;
+  renderQuiz();
+}
+function pickChoice(i){
+  const q=S.q; const w=BYID[q.id];
+  q.typed=q.choices[i]; q.meaning=(q.choices[i]===w.ja[0]);
+  finishQuestion();
+}
+
+/* ---- 結果 ---- */
+function finishQuestion(){
+  const q=S.q; q.step="result";
+  const ok=!!(q.pron&&q.meaning);
+  q.ok=ok;
+  if(!S.seen.has(q.id)){ // 最初の1回だけ記録に反映
+    S.seen.add(q.id); S.firstDone++;
+    if(ok) S.correct++; else S.wrong.push(q.id);
+    const p=P.words[q.id]||{box:0,due:today(),ok:0,ng:0};
+    if(ok){ p.box=Math.min(5,p.box+1); p.ok++; }
+    else{ p.box=1; p.ng++; }
+    p.due = ok ? today(INTERVALS[p.box]) : today();
+    P.words[q.id]=p; save();
+  }
+  if(!ok && !S.retried.has(q.id)){ // 数問あとにもう一度
+    S.retried.add(q.id);
+    S.queue.splice(Math.min(S.idx+4,S.queue.length),0,q.id);
+  }
+  renderQuiz();
+}
+function goNext(){ S.idx++; nextQuestion(); }
+
+/* ---- まとめ ---- */
+function showSummary(){
+  const t=today();
+  if(P.streak.last!==t){
+    P.streak.count = (P.streak.last===today(-1)) ? P.streak.count+1 : 1;
+    P.streak.last=t;
+  }
+  P.sessions++; save();
+  const c=S.correct, n=S.total;
+  const stars = c>=n ? 3 : c>=Math.ceil(n*0.7) ? 2 : 1;
+  const st=[0,1,2].map(i=>`<span class="${i<stars?"":"off"}">★</span>`).join("");
+  const wrongList=S.wrong.map(id=>{const w=BYID[id];return `<li><span class="en">${esc(w.en)}</span><span>${esc(w.ja[0])}</span></li>`;}).join("");
+  $app.innerHTML=`
+    <div class="card">
+      <h1>${c===n?"ぜんぶ せいかい！":"おつかれさま！"}</h1>
+      <div class="stars">${st}</div>
+      <p style="font-size:1.4rem;font-weight:800;margin:0">${c} / ${n} もん ○</p>
+      ${S.wrong.length?`<p class="sub">まちがえた たんごは あしたも でてくるよ。</p><ul class="list">${wrongList}</ul>`:`<p class="sub">まちがえた たんごは なし！</p>`}
+      <div class="actions">
+        <button class="btn" onclick="startSession()">もういちど</button>
+        <button class="btn ghost" onclick="showHome()">ホームへ</button>
+      </div>
+    </div>`;
+}
+
+/* ============================================================
+   クイズ画面の描画
+   ============================================================ */
+function stampHTML(ok,size){ return `<span class="stamp ${ok?"ok":"ng"} ${size}">${ok?"○":"×"}</span>`; }
+
+function renderQuiz(){
+  const q=S.q, w=BYID[q.id];
+  const pct=Math.round(S.firstDone/S.total*100);
+  let body="";
+
+  if(q.step==="speak"){
+    const useMic=micAvailable();
+    let mic="";
+    if(useMic){
+      mic=`<button class="mic" id="micBtn" onclick="doMic()"><span>🎤</span>はなす</button>
+           <p class="msg" id="msg">${esc(q.msg)||("おてほんを きいて、マイクを おして いってみよう"+(window.matchMedia&&matchMedia("(hover:hover)").matches?"（スペースキーでも おせるよ）":""))}</p>`;
+    }else{
+      mic=`<p class="msg" id="msg">${esc(q.msg)||"おてほんを きいて、こえに だして いってみよう"}</p>`;
+    }
+    const showSelf = !useMic || q.fails>=2;
+    const self = showSelf ? `
+      <div class="self">
+        ${useMic?`<p>うまく いかないときは、じぶんで えらんでも いいよ。</p>`:""}
+        <div class="actions" style="margin-top:0">
+          <button class="btn" onclick="selfPron(true)">いえた！</button>
+          <button class="btn ghost" onclick="selfPron(false)">むずかしかった</button>
+        </div>
+      </div>` : "";
+    body=`<div class="step"><h2>② はつおん</h2>${mic}${self}</div>`;
+  }
+
+  if(q.step==="meaning"){
+    const chip = `<span class="chip">はつおん ${q.pron?"OK":"チェックずみ"}${q.pronBy==="self"?"（じぶんで）":""}</span>`;
+    let choices="";
+    if(q.choices){
+      choices=`<div class="choices">${q.choices.map((c,i)=>`<button class="btn ghost" onclick="pickChoice(${i})">${esc(c)}</button>`).join("")}</div>`;
+    }
+    body=`<div class="step"><h2>③ にほんごで いうと？</h2>${chip}<br>
+      <input class="ans" id="ans" type="text" lang="ja" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="ひらがなで こたえよう">
+      <div class="actions" style="margin-top:18px">
+        <button class="btn" onclick="submitMeaning()">こたえる</button>
+        ${q.choices?"":`<button class="btn ghost" onclick="showHint()">ヒント (4たく)</button>`}
+      </div>${choices}</div>`;
+  }
+
+  if(q.step==="result"){
+    const others=w.ja.filter(x=>x!==w.ja[0]).slice(0,3);
+    const heardLine = q.pronBy==="mic" ? `きこえた こえ: ${esc(q.heard)}` : "はつおん: じぶんで チェック";
+    const ansLine = q.typed ? `あなたの こたえ: ${esc(q.typed)}` : "";
+    body=`<div class="step">
+      <div class="stamps">
+        <div class="mini"><small>はつおん</small>${stampHTML(q.pron,"sm")}</div>
+        <div class="mini"><small>いみ</small>${stampHTML(q.meaning,"sm")}</div>
+      </div>
+      ${stampHTML(q.ok,"big")}
+      <div class="answer">${esc(w.ja[0])}<small>${others.length?"ほかにも: "+others.map(esc).join("、"):""}</small></div>
+      <p class="detail">${heardLine}</p>
+      <p class="detail">${ansLine}</p>
+      <div class="example"><div class="en">${esc(w.ex)}</div><div class="ja">${esc(w.exJa)}</div></div>
+      <div class="actions">
+        <button class="btn ghost" onclick="speak(BYID[S.q.id].en)">🔊 きく</button>
+        <button class="btn ghost" onclick="speak(BYID[S.q.id].ex)">🔊 れいぶん</button>
+        <button class="btn" id="nextBtn" onclick="goNext()">つぎへ</button>
+      </div></div>`;
+  }
+
+  $app.innerHTML=`
+    <div class="top">
+      <button class="btn small ghost" onclick="quit()">やめる</button>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <div class="count">${Math.min(S.firstDone+ (q.step==="result"?0:1),S.total)} / ${S.total}</div>
+    </div>
+    <div class="card">
+      <span class="tag">${esc(w.cat)}${q.repeat?'<span class="again">もういちど</span>':""}</span>
+      <div class="word">${esc(w.en)}</div>
+      <button class="speaker" onclick="speak(BYID[S.q.id].en)" aria-label="おてほんを きく">🔊</button>
+      ${body}
+    </div>`;
+
+  if(q.step==="meaning"){ const a=document.getElementById("ans"); if(a){ a.focus(); a.addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.isComposing&&e.keyCode!==229) submitMeaning(); }); } }
+  if(q.step==="result"){ const b=document.getElementById("nextBtn"); if(b) b.focus(); }
+}
+
+/* PCキーボード: スペースでマイク */
+document.addEventListener("keydown",e=>{
+  if(!S||!S.q) return;
+  const tag=(document.activeElement&&document.activeElement.tagName)||"";
+  if(e.code==="Space" && S.q.step==="speak" && micAvailable() && tag!=="INPUT" && tag!=="TEXTAREA"){
+    e.preventDefault(); doMic();
+  }
+});
+if(hasTTS){ try{ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged=()=>{}; }catch(e){} }
+
+showHome();
+</script>
+</body>
+</html>
